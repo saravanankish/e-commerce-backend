@@ -10,7 +10,6 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,26 +17,22 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
+import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.MobileNumber;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.MobileNumberRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserServiceImpl implements UserService {
 
-	private static final Logger logger = Logger.getLogger(UserService.class);
+	private static final Logger logger = Logger.getLogger(UserServiceImpl.class);
 
 	@Autowired
 	private UserRepository userRepo;
 
 	@Autowired
 	private CartService cartService;
-
-	@Autowired
-	private MobileNumberRepository contactRepo;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -61,6 +56,7 @@ public class UserService implements UserDetailsService {
 		return authorities;
 	}
 
+	@Override
 	public User addUser(User user) {
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		user.setCreationTime(new Date());
@@ -72,35 +68,36 @@ public class UserService implements UserDetailsService {
 		return user;
 	}
 
+	@Override
 	public User getUserByUsername(String username) {
 		logger.info("Returned user with username=" + username);
 		return userRepo.findByUsername(username);
 	}
 
+	@Override
 	public List<User> getCustomers() {
 		logger.info("Returned All customers");
 		return userRepo.findByRole("CUSTOMER");
 	}
 
+	@Override
 	public User getUserById(long id) {
 		Optional<User> user = userRepo.findById(id);
 		if (user.isEmpty()) {
-			logger.warn("User with userId=" + id + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with id " + id + " not found");
 		}
 		logger.info("Returned user with userId=" + id);
 		return user.get();
 	}
 
+	@Override
 	public User updateUser(User user, long customerId, String updatedBy) {
 		if (customerId == 0) {
-			logger.warn("Customer id is not present");
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User id should be present");
+			throw new NotFoundException("User with id is not present");
 		}
 		Optional<User> userData = userRepo.findById(customerId);
 		if (userData.isEmpty()) {
-			logger.warn("User with userId=" + customerId + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with id " + customerId + " not found");
 		}
 		User userInDb = userData.get();
 		if (user.getName() != null)
@@ -119,44 +116,16 @@ public class UserService implements UserDetailsService {
 		return userInDb;
 	}
 
+	@Override
 	public void deleteUser(long id) {
 		Optional<User> user = userRepo.findById(id);
 		if (user.isEmpty()) {
-			logger.warn("User with userId=" + id + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with id " + id + " not found");
 		}
 		User userData = user.get();
 		userData.setAccountActive(false);
 		logger.info("Deleted user with userId=" + id);
 		userRepo.save(userData);
-	}
-
-	public MobileNumber addMobileNumber(String username, MobileNumber number) {
-		User userInDb = userRepo.findByUsername(username);
-		if (userInDb == null)
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
-		userInDb.getMobileNumbers().add(number);
-		userRepo.save(userInDb);
-		return number;
-	}
-
-	public MobileNumber updateMobileNumber(long contactId, MobileNumber contact) {
-		Optional<MobileNumber> mobileNumber = contactRepo.findById(contactId);
-		if (mobileNumber.isEmpty())
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Mobile number not found");
-		MobileNumber contactData = mobileNumber.get();
-		if (contact.getLabel() != null)
-			contactData.setLabel(contact.getLabel());
-		if (contact.getNumber() != null)
-			contactData.setNumber(contact.getNumber());
-		contactRepo.save(contactData);
-		return contactData;
-	}
-	
-	public void deleteMobileNumber(long contactId) {
-		boolean numberExists = contactRepo.existsById(contactId);
-		if(!numberExists) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Mobile number not found");
-		contactRepo.deleteById(contactId);
 	}
 
 }

@@ -18,54 +18,48 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Category;
-import com.saravanank.ecommerce.resourceserver.service.CategoryService;
-
+import com.saravanank.ecommerce.resourceserver.service.CrudOperationService;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/v1/category")
 public class CategoryController {
-	
-	private static final Logger logger = Logger.getLogger(CartController.class);
+
+	private static final Logger logger = Logger.getLogger(CategoryController.class);
 
 	@Autowired
-	private CategoryService categoryService;
+	private CrudOperationService<Category> categoryService;
 
 	@PostMapping
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Add category", notes = "Only user with admin access can use this endpoint")
 	public ResponseEntity<Category> addCategory(@RequestBody Category subCategory, Principal principal) {
 		logger.info("POST request to /api/v1/category");
-		return new ResponseEntity<Category>(categoryService.addSubCategory(subCategory, principal.getName()), HttpStatus.CREATED);
+		return new ResponseEntity<Category>(categoryService.add(subCategory, principal.getName()), HttpStatus.CREATED);
 	}
 
 	@PostMapping("/all")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Add many categories", notes = "Only user with admin access can use this endpoint")
-	public ResponseEntity<List<Category>> addCategories(@RequestBody List<Category> subCategories, Principal principal) {
+	public ResponseEntity<List<Category>> addCategories(@RequestBody List<Category> subCategories,
+			Principal principal) {
 		logger.info("POST request to /api/v1/category/all");
-		return new ResponseEntity<List<Category>>(categoryService.addSubCategories(subCategories, principal.getName()), HttpStatus.CREATED);
+		return new ResponseEntity<List<Category>>(categoryService.addAll(subCategories, principal.getName()),
+				HttpStatus.CREATED);
 	}
 
 	@GetMapping("/{categoryId}")
 	@ApiOperation(value = "Get category by id", notes = "All users can use this endpoint")
 	public ResponseEntity<Category> getCategoryById(@PathVariable("categoryId") long categoryId) {
 		logger.info("GET request to /api/v1/category/" + categoryId);
-		return new ResponseEntity<Category>(categoryService.getCategoryById(categoryId), HttpStatus.OK);
+		return new ResponseEntity<Category>(categoryService.getById(categoryId), HttpStatus.OK);
 	}
 
 	@GetMapping("/all")
 	@ApiOperation(value = "Get all categories", notes = "All users can use this endpoint")
 	public ResponseEntity<List<Category>> getAllCategories() {
 		logger.info("GET request to /api/v1/category/all");
-		return new ResponseEntity<List<Category>>(categoryService.getAllCategories(), HttpStatus.OK);
-	}
-	
-	@GetMapping("/subcategory")
-	@ApiOperation(value = "Get all categories", notes = "All users can use this endpoint")
-	public ResponseEntity<List<String>> getAllSubCategories() {
-		logger.info("GET request to /api/v1/category/all");
-		return new ResponseEntity<List<String>>(categoryService.getAllSubCategories(), HttpStatus.OK);
+		return new ResponseEntity<List<Category>>(categoryService.getAll(), HttpStatus.OK);
 	}
 
 	@PutMapping("/{categoryId}")
@@ -74,7 +68,8 @@ public class CategoryController {
 	public ResponseEntity<Category> updateCategory(@PathVariable("categoryId") long categoryId,
 			@RequestBody Category category, Principal principal) {
 		logger.info("PUT request to /api/v1/category/" + categoryId);
-		return new ResponseEntity<Category>(categoryService.updateCategory(categoryId, category, principal.getName()), HttpStatus.CREATED);
+		return new ResponseEntity<Category>(categoryService.update(category, categoryId, principal.getName()),
+				HttpStatus.CREATED);
 	}
 
 	@DeleteMapping("/{categoryId}")
@@ -82,7 +77,7 @@ public class CategoryController {
 	@ApiOperation(value = "Delete a category", notes = "Only user with admin access can use this endpoint")
 	public ResponseEntity<String> deleteCategory(@PathVariable("categoryId") long categoryId) {
 		logger.info("DELETE request to /api/v1/category/" + categoryId);
-		categoryService.deleteCategroy(categoryId);
+		categoryService.delete(categoryId);
 		return new ResponseEntity<String>("Deleted successfully", HttpStatus.CREATED);
 	}
 

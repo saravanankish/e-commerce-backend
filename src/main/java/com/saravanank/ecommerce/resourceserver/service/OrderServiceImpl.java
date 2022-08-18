@@ -8,10 +8,9 @@ import java.util.Optional;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
+import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
+import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.Invoice;
@@ -29,9 +28,9 @@ import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
 
 @Service
-public class OrderService {
+public class OrderServiceImpl implements OrderService {
 
-	private static final Logger logger = Logger.getLogger(OrderService.class);
+	private static final Logger logger = Logger.getLogger(OrderServiceImpl.class);
 
 	@Autowired
 	private OrderRepository orderRepo;
@@ -54,36 +53,37 @@ public class OrderService {
 	@Value("${e-commerce.application.tax-percentage}")
 	private float taxPercentage;
 
+	@Override
 	public List<Order> getUserOrders(String username) {
 		User userInDb = userRepo.findByUsername(username);
 		if (userInDb == null) {
-			logger.warn("User with username=" + username + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with username " + username + " not found");
 		}
 		logger.info("Returned order of user with username=" + username);
 		return orderRepo.findByUserUsername(username);
 	}
 
+	@Override
 	public List<Order> getUserOrders(long userId) {
 		Optional<User> userInDb = userRepo.findById(userId);
 		if (userInDb.isEmpty()) {
-			logger.warn("User with userId=" + userId + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with id " + userId + " not found");
 		}
 		logger.info("Returned order of user with userId=" + userId);
 		return orderRepo.findByUserUserId(userId);
 	}
 
+	@Override
 	public List<Order> getAllOrders() {
 		logger.info("Returned all order");
 		return orderRepo.findAll();
 	}
 
+	@Override
 	public Order updateOrder(Order order, long orderId) {
 		Optional<Order> orderInDb = orderRepo.findById(orderId);
 		if (orderInDb.isEmpty()) {
-			logger.warn("Order with orderId=" + orderId + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Order not found");
+			throw new NotFoundException("Order with id " + orderId + " not found");
 		}
 		Order orderData = orderInDb.get();
 		if (order.getValue() != 0)
@@ -120,39 +120,39 @@ public class OrderService {
 		return orderData;
 	}
 
+	@Override
 	public Order addOrder(String placedFor, String placedBy, List<ProductQuantityMapper> products, String paymentType) {
 		User placedForUser = userRepo.findByUsername(placedFor);
 		User placedByUser = userRepo.findByUsername(placedBy);
 		if (placedByUser == null || placedForUser == null) {
-			logger.warn("User details are wrong, couldn't place order");
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User details are wrong");
+			throw new BadRequestException("User details are wrong, couldn't place order");
 		}
 		return orderHelper(placedForUser, placedByUser, products, paymentType);
 	}
-
+	
+	@Override
 	public Order placeOrderForUser(long userId, String placedBy, List<ProductQuantityMapper> products,
 			String paymentType) {
 		Optional<User> placedForUser = userRepo.findById(userId);
 		User placedByUser = userRepo.findByUsername(placedBy);
 		if (placedByUser == null || placedForUser.isEmpty()) {
-			logger.warn("User details are wrong, couldn't place order");
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User details are wrong");
+			throw new BadRequestException("User details are wrong, couldn't place order");
 		}
 		return orderHelper(placedByUser, placedByUser, products, paymentType);
 	}
 
+	@Override
 	public Order placeOrderFromCart(String paymentType, String username) {
 		Cart userCart = cartRepo.findByUserUsername(username);
 		User placedForUser = userRepo.findByUsername(username);
 		if (placedForUser == null) {
-			logger.warn("User details are wrong, couldn't place order");
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User details are wrong");
+			throw new BadRequestException("User details are wrong, couldn't place order");
 		}
 		if (userCart == null) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User Cart not found");
+			throw new NotFoundException("Cart of user with username " + username + " not found");
 		}
 		if (userCart.getProducts().size() == 0) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User cart is empty");
+			throw new BadRequestException("User cart is empty");
 		}
 		return orderHelper(placedForUser, placedForUser, userCart.getProducts(), paymentType);
 	}
@@ -167,13 +167,13 @@ public class OrderService {
 			Optional<Product> productData = productRepo.findById(product.getProductId());
 			Product prod = productData.get();
 			if (productData.isEmpty()) {
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "One or more products not present");
+				throw new BadRequestException("One or more products not present, couldn't place order");
 			}
 			if (product.getQuantity() <= 0) {
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Quantity should be more than one");
+				throw new BadRequestException("Quantity should be more than one, couldn't place order");
 			}
 			if(prod.getQuantity() < product.getQuantity()) {
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Insufficient stock of " + productData.get().getName());
+				throw new BadRequestException("Insufficient stock of " + productData.get().getName());
 			}
 			prod.setQuantity(prod.getQuantity() - product.getQuantity());
 			productUpdate.add(prod);
@@ -194,7 +194,7 @@ public class OrderService {
 		userOrder.setProducts(products);
 		Address deliveryAddress = addressRepo.findDeliveryAddressOfUser(placedForUser.getUserId());
 		if (deliveryAddress == null)
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User has no delivery address");
+			throw new BadRequestException("User has no delivery address");
 		userOrder.setDeliveryAddress(deliveryAddress);
 		invoice.setOrder(userOrder);
 		invoice.setTotalAmountReceivable(totalValue + (totalValue * (taxPercentage / 100)));
@@ -205,9 +205,10 @@ public class OrderService {
 		return invoice.getOrder();
 	}
 
+	@Override
 	public Order cancelOrder(long orderId, String cancelReason) {
 		Optional<Order> order = orderRepo.findById(orderId);
-		if(order.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Order not found");
+		if(order.isEmpty()) throw new NotFoundException("Order with id " + orderId + " not found");
 		Order orderData = order.get();
 		orderData.setOrderStatus(OrderStatus.CANCELED);
 		orderData.setCancelDate(new Date());

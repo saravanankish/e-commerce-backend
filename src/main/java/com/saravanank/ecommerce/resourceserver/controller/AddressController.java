@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.service.AddressService;
-
 import io.swagger.annotations.ApiOperation;
 
 @RestController

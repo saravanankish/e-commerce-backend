@@ -12,79 +12,104 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.ProductResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
 
 @Service
-public class ProductService {
+public class ProductService implements PageCrudOperationService<Product, ProductResponseModel> {
 
 	private static final Logger logger = Logger.getLogger(ProductService.class);
-	
+
 	@Autowired
 	private ProductRepository productRepo;
-	
+
 	@Autowired
 	private UserService userService;
-	
-	public Product getProductById(long productId) {
-		Optional<Product> product = productRepo.findById(productId);
-		if(product.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found");
+
+	@Override
+	public Product getById(long id) {
+		Optional<Product> product = productRepo.findById(id);
+		if (product.isEmpty())
+			throw new NotFoundException("Product with id " + id + " not found");
 		return product.get();
 	}
-	
-	public Product addProduct(Product product, String username) {
-		product.setModifiedDate(new Date());
-		product.setCreationDate(new Date());
-		product.setModifiedBy(userService.getUserByUsername(username));
-		productRepo.save(product);
-		logger.info("Added product with productId=" + product.getProductId());
-		return product;
-	}
-	
-	public Product updateProduct(Product product, long productId, String username) {
-		Optional<Product> productInDb = productRepo.findById(productId);
-		if(productInDb.isEmpty()) {
-			logger.warn("Product with productId=" + productId + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found");
-		}
-		Product productData = productInDb.get();
-		if(product.getName() != null) productData.setName(product.getName());
-		if(product.getDescription() != null) productData.setDescription(product.getDescription());
-		if(product.getPrice() != 0) productData.setPrice(product.getPrice());
-		if(product.getQuantity() != null) productData.setQuantity(product.getQuantity());
-		if(product.getRating() != 0) productData.setRating(product.getRating());
-		if(product.getThumbnail() != null) productData.setThumbnail(product.getThumbnail());
-		if(product.getImages() != null) productData.setImages(product.getImages());
-		if(product.getBrand() != null) productData.setBrand(product.getBrand());
-		if(product.getCategory() != null) productData.setCategory(product.getCategory());
-		product.setModifiedDate(new Date(new java.util.Date().getTime()));
-		product.setModifiedBy(userService.getUserByUsername(username));
-		productRepo.save(productData);
-		logger.info("Updated product with productId=" + product.getProductId());
-		return productData;
-	}
-	
-	public List<Product> addProducts(List<Product> products, String username) {
-		User modifiedBy = userService.getUserByUsername(username);
-		products.stream().forEach(product -> {
+
+	@Override
+	public List<Product> addAll(List<Product> data, String modifiedBy) {
+		User modifiedByUser = userService.getUserByUsername(modifiedBy);
+		data.stream().forEach(product -> {
 			product.setCreationDate(new Date(new java.util.Date().getTime()));
 			product.setModifiedDate(new Date(new java.util.Date().getTime()));
-			product.setModifiedBy(modifiedBy);
+			product.setModifiedBy(modifiedByUser);
 		});
-		logger.info("Added " + products.size() + " product(s)");
-		return (List<Product>) this.productRepo.saveAll(products);
+		logger.info("Added " + data.size() + " product(s)");
+		return (List<Product>) this.productRepo.saveAll(data);
 	}
-	
-	public ProductResponseModel getAllProducts(Integer page, Integer limit, String search) {
+
+	@Override
+	public Product add(Product data, String modifiedBy) {
+		data.setModifiedDate(new Date());
+		data.setCreationDate(new Date());
+		data.setModifiedBy(userService.getUserByUsername(modifiedBy));
+		productRepo.save(data);
+		logger.info("Added product with productId=" + data.getProductId());
+		return data;
+	}
+
+	@Override
+	public Product update(Product data, long id, String modifiedBy) {
+		Optional<Product> productInDb = productRepo.findById(id);
+		if (productInDb.isEmpty()) {
+			throw new NotFoundException("Product with id " + id + " not found");
+		}
+		Product productData = productInDb.get();
+		if (data.getName() != null)
+			productData.setName(data.getName());
+		if (data.getDescription() != null)
+			productData.setDescription(data.getDescription());
+		if (data.getPrice() != 0)
+			productData.setPrice(data.getPrice());
+		if (data.getQuantity() != null)
+			productData.setQuantity(data.getQuantity());
+		if (data.getRating() != 0)
+			productData.setRating(data.getRating());
+		if (data.getThumbnail() != null)
+			productData.setThumbnail(data.getThumbnail());
+		if (data.getImages() != null)
+			productData.setImages(data.getImages());
+		if (data.getBrand() != null)
+			productData.setBrand(data.getBrand());
+		if (data.getCategory() != null)
+			productData.setCategory(data.getCategory());
+		data.setModifiedDate(new Date(new java.util.Date().getTime()));
+		data.setModifiedBy(userService.getUserByUsername(modifiedBy));
+		productRepo.save(productData);
+		logger.info("Updated product with productId=" + data.getProductId());
+		return productData;
+	}
+
+	@Override
+	public void delete(long id) {
+		boolean productPresent = productRepo.existsById(id);
+		if (!productPresent) {
+			throw new NotFoundException("Product with id " + id + " not found");
+		}
+		logger.info("Deleted product with productId=" + id);
+		productRepo.deleteById(id);
+	}
+
+	@Override
+	public ProductResponseModel getAll(Integer page, Integer limit, String search) {
 		PageRequest pageReq = PageRequest.of(page, limit);
 		ProductResponseModel productResponse = new ProductResponseModel();
 		Page<Product> products;
-		if(search == null) {			
+		if (search == null) {
 			products = productRepo.findAll(pageReq);
 		} else {
-			 products = productRepo.findByNameContainingOrDescriptionContaining(search, search, pageReq);
+			products = productRepo.findByNameContainingOrDescriptionContaining(search, search, pageReq);
 		}
 		productResponse.setProducts(products.toList());
 		productResponse.setTotal(products.getTotalElements());
@@ -94,15 +119,5 @@ public class ProductService {
 		logger.info("Returned products");
 		return productResponse;
 	}
-	
-	public void deleteProduct(long productId) {
-		boolean productPresent = productRepo.existsById(productId);
-		if(!productPresent) {
-			logger.warn("Product with productId=" + productId + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found");
-		}
-		logger.info("Deleted product with productId=" + productId);
-		productRepo.deleteById(productId);
-	}
-	
+
 }

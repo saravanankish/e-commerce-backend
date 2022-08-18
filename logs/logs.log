@@ -2298,3 +2298,35 @@
 [2022-08-16 16:19:59,453] com.saravanank.ecommerce.resourceserver.controller.UserController 53 INFO   -  POST request to /api/v1/user/register
 [2022-08-16 16:19:59,973] com.saravanank.ecommerce.resourceserver.service.CartService 88 INFO   -  Added cart to user with id=3
 [2022-08-16 16:20:00,009] com.saravanank.ecommerce.resourceserver.service.UserService 71 INFO   -  Added user with userid=3
+[2022-08-16 21:03:29,915] com.saravanank.ecommerce.resourceserver.controller.ProductController 49 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-16 21:03:30,411] com.saravanank.ecommerce.resourceserver.service.ProductService 94 INFO   -  Returned products
+[2022-08-16 21:03:35,265] com.saravanank.ecommerce.resourceserver.controller.ProductController 49 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-16 21:03:35,382] com.saravanank.ecommerce.resourceserver.service.ProductService 94 INFO   -  Returned products
+[2022-08-18 11:19:10,756] com.saravanank.ecommerce.resourceserver.controller.ProductController 49 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-18 11:19:11,173] com.saravanank.ecommerce.resourceserver.service.ProductService 94 INFO   -  Returned products
+[2022-08-18 12:26:36,084] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-18 12:26:54,462] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-18 12:26:54,462] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-18 12:27:20,612] com.saravanank.ecommerce.resourceserver.controller.BrandController 78 INFO   -  DELETE request to /api/v1/brand/1
+[2022-08-18 12:27:20,635] com.saravanank.ecommerce.resourceserver.service.BrandService 74 INFO   -  Deleted brand with id=1
+[2022-08-18 12:30:08,222] com.saravanank.ecommerce.resourceserver.controller.BrandController 78 INFO   -  DELETE request to /api/v1/brand/1
+[2022-08-18 12:30:08,228] com.saravanank.ecommerce.resourceserver.service.BrandService 74 INFO   -  Deleted brand with id=1
+[2022-08-18 12:30:08,256] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 52 ERROR  -  Cannot delete or update a parent row: a foreign key constraint fails (`project_test`.`product`, CONSTRAINT `FKs6cydsualtsrprvlf2bb3lcam` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`))
+[2022-08-18 12:30:33,146] com.saravanank.ecommerce.resourceserver.controller.BrandController 78 INFO   -  DELETE request to /api/v1/brand/1
+[2022-08-18 12:30:33,151] com.saravanank.ecommerce.resourceserver.service.BrandService 74 INFO   -  Deleted brand with id=1
+[2022-08-18 12:30:33,175] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 52 ERROR  -  Cannot delete or update a parent row: a foreign key constraint fails (`project_test`.`product`, CONSTRAINT `FKs6cydsualtsrprvlf2bb3lcam` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`))
+[2022-08-18 12:30:35,830] com.saravanank.ecommerce.resourceserver.controller.BrandController 78 INFO   -  DELETE request to /api/v1/brand/1
+[2022-08-18 12:30:35,839] com.saravanank.ecommerce.resourceserver.service.BrandService 74 INFO   -  Deleted brand with id=1
+[2022-08-18 12:30:35,862] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 52 ERROR  -  Cannot delete or update a parent row: a foreign key constraint fails (`project_test`.`product`, CONSTRAINT `FKs6cydsualtsrprvlf2bb3lcam` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`id`))
+[2022-08-18 12:31:45,126] com.saravanank.ecommerce.resourceserver.controller.BrandController 53 INFO   -  GET request to /api/v1/brand/1
+[2022-08-18 12:34:28,319] com.saravanank.ecommerce.resourceserver.controller.BrandController 53 INFO   -  GET request to /api/v1/brand/1
+[2022-08-18 12:34:28,328] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=1
+[2022-08-18 12:34:59,831] com.saravanank.ecommerce.resourceserver.controller.BrandController 69 INFO   -  PUT request to /api/v1/brand/1
+[2022-08-18 12:34:59,839] com.saravanank.ecommerce.resourceserver.service.UserService 77 INFO   -  Returned user with username=admin
+[2022-08-18 12:34:59,859] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=1, name=Apple 1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-18 20:14:21,798] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-18 20:14:22,677] com.saravanank.ecommerce.resourceserver.service.ProductService 119 INFO   -  Returned products
+[2022-08-18 20:14:48,556] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
+[2022-08-18 20:19:26,181] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
+[2022-08-18 20:21:14,550] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
+[2022-08-18 20:28:23,576] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3

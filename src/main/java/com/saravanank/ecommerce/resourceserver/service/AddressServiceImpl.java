@@ -4,17 +4,15 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
+import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.AddressRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
 
 @Service
-public class AddressService {
+public class AddressServiceImpl implements AddressService {
 
 	@Autowired
 	private AddressRepository addressRepo;
@@ -22,10 +20,11 @@ public class AddressService {
 	@Autowired
 	private UserRepository userRepo;
 
+	@Override
 	public Address addAddress(long userId, Address address) {
 		Optional<User> user = userRepo.findById(userId);
 		if (user.isEmpty())
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with id " + userId + " not found");
 		User userData = user.get();
 		List<Address> userAddress = userData.getAddresses();
 		userAddress.add(address);
@@ -34,10 +33,11 @@ public class AddressService {
 		return address;
 	}
 
+	@Override
 	public Address addAddressByUsername(String username, Address address) {
 		User user = userRepo.findByUsername(username);
 		if (user == null)
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with username " + username + " not found");
 		List<Address> userAddress = user.getAddresses();
 		userAddress.add(address);
 		user.setAddresses(userAddress);
@@ -45,31 +45,35 @@ public class AddressService {
 		return address;
 	}
 
+	@Override
 	public Address getAddressById(long addressId) {
 		Optional<Address> address = addressRepo.findById(addressId);
 		if (address.isEmpty())
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Address not found");
+			throw new NotFoundException("Address with id " + addressId + " not found");
 		return address.get();
 	}
 
+	@Override
 	public List<Address> getUserAddresses(long userId) {
 		Optional<User> user = userRepo.findById(userId);
 		if (user.isEmpty())
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with id " + userId + " not found");
 		return user.get().getAddresses();
 	}
 
+	@Override
 	public void deleteAddress(long addressId) {
 		boolean addressExists = addressRepo.existsById(addressId);
 		if (!addressExists)
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Address not found");
+			throw new NotFoundException("Address with id " + addressId + " not found");
 		addressRepo.deleteById(addressId);
 	}
 
+	@Override
 	public Address updateAddress(long addressId, Address address) {
 		Optional<Address> addressInDb = addressRepo.findById(addressId);
 		if (addressInDb.isEmpty())
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Address not found");
+			throw new NotFoundException("Address with id " + addressId + " not found");
 		Address addressData = addressInDb.get();
 		if (address.getDoorNo() != null)
 			addressData.setDoorNo(address.getDoorNo());
@@ -94,13 +98,15 @@ public class AddressService {
 		addressRepo.save(addressData);
 		return addressData;
 	}
-	
+
+	@Override
 	public void changeDeliveryAddressOfUser(long addressId, String username) {
 		User user = userRepo.findByUsername(username);
-		if(user == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+		if (user == null)
+			throw new NotFoundException("User with username " + username + " not found");
 		List<Address> userAddress = user.getAddresses();
 		userAddress.stream().forEach(address -> {
-			if(address.getId() == addressId) {
+			if (address.getId() == addressId) {
 				address.setDeliveryAddress(true);
 			} else {
 				address.setDeliveryAddress(false);
@@ -109,5 +115,5 @@ public class AddressService {
 		user.setAddresses(userAddress);
 		userRepo.save(user);
 	}
-	
+
 }

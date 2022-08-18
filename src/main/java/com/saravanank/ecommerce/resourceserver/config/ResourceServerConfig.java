@@ -17,7 +17,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 
-import com.saravanank.ecommerce.resourceserver.service.UserService;
+import com.saravanank.ecommerce.resourceserver.service.UserServiceImpl;
 
 import lombok.AllArgsConstructor;
 
@@ -28,7 +28,7 @@ import lombok.AllArgsConstructor;
 public class ResourceServerConfig {
 
 	@Autowired
-	private UserService userService;
+	private UserServiceImpl userService;
 	
 	private final String[] AUTH_WHITELIST = {
             "/v2/api-docs",

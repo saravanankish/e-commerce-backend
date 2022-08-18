@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
+import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Invoice;
 import com.saravanank.ecommerce.resourceserver.model.Order;
 import com.saravanank.ecommerce.resourceserver.model.OrderStatus;
@@ -34,9 +36,6 @@ public class TransactionService {
 	private UserRepository userRepo;
 
 	@Autowired
-	private ProductRepository productRepo;
-
-	@Autowired
 	private InvoiceRepository invoiceRepo;
 
 	public Transactions makeTransaction(Transactions transaction) {
@@ -45,9 +44,9 @@ public class TransactionService {
 		Invoice orderInvoice = invoiceRepo.findByOrderOrderId(order.getOrderId());
 		if (transaction.isSuccess()) {
 			if (transaction.getAmount() <= 0)
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Amount should be greater than 0");
+				throw new BadRequestException("Amount should be greater than 0");
 			if (orderOpt.isEmpty())
-				throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Order not found");
+				throw new NotFoundException("Order with id " + transaction.getOrder().getOrderId() + " not found");
 			if (transaction.isReceived()) {
 				float totalAmountReceived = orderInvoice.getTotalAmountReceived() + transaction.getAmount();
 				float totalAmountPending = orderInvoice.getTotalAmountReceivable() - totalAmountReceived;
@@ -72,21 +71,21 @@ public class TransactionService {
 		} else {
 			orderInvoice.getTransactions().add(transaction);
 			invoiceRepo.save(orderInvoice);
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Transaction failed");
+			throw new BadRequestException("Transaction failed");
 		}
 	}
 
 	public List<Transactions> getUserTransactrions(long userId) {
 		boolean userExists = userRepo.existsById(userId);
 		if (!userExists)
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with id " + userId + " not found");
 		return transactionRepo.findByOrderUserUserId(userId);
 	}
 
 	public List<Transactions> getOrderTransactrions(long orderId) {
 		boolean orderExists = orderRepo.existsById(orderId);
 		if (!orderExists)
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Order not found");
+			throw new NotFoundException("Order with id " + orderId + " not found");
 		return transactionRepo.findByOrderOrderId(orderId);
 	}
 }

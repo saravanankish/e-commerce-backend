@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
 import com.saravanank.ecommerce.resourceserver.service.CartService;
+import com.saravanank.ecommerce.resourceserver.service.CartServiceImpl;
 
 import io.swagger.annotations.ApiOperation;
 

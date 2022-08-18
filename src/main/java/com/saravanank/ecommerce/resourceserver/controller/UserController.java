@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.MobileNumber;
 import com.saravanank.ecommerce.resourceserver.model.User;
+import com.saravanank.ecommerce.resourceserver.service.MobileNumberService;
 import com.saravanank.ecommerce.resourceserver.service.UserService;
-
 import io.swagger.annotations.ApiOperation;
 
 @RestController
@@ -31,6 +31,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private MobileNumberService mobileNumberService;
 
 	@GetMapping
 	@ApiOperation(value = "Get user data", notes = "All users can use this endpoint, returns user data of current authenticated user")
@@ -93,7 +96,7 @@ public class UserController {
 	@ApiOperation(value = "Add mobile number to user", notes = "Only users with admin or customer access can use this endpoint")
 	public ResponseEntity<MobileNumber> addMobileNumber(Principal principal, @RequestBody MobileNumber number) {
 		logger.info("POST request to /api/v1/user/contact");
-		return new ResponseEntity<MobileNumber>(userService.addMobileNumber(principal.getName(), number),
+		return new ResponseEntity<MobileNumber>(mobileNumberService.addMobileNumber(principal.getName(), number),
 				HttpStatus.CREATED);
 	}
 
@@ -103,7 +106,7 @@ public class UserController {
 	public ResponseEntity<MobileNumber> updateMobileNumber(Principal principal, @RequestBody MobileNumber number,
 			@PathVariable("contactId") long contactId) {
 		logger.info("PUT request to /api/v1/user/contact/" + contactId);
-		return new ResponseEntity<MobileNumber>(userService.updateMobileNumber(contactId, number),
+		return new ResponseEntity<MobileNumber>(mobileNumberService.updateMobileNumber(contactId, number),
 				HttpStatus.CREATED);
 	}
 
@@ -112,7 +115,7 @@ public class UserController {
 	@ApiOperation(value = "Delete mobile number of user", notes = "Only users with admin or customer access can use this endpoint")
 	public ResponseEntity<Void> deleteUserMobileNumber(Principal principal, @PathVariable("contactId") long contactId) {
 		logger.info("DELETE request to /api/v1/user/contact/" + contactId);
-		userService.deleteMobileNumber(contactId);
+		mobileNumberService.deleteMobileNumber(contactId);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 

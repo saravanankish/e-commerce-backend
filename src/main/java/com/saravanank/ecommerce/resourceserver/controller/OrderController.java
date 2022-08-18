@@ -23,6 +23,7 @@ import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.Order;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
 import com.saravanank.ecommerce.resourceserver.service.OrderService;
+import com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl;
 
 import io.swagger.annotations.ApiOperation;
 

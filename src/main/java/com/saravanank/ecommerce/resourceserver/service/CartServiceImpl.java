@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
@@ -20,9 +21,9 @@ import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
 
 @Service
-public class CartService {
+public class CartServiceImpl implements CartService {
 
-	private static final Logger logger = Logger.getLogger(CartService.class);
+	private static final Logger logger = Logger.getLogger(CartServiceImpl.class);
 
 	@Autowired
 	private UserRepository userRepo;
@@ -33,29 +34,30 @@ public class CartService {
 	@Autowired
 	private ProductRepository productRepo;
 
+	@Override
 	public Cart getUserCart(String username) {
 		boolean userExists = userRepo.existsByUsername(username);
 		if (!userExists) {
-			logger.warn("Cart of user with username=" + username + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with username " + username + " not found");
 		}
 		logger.warn("Returned cart of user with username=" + username);
 		return cartRepo.findByUserUsername(username);
 	}
 
+	@Override
 	public Cart addProductsToCart(String username, ProductQuantityMapper product) {
 		boolean userExists = userRepo.existsByUsername(username);
 		if (!userExists) {
-			logger.warn("Cart of user with username=" + username + " not found");
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new NotFoundException("User with username " + username + " not found");
 		}
 		Optional<Product> productFromDatabase = productRepo.findById(product.getProductId());
 		if (productFromDatabase.isEmpty()) {
-			logger.warn("Product with product_id=" + product.getProductId() + " not found");
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Product not found");
+			throw new NotFoundException("Product with id " + product.getProductId() + " not found");
 		}
 		product.setProduct(productFromDatabase.get());
 		Cart userCart = cartRepo.findByUserUsername(username);
+		if(userCart == null)
+			throw new NotFoundException("Cart of user with username " + username + " not found");
 		if (userCart.getProducts() == null) {
 			userCart.setProducts(new ArrayList<ProductQuantityMapper>());
 		}
@@ -83,7 +85,7 @@ public class CartService {
 
 	public Cart addCartToUser(User user) {
 		if (user.getUserId() == 0) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User id not present");
+			throw new NotFoundException("User with id " + user.getUserId() + " not found");
 		}
 		logger.info("Added cart to user with id=" + user.getUserId());
 		Cart userCart = new Cart();

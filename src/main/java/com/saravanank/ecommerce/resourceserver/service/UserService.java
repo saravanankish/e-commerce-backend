@@ -1,0 +1,23 @@
+package com.saravanank.ecommerce.resourceserver.service;
+
+import java.util.List;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import com.saravanank.ecommerce.resourceserver.model.User;
+
+public interface UserService extends UserDetailsService {
+
+	public User addUser(User user);
+	
+	public User getUserByUsername(String username);
+	
+	public List<User> getCustomers();
+	
+	public User getUserById(long id);
+	
+	public User updateUser(User user, long customerId, String updatedBy);
+	
+	public void deleteUser(long id);
+	
+}

@@ -20,8 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.ProductResponseModel;
-import com.saravanank.ecommerce.resourceserver.service.ProductService;
-
+import com.saravanank.ecommerce.resourceserver.service.PageCrudOperationService;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
@@ -31,13 +30,13 @@ public class ProductController {
 	private static final Logger logger = Logger.getLogger(ProductController.class);
 
 	@Autowired
-	private ProductService prodService;
+	private PageCrudOperationService<Product, ProductResponseModel> prodService;
 
 	@GetMapping("/{productId}")
 	@ApiOperation(value = "Get product by id", notes = "This is an open endpoint")
 	public ResponseEntity<Product> getProductById(@PathVariable("productId") long productId) {
 		logger.info("GET request to /api/v1/products/" + productId);
-		return new ResponseEntity<Product>(prodService.getProductById(productId), HttpStatus.OK);
+		return new ResponseEntity<Product>(prodService.getById(productId), HttpStatus.OK);
 	}
 
 	@GetMapping
@@ -53,7 +52,7 @@ public class ProductController {
 			limit = 12;
 		if (limit > 100)
 			limit = 100;
-		return new ResponseEntity<ProductResponseModel>(prodService.getAllProducts(page, limit, search), HttpStatus.OK);
+		return new ResponseEntity<ProductResponseModel>(prodService.getAll(page, limit, search), HttpStatus.OK);
 	}
 
 	@PostMapping
@@ -61,7 +60,7 @@ public class ProductController {
 	@ApiOperation(value = "Add a product", notes = "Only user with admin access can use this endpoint")
 	public ResponseEntity<Product> addProduct(@RequestBody Product product, Principal principal) {
 		logger.info("POST request to /api/v1/products");
-		return new ResponseEntity<Product>(prodService.addProduct(product, principal.getName()), HttpStatus.CREATED);
+		return new ResponseEntity<Product>(prodService.add(product, principal.getName()), HttpStatus.CREATED);
 	}
 
 	@PostMapping("/all")
@@ -69,7 +68,7 @@ public class ProductController {
 	@ApiOperation(value = "Add many products", notes = "Only user with admin access can use this endpoint")
 	public ResponseEntity<List<Product>> addProducts(@RequestBody List<Product> products, Principal principal) {
 		logger.info("POST request to /api/v1/products/all");
-		return new ResponseEntity<List<Product>>(prodService.addProducts(products, principal.getName()), HttpStatus.CREATED);
+		return new ResponseEntity<List<Product>>(prodService.addAll(products, principal.getName()), HttpStatus.CREATED);
 	}
 
 	@PutMapping("/{productId}")
@@ -78,7 +77,7 @@ public class ProductController {
 	public ResponseEntity<Product> updateProduct(@RequestBody Product product,
 			@PathVariable("productId") long productId, Principal principal) {
 		logger.info("PUT request to /api/v1/products");
-		return new ResponseEntity<Product>(prodService.updateProduct(product, productId, principal.getName()), HttpStatus.CREATED);
+		return new ResponseEntity<Product>(prodService.update(product, productId, principal.getName()), HttpStatus.CREATED);
 	}
 
 	@DeleteMapping("/{productId}")
@@ -86,7 +85,7 @@ public class ProductController {
 	@ApiOperation(value = "Delete a product", notes = "Only user with admin access can use this endpoint")
 	public ResponseEntity<String> deleteProduct(@PathVariable("productId") long productId) {
 		logger.info("DELET request to /api/v1/products/" + productId);
-		prodService.deleteProduct(productId);
+		prodService.delete(productId);
 		return new ResponseEntity<String>("Deleted successfully", HttpStatus.NO_CONTENT);
 	}
 
