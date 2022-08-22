@@ -1,8 +1,6 @@
 package com.saravanank.ecommerce.resourceserver.controller;
 
 import java.security.Principal;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,9 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.MobileNumber;
+import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.service.MobileNumberService;
 import com.saravanank.ecommerce.resourceserver.service.UserService;
@@ -52,24 +52,32 @@ public class UserController {
 
 	@PostMapping("/register")
 	@ApiOperation(value = "Register customer", notes = "This is an open endpoint to register user")
-	public User registerUser(@RequestBody User user) {
+	public ResponseEntity<User> registerUser(@RequestBody User user) {
 		logger.info("POST request to /api/v1/user/register");
-		return userService.addUser(user);
+		return new ResponseEntity<User>(userService.addUser(user), HttpStatus.CREATED);
 	}
 
 	@PostMapping
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
-	public User addUser(@RequestBody User user) {
+	public ResponseEntity<User> addUser(@RequestBody User user) {
 		logger.info("POST request to /api/v1/user");
-		return userService.addUser(user);
+		return new ResponseEntity<User>(userService.addUser(user), HttpStatus.CREATED);
 	}
 
-	@GetMapping("/customer")
+	@GetMapping("/role/{role}")
 	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_SUPPORT')")
 	@ApiOperation(value = "Get all customer", notes = "Only user with admin or support access can use this endpoint")
-	public ResponseEntity<List<User>> getAllCustomers() {
+	public ResponseEntity<PageResponseModel<User>> getByRole(@RequestParam(required = false, name = "limit") Integer limit,
+			@RequestParam(required = false, name = "page") Integer page,
+			@RequestParam(required = false, name = "search") String search,
+			@PathVariable(name = "role", required = false) String role) {
 		logger.info("GET request to /api/v1/user/customer");
-		return new ResponseEntity<List<User>>(userService.getCustomers(), HttpStatus.OK);
+		if (limit == null)
+			limit = 100;
+		if (limit > 100)
+			limit = 100;
+		if(page == null) page = 0;
+		return new ResponseEntity<PageResponseModel<User>>(userService.getByRole(role, page, limit, search), HttpStatus.OK);
 	}
 
 	@PutMapping("/{customerId}")

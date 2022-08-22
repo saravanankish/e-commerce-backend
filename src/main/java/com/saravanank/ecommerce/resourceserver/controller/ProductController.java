@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Product;
-import com.saravanank.ecommerce.resourceserver.model.ProductResponseModel;
+import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.service.PageCrudOperationService;
 import io.swagger.annotations.ApiOperation;
 
@@ -30,7 +30,7 @@ public class ProductController {
 	private static final Logger logger = Logger.getLogger(ProductController.class);
 
 	@Autowired
-	private PageCrudOperationService<Product, ProductResponseModel> prodService;
+	private PageCrudOperationService<Product, PageResponseModel<Product>> prodService;
 
 	@GetMapping("/{productId}")
 	@ApiOperation(value = "Get product by id", notes = "This is an open endpoint")
@@ -41,7 +41,7 @@ public class ProductController {
 
 	@GetMapping
 	@ApiOperation(value = "Get all products", notes = "This is an open endpoint")
-	public ResponseEntity<ProductResponseModel> getAllProducts(
+	public ResponseEntity<PageResponseModel<Product>> getAllProducts(
 			@RequestParam(required = false, name = "limit") Integer limit,
 			@RequestParam(required = false, name = "page") Integer page,
 			@RequestParam(required = false, name = "search") String search) {
@@ -52,7 +52,7 @@ public class ProductController {
 			limit = 12;
 		if (limit > 100)
 			limit = 100;
-		return new ResponseEntity<ProductResponseModel>(prodService.getAll(page, limit, search), HttpStatus.OK);
+		return new ResponseEntity<PageResponseModel<Product>>(prodService.getAll(page, limit, search), HttpStatus.OK);
 	}
 
 	@PostMapping

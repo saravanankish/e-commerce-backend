@@ -1,9 +1,8 @@
 package com.saravanank.ecommerce.resourceserver.service;
 
-import java.util.List;
-
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
 
 public interface UserService extends UserDetailsService {
@@ -12,7 +11,7 @@ public interface UserService extends UserDetailsService {
 	
 	public User getUserByUsername(String username);
 	
-	public List<User> getCustomers();
+	public PageResponseModel<User> getByRole(String role, Integer page, Integer limit, String search);
 	
 	public User getUserById(long id);
 	

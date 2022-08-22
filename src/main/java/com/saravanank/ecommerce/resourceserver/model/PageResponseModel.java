@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductResponseModel {
+public class PageResponseModel<T> {
 
-	private List<Product> products;
+	private List<T> data;
 	private long total;
 	private int currentPage;
 	private int limit;

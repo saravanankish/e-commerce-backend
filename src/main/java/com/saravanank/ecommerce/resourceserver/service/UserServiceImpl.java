@@ -10,13 +10,18 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
+import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
 
@@ -55,6 +60,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User addUser(User user) {
+		if (userRepo.existsByUsername(user.getUsername())) {
+			throw new BadRequestException("Username already present");
+		}
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		user.setCreationTime(new Date());
 		user.setModifiedTime(new Date());
@@ -72,9 +80,23 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> getCustomers() {
+	public PageResponseModel<User> getByRole(String role, Integer page, Integer limit, String search) {
 		logger.info("Returned All customers");
-		return userRepo.findByRole("CUSTOMER");
+		PageRequest pageReq = PageRequest.of(page, limit);
+		PageResponseModel<User> userResponse = new PageResponseModel<User>();
+		Page<User> user;
+		if (search == null) {
+			user = userRepo.findByRole(role.toUpperCase(), pageReq);
+		} else {
+			user = userRepo.findByRoleAndNameContainingOrEmailContainingOrUsernameContaining(role.toUpperCase(), search,
+					search, search, pageReq);
+		}
+		userResponse.setData(user.toList());
+		userResponse.setCurrentPage(user.getNumber());
+		userResponse.setLimit(limit);
+		userResponse.setTotal(user.getTotalElements());
+		userResponse.setTotalPages(user.getTotalPages());
+		return userResponse;
 	}
 
 	@Override

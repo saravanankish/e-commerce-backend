@@ -1,7 +1,7 @@
 package com.saravanank.ecommerce.resourceserver.repository;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.saravanank.ecommerce.resourceserver.model.User;
@@ -9,9 +9,12 @@ import com.saravanank.ecommerce.resourceserver.model.User;
 public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 
 	public User findByUsername(String username);
-	
-	public List<User> findByRole(String role);
-	
+
+	public Page<User> findByRole(String role, PageRequest request);
+
+	public Page<User> findByRoleAndNameContainingOrEmailContainingOrUsernameContaining(String role, String name,
+			String email, String username, PageRequest request);
+
 	public boolean existsByUsername(String username);
 
 }

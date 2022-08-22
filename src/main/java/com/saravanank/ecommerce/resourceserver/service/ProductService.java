@@ -11,12 +11,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Product;
-import com.saravanank.ecommerce.resourceserver.model.ProductResponseModel;
+import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
 
 @Service
-public class ProductService implements PageCrudOperationService<Product, ProductResponseModel> {
+public class ProductService implements PageCrudOperationService<Product, PageResponseModel<Product>> {
 
 	private static final Logger logger = Logger.getLogger(ProductService.class);
 
@@ -99,16 +99,16 @@ public class ProductService implements PageCrudOperationService<Product, Product
 	}
 
 	@Override
-	public ProductResponseModel getAll(Integer page, Integer limit, String search) {
+	public PageResponseModel<Product> getAll(Integer page, Integer limit, String search) {
 		PageRequest pageReq = PageRequest.of(page, limit);
-		ProductResponseModel productResponse = new ProductResponseModel();
+		PageResponseModel<Product> productResponse = new PageResponseModel<Product>();
 		Page<Product> products;
 		if (search == null) {
 			products = productRepo.findAll(pageReq);
 		} else {
 			products = productRepo.findByNameContainingOrDescriptionContaining(search, search, pageReq);
 		}
-		productResponse.setProducts(products.toList());
+		productResponse.setData(products.toList());
 		productResponse.setTotal(products.getTotalElements());
 		productResponse.setTotalPages(products.getTotalPages());
 		productResponse.setCurrentPage(products.getNumber());
