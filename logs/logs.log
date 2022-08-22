@@ -2330,3 +2330,93 @@
 [2022-08-18 20:19:26,181] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
 [2022-08-18 20:21:14,550] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
 [2022-08-18 20:28:23,576] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
+[2022-08-18 20:39:38,253] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
+[2022-08-21 11:04:01,189] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-21 11:04:01,928] com.saravanank.ecommerce.resourceserver.service.ProductService 119 INFO   -  Returned products
+[2022-08-21 11:46:06,721] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
+[2022-08-21 11:46:23,456] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-21 11:46:23,511] com.saravanank.ecommerce.resourceserver.service.ProductService 119 INFO   -  Returned products
+[2022-08-21 11:47:25,386] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-21 11:47:25,427] com.saravanank.ecommerce.resourceserver.service.ProductService 119 INFO   -  Returned products
+[2022-08-21 12:05:20,904] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-21 12:05:20,949] com.saravanank.ecommerce.resourceserver.service.ProductService 119 INFO   -  Returned products
+[2022-08-21 12:14:58,149] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-21 12:14:58,191] com.saravanank.ecommerce.resourceserver.service.ProductService 119 INFO   -  Returned products
+[2022-08-21 12:15:23,779] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-21 12:18:21,708] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-21 12:18:27,591] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/3
+[2022-08-21 12:18:45,281] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Could not verify the provided CSRF token because no token was found to compare.
+[2022-08-21 12:21:49,023] com.saravanank.ecommerce.resourceserver.controller.ProductController 62 INFO   -  POST request to /api/v1/products
+[2022-08-21 12:21:49,025] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 73 INFO   -  Returned user with username=admin
+[2022-08-21 12:21:49,172] com.saravanank.ecommerce.resourceserver.service.ProductService 58 INFO   -  Added product with productId=102
+[2022-08-21 12:22:21,387] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-21 12:22:21,411] com.saravanank.ecommerce.resourceserver.service.ProductService 119 INFO   -  Returned products
+[2022-08-21 12:22:39,926] com.saravanank.ecommerce.resourceserver.controller.ProductController 62 INFO   -  POST request to /api/v1/products
+[2022-08-21 12:22:39,927] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 73 INFO   -  Returned user with username=admin
+[2022-08-21 12:22:39,988] com.saravanank.ecommerce.resourceserver.service.ProductService 58 INFO   -  Added product with productId=103
+[2022-08-21 12:22:59,595] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-21 12:23:10,019] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Invalid signature
+[2022-08-21 12:23:26,964] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 11:56:53,976] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-22 12:30:48,964] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 12:30:48,965] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 12:31:58,802] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 12:31:58,802] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 12:32:37,057] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 12:32:37,057] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 12:32:44,999] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-22 12:33:11,110] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 12:33:11,110] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 12:33:12,554] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 12:33:12,554] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 12:33:33,162] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-22 12:33:40,257] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-22 12:33:46,152] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-22 12:33:46,222] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 12:34:26,685] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-22 12:34:46,386] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-22 12:35:15,325] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-22 12:35:30,136] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-22 12:35:54,618] com.saravanank.ecommerce.resourceserver.controller.OrderController 63 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 12:35:54,619] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 84 INFO   -  Returned all order
+[2022-08-22 12:46:44,171] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-22 12:48:02,031] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-22 12:48:05,912] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 32 ERROR  -  Invoice with id 1 not found
+[2022-08-22 12:48:42,962] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-22 13:16:27,347] com.saravanank.ecommerce.resourceserver.controller.OrderController 63 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:16:27,348] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 84 INFO   -  Returned all order
+[2022-08-22 13:17:19,864] com.saravanank.ecommerce.resourceserver.controller.OrderController 63 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:17:19,865] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 84 INFO   -  Returned all order
+[2022-08-22 13:17:43,379] com.saravanank.ecommerce.resourceserver.controller.OrderController 48 INFO   -  GET request to /api/v1/order/11
+[2022-08-22 13:17:43,388] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 32 ERROR  -  User with id 11 not found
+[2022-08-22 13:22:06,460] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 108 ERROR  -  Unsupported Http method to path /api
+[2022-08-22 13:22:12,396] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 108 ERROR  -  Unsupported Http method to path /api
+[2022-08-22 13:23:09,260] com.saravanank.ecommerce.resourceserver.controller.OrderController 60 INFO   -  POST request to /api/v1/order/cancel11
+[2022-08-22 13:24:47,803] com.saravanank.ecommerce.resourceserver.controller.OrderController 83 INFO   -  POST request to /api/v1/order/add
+[2022-08-22 13:24:47,939] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 210 INFO   -  Added order for user customer
+[2022-08-22 13:49:38,598] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 13:49:43,948] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 13:49:49,624] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 13:49:54,808] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:49:54,808] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 13:52:33,193] com.saravanank.ecommerce.resourceserver.controller.OrderController 83 INFO   -  POST request to /api/v1/order/add
+[2022-08-22 13:53:06,601] com.saravanank.ecommerce.resourceserver.controller.OrderController 83 INFO   -  POST request to /api/v1/order/add
+[2022-08-22 13:54:04,433] com.saravanank.ecommerce.resourceserver.controller.OrderController 83 INFO   -  POST request to /api/v1/order/add
+[2022-08-22 13:54:04,503] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 213 INFO   -  Added order for user customer
+[2022-08-22 13:54:14,626] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 32 ERROR  -  Invoice of order with id 12 not found
+[2022-08-22 13:55:37,002] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:55:37,003] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 13:57:03,449] com.saravanank.ecommerce.resourceserver.controller.OrderController 83 INFO   -  POST request to /api/v1/order/add
+[2022-08-22 13:57:03,545] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 213 INFO   -  Added order for user customer
+[2022-08-22 13:57:13,379] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:57:13,380] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 13:57:51,721] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:57:51,722] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 13:58:36,639] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:58:36,639] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 13:58:46,878] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 13:58:46,878] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 14:00:00,308] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 14:00:00,310] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 14:03:03,166] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
+[2022-08-22 14:03:03,189] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order

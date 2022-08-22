@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 public class BadRequestException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
-	private HttpStatus errorCode = HttpStatus.NOT_FOUND;
+	private HttpStatus errorCode = HttpStatus.BAD_REQUEST;
 	private String errorMessage;
 
 	public BadRequestException(HttpStatus errorCode, String errorMessage) {

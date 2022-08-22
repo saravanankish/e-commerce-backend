@@ -7,10 +7,7 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.Product;
@@ -66,7 +63,7 @@ public class CartServiceImpl implements CartService {
 		if (qMapper.size() != 0) {
 			if (product.getQuantity() == 0) {
 				userCart.setProducts(userCart.getProducts().stream()
-						.filter(prod -> prod.getProductId() != product.getProductId()).toList());
+						.filter(prod -> prod.getProductId() != product.getProductId()).collect(Collectors.toList()));
 			} else {
 				userCart.getProducts().stream().forEach(prod -> {
 					if (prod.getProductId() == product.getProductId()) {

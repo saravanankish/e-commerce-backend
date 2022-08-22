@@ -21,7 +21,7 @@ public class Json {
 		objectMapper.configure(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES, false);
 		return objectMapper;
 	}
-
+	
 	public static JsonNode parse(String src) throws JsonMappingException, JsonProcessingException {
 		return objectMapper.readTree(src);
 	}
@@ -29,6 +29,10 @@ public class Json {
 	public static <A> A fromJson(JsonNode node, Class<A> className)
 			throws JsonProcessingException, IllegalArgumentException {
 		return objectMapper.treeToValue(node, className);
+	}
+	
+	public static JsonNode toJson(Object data) {
+		return objectMapper.valueToTree(data);
 	}
 
 	public static <A> List<A> fromJsonAsList(String src, Class<A> a)

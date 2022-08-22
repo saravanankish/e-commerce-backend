@@ -1,14 +1,11 @@
 package com.saravanank.ecommerce.resourceserver.model;
 
-import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -31,7 +28,7 @@ public class Invoice {
 	@JoinColumn(name ="invoice_of_user")
 	private User user;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "invoice_of_order")
 	private Order order;
 	
@@ -43,7 +40,4 @@ public class Invoice {
 	private float totalAmountReturned;
 	private float pendingReturns;
 	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name = "invoice_id")
-	private List<Transactions> transactions;
 }

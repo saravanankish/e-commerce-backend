@@ -41,7 +41,7 @@ public class ResourceServerConfig {
             "/v3/api-docs/**",
             "/**/swagger-ui/**"
     };
-
+	
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.cors(c -> {

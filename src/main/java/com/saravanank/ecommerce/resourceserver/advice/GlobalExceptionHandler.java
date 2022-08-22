@@ -10,9 +10,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.RestResponse;
@@ -53,6 +56,37 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		errResponse.setStatus(400);
 		errResponse.setTimestamp(new Date().toString());
 		return new ResponseEntity<RestResponse>(errResponse, HttpStatus.BAD_REQUEST);
+	}
+
+	@ExceptionHandler(HttpClientErrorException.class)
+	public ResponseEntity<RestResponse> clientHttpErr(HttpClientErrorException clientExp) {
+		RestResponse errResponse = new RestResponse();
+		logger.error(clientExp.getMessage());
+		errResponse.setError(clientExp.getMessage());
+		errResponse.setMessage("Error occured while getting data from other clients");
+		errResponse.setStatus(clientExp.getStatusCode().value());
+		errResponse.setTimestamp(new Date().toString());
+		return new ResponseEntity<RestResponse>(errResponse, clientExp.getStatusCode());
+	}
+
+	@ExceptionHandler({ JsonMappingException.class, JsonProcessingException.class })
+	public ResponseEntity<RestResponse> jsonMappingException(JsonMappingException mapExp,
+			JsonProcessingException proccessingExp) {
+		RestResponse errResponse = new RestResponse();
+		if (mapExp != null) {
+			logger.error(mapExp.getMessage());
+			errResponse.setError(mapExp.getMessage());
+			errResponse.setMessage("Couldn't map JSON");
+			errResponse.setStatus(500);
+			errResponse.setTimestamp(new Date().toString());
+		} else {
+			logger.error(proccessingExp.getMessage());
+			errResponse.setError(proccessingExp.getMessage());
+			errResponse.setMessage("Couldn't process JSON");
+			errResponse.setStatus(500);
+			errResponse.setTimestamp(new Date().toString());			
+		}
+		return new ResponseEntity<RestResponse>(errResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	@Override

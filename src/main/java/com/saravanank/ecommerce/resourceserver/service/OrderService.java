@@ -11,6 +11,8 @@ public interface OrderService {
 	
 	public List<Order> getUserOrders(long userId);
 	
+	public Order getById(long id);
+	
 	public List<Order> getAllOrders();
 	
 	public Order updateOrder(Order order, long orderId);

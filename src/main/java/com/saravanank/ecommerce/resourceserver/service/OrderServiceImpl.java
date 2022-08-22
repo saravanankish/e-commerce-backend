@@ -5,15 +5,22 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.apache.log4j.Logger;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.Invoice;
+import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.Order;
 import com.saravanank.ecommerce.resourceserver.model.OrderStatus;
 import com.saravanank.ecommerce.resourceserver.model.PaymentType;
@@ -129,7 +136,7 @@ public class OrderServiceImpl implements OrderService {
 		}
 		return orderHelper(placedForUser, placedByUser, products, paymentType);
 	}
-	
+
 	@Override
 	public Order placeOrderForUser(long userId, String placedBy, List<ProductQuantityMapper> products,
 			String paymentType) {
@@ -172,7 +179,7 @@ public class OrderServiceImpl implements OrderService {
 			if (product.getQuantity() <= 0) {
 				throw new BadRequestException("Quantity should be more than one, couldn't place order");
 			}
-			if(prod.getQuantity() < product.getQuantity()) {
+			if (prod.getQuantity() < product.getQuantity()) {
 				throw new BadRequestException("Insufficient stock of " + productData.get().getName());
 			}
 			prod.setQuantity(prod.getQuantity() - product.getQuantity());
@@ -200,6 +207,7 @@ public class OrderServiceImpl implements OrderService {
 		invoice.setTotalAmountReceivable(totalValue + (totalValue * (taxPercentage / 100)));
 		invoice.setAmountPending(totalValue + (totalValue * (taxPercentage / 100)));
 		invoice.setUser(placedForUser);
+		orderRepo.saveAndFlush(userOrder);
 		invoiceRepo.saveAndFlush(invoice);
 		logger.info("Added order for user " + placedForUser.getUsername());
 		return invoice.getOrder();
@@ -208,7 +216,8 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public Order cancelOrder(long orderId, String cancelReason) {
 		Optional<Order> order = orderRepo.findById(orderId);
-		if(order.isEmpty()) throw new NotFoundException("Order with id " + orderId + " not found");
+		if (order.isEmpty())
+			throw new NotFoundException("Order with id " + orderId + " not found");
 		Order orderData = order.get();
 		orderData.setOrderStatus(OrderStatus.CANCELED);
 		orderData.setCancelDate(new Date());
@@ -218,5 +227,53 @@ public class OrderServiceImpl implements OrderService {
 		orderRepo.saveAndFlush(orderData);
 		return orderData;
 	}
-	
+
+	@RabbitListener(queues = "my-transactions")
+	@Transactional
+	private void recieveTransactions(String data) {
+		try {
+			JsonNode transactionJson = Json.parse(data);
+			long orderId = transactionJson.get("orderId").asLong();
+			long userId = transactionJson.get("userId").asLong();
+			Optional<Order> orderInDb = orderRepo.findById(orderId);
+			if (orderInDb.isEmpty()) {
+				logger.error(
+						"Order with id " + orderId + " is not present, wrong payment made by user with id " + userId);
+			}
+			Order order = orderInDb.get();
+			float amountReceived = (float) transactionJson.get("amount").asDouble();
+			Invoice orderInvoice = invoiceRepo.findByOrderOrderId(order.getOrderId());
+			float totalAmountReceived = orderInvoice.getTotalAmountReceived() + amountReceived;
+			float totalAmountPending = orderInvoice.getTotalAmountReceivable() - totalAmountReceived;
+			orderInvoice.setTotalAmountReceived(totalAmountReceived);
+			if (totalAmountPending < 0) {
+				orderInvoice.setTotalAmountReturnable(totalAmountReceived - orderInvoice.getTotalAmountReceivable());
+				orderInvoice.setAmountPending(0);
+			} else {
+				orderInvoice.setAmountPending(totalAmountPending);
+			}
+			if (totalAmountPending <= 0) {
+				Date today = new Date();
+				order.setOrderStatus(OrderStatus.PLACED);
+				order.setModifiedDate(today);
+				order.setExpectedDeliveryDate(new Date(today.getTime() + (7 * 24 * 60 * 60 * 1000)));
+				orderRepo.saveAndFlush(order);
+				System.out.println("In placed");
+			}
+			invoiceRepo.save(orderInvoice);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+			logger.error(e);
+		}
+
+	}
+
+	@Override
+	public Order getById(long id) {
+		Optional<Order> order = orderRepo.findById(id);
+		if (order.isEmpty())
+			throw new NotFoundException("Order with id " + id + " not found");
+		return order.get();
+	}
+
 }

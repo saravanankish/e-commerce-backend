@@ -23,8 +23,6 @@ import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.Order;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
 import com.saravanank.ecommerce.resourceserver.service.OrderService;
-import com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl;
-
 import io.swagger.annotations.ApiOperation;
 
 @RestController
@@ -44,7 +42,12 @@ public class OrderController {
 		return new ResponseEntity<List<Order>>(orderService.getUserOrders(principal.getName()), HttpStatus.OK);
 	}
 
-	@GetMapping("/{customerId}")
+	@GetMapping("/{orderId}")
+	public ResponseEntity<Order> getOrderById(@PathVariable("orderId") long orderId) {
+		return new ResponseEntity<Order>(orderService.getById(orderId), HttpStatus.OK);
+	}
+
+	@GetMapping("/customer/{customerId}")
 	@ApiOperation(value = "Get orders of customer", notes = "All users can use this endpoint")
 	public ResponseEntity<List<Order>> getOrderOfCustomer(@PathVariable("customerId") long customerId) {
 		logger.info("GET request to /api/v1/order/" + customerId);
@@ -55,7 +58,7 @@ public class OrderController {
 	@ApiOperation(value = "Cancel an order", notes = "All users can use this endpoint")
 	public ResponseEntity<Order> cancelOrder(@PathVariable("orderId") long orderId, @RequestBody String cancelReason) {
 		logger.info("POST request to /api/v1/order/cancel" + orderId);
-		return new ResponseEntity<Order>(orderService.cancelOrder(orderId, cancelReason) ,HttpStatus.CREATED);
+		return new ResponseEntity<Order>(orderService.cancelOrder(orderId, cancelReason), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/all")
