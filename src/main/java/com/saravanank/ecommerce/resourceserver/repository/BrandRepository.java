@@ -6,4 +6,6 @@ import com.saravanank.ecommerce.resourceserver.model.Brand;
 
 public interface BrandRepository extends JpaRepository<Brand, Long> {
 
+	public Brand findByNameIgnoreCase(String name);
+	
 }

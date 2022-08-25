@@ -11,8 +11,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Product;
+import com.saravanank.ecommerce.resourceserver.model.Brand;
+import com.saravanank.ecommerce.resourceserver.model.Category;
 import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
+import com.saravanank.ecommerce.resourceserver.repository.BrandRepository;
+import com.saravanank.ecommerce.resourceserver.repository.CategoryRepository;
 import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
 
 @Service
@@ -25,6 +29,12 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private BrandRepository brandRepo;
+
+	@Autowired
+	private CategoryRepository categoryRepo;
 
 	@Override
 	public Product getById(long id) {
@@ -48,9 +58,39 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 
 	@Override
 	public Product add(Product data, String modifiedBy) {
+		User modifiedByUser = userService.getUserByUsername(modifiedBy);
+		if (data.getBrand().getId() == 0) {
+			Brand brandInDb = brandRepo.findByNameIgnoreCase(data.getBrand().getName());
+			if (brandInDb != null) {
+				data.setBrand(brandInDb);
+			} else {
+				Brand newBrand = new Brand();
+				newBrand.setName(data.getBrand().getName());
+				newBrand.setCreationDate(new Date());
+				newBrand.setModifiedBy(modifiedByUser);
+				newBrand.setModifiedDate(new Date());
+				brandRepo.saveAndFlush(newBrand);
+				data.setBrand(newBrand);
+			}
+		}
+		if (!categoryRepo.existsBySubCategoryIgnoreCase(data.getCategory())) {
+			Category category = categoryRepo.findByNameIgnoreCase("Others");
+			if (category == null) {
+				Category newCategory = new Category();
+				newCategory.setCreationDate(new Date());
+				newCategory.setModifiedDate(new Date());
+				newCategory.setModifiedBy(modifiedByUser);
+				newCategory.setName("Others");
+				newCategory.setSubCategory(List.of(data.getCategory()));
+				categoryRepo.saveAndFlush(newCategory);
+			} else {
+				category.getSubCategory().add(data.getCategory());
+				categoryRepo.saveAndFlush(category);
+			}
+		}
 		data.setModifiedDate(new Date());
 		data.setCreationDate(new Date());
-		data.setModifiedBy(userService.getUserByUsername(modifiedBy));
+		data.setModifiedBy(modifiedByUser);
 		productRepo.save(data);
 		logger.info("Added product with productId=" + data.getProductId());
 		return data;
@@ -58,6 +98,7 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 
 	@Override
 	public Product update(Product data, long id, String modifiedBy) {
+		User modifiedByUser = userService.getUserByUsername(modifiedBy);
 		Optional<Product> productInDb = productRepo.findById(id);
 		if (productInDb.isEmpty()) {
 			throw new NotFoundException("Product with id " + id + " not found");
@@ -77,12 +118,43 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 			productData.setThumbnail(data.getThumbnail());
 		if (data.getImages() != null)
 			productData.setImages(data.getImages());
-		if (data.getBrand() != null)
+		if (data.getBrand() != null) {
+			if (data.getBrand().getId() == 0) {
+				Brand brandInDb = brandRepo.findByNameIgnoreCase(data.getBrand().getName());
+				if (brandInDb != null) {
+					data.setBrand(brandInDb);
+				} else {
+					Brand newBrand = new Brand();
+					newBrand.setName(data.getBrand().getName());
+					newBrand.setCreationDate(new Date());
+					newBrand.setModifiedBy(modifiedByUser);
+					newBrand.setModifiedDate(new Date());
+					brandRepo.saveAndFlush(newBrand);
+					data.setBrand(newBrand);
+				}
+			}
 			productData.setBrand(data.getBrand());
-		if (data.getCategory() != null)
+		}
+		if (data.getCategory() != null) {
+			if (!categoryRepo.existsBySubCategoryIgnoreCase(data.getCategory())) {
+				Category category = categoryRepo.findByNameIgnoreCase("Others");
+				if (category == null) {
+					Category newCategory = new Category();
+					newCategory.setCreationDate(new Date());
+					newCategory.setModifiedDate(new Date());
+					newCategory.setModifiedBy(modifiedByUser);
+					newCategory.setName("Others");
+					newCategory.setSubCategory(List.of(data.getCategory()));
+					categoryRepo.saveAndFlush(newCategory);
+				} else {
+					category.getSubCategory().add(data.getCategory());
+					categoryRepo.saveAndFlush(category);
+				}
+			}
 			productData.setCategory(data.getCategory());
+		}
 		data.setModifiedDate(new Date(new java.util.Date().getTime()));
-		data.setModifiedBy(userService.getUserByUsername(modifiedBy));
+		data.setModifiedBy(modifiedByUser);
 		productRepo.save(productData);
 		logger.info("Updated product with productId=" + data.getProductId());
 		return productData;

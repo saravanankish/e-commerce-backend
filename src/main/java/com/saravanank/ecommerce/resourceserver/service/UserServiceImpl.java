@@ -88,8 +88,8 @@ public class UserServiceImpl implements UserService {
 		if (search == null) {
 			user = userRepo.findByRole(role.toUpperCase(), pageReq);
 		} else {
-			user = userRepo.findByRoleAndNameContainingOrEmailContainingOrUsernameContaining(role.toUpperCase(), search,
-					search, search, pageReq);
+			user = userRepo.findByNameContainingOrEmailContainingOrUsernameContainingAndRole(search, search, search,
+					role.toUpperCase(), pageReq);
 		}
 		userResponse.setData(user.toList());
 		userResponse.setCurrentPage(user.getNumber());

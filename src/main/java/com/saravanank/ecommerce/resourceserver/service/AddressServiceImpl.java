@@ -104,14 +104,20 @@ public class AddressServiceImpl implements AddressService {
 		User user = userRepo.findByUsername(username);
 		if (user == null)
 			throw new NotFoundException("User with username " + username + " not found");
+		boolean addressExistsForUser = false;
 		List<Address> userAddress = user.getAddresses();
-		userAddress.stream().forEach(address -> {
+		for(Address address: userAddress) {
 			if (address.getId() == addressId) {
 				address.setDeliveryAddress(true);
+				addressExistsForUser = true;
+				return;
 			} else {
 				address.setDeliveryAddress(false);
 			}
-		});
+		}
+		if(!addressExistsForUser) {
+			throw new NotFoundException("Address with id " + addressId + " is not present for user " + username);
+		}
 		user.setAddresses(userAddress);
 		userRepo.save(user);
 	}

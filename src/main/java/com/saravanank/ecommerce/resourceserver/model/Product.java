@@ -36,14 +36,14 @@ public class Product {
 	@ElementCollection
 	private List<String> images;
 	
-	@OneToOne(cascade = CascadeType.MERGE)
+	@OneToOne(cascade = CascadeType.REFRESH)
 	private Brand brand;
 	
 	private String category;
 	private Date creationDate = new Date();
 	private Date modifiedDate = new Date();
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "modified_by")
 	private User modifiedBy;
 	

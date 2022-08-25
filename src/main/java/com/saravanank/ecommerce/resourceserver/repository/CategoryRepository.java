@@ -11,7 +11,9 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
 	@Query(nativeQuery = true, value = "SELECT sub_category FROM category_sub_category")
 	public List<String> findAllSubcategories();
-	
-	public boolean existsBySubCategory(String subCategory);
-	
+
+	public boolean existsBySubCategoryIgnoreCase(String subCategory);
+
+	public Category findByNameIgnoreCase(String name);
+
 }
