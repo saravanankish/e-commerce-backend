@@ -229,7 +229,6 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@RabbitListener(queues = "my-transactions")
-	@Transactional
 	private void recieveTransactions(String data) {
 		try {
 			JsonNode transactionJson = Json.parse(data);

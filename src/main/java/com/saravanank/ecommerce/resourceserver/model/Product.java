@@ -26,6 +26,7 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long productId;
+	
 	private String name;
 	private String description;
 	private float price;

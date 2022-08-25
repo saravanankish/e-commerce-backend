@@ -2878,3 +2878,123 @@
 [2022-08-25 09:59:51,809] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
 [2022-08-25 09:59:51,831] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
 [2022-08-25 09:59:51,847] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-25 10:30:19,501] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-25 10:30:19,981] com.saravanank.ecommerce.resourceserver.service.ProductService 188 INFO   -  Returned products
+[2022-08-25 10:30:33,359] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-25 10:30:54,013] com.saravanank.ecommerce.resourceserver.controller.CategoryController 46 INFO   -  POST request to /api/v1/category/all
+[2022-08-25 10:30:54,013] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin
+[2022-08-25 10:30:54,035] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 7 category(ies)
+[2022-08-25 10:35:56,717] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-25 10:36:04,676] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-25 10:36:04,676] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-25 10:36:12,913] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 96 ERROR  -  Unsupported Http method to path /api
+[2022-08-25 10:36:19,461] com.saravanank.ecommerce.resourceserver.controller.CategoryController 61 INFO   -  GET request to /api/v1/category/all
+[2022-08-25 10:36:19,462] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 10:36:36,199] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-25 10:36:36,205] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-25 10:38:12,232] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-25 10:38:16,876] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-25 10:38:16,885] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-25 10:39:12,612] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-25 10:39:18,389] com.saravanank.ecommerce.resourceserver.controller.ProductController 62 INFO   -  POST request to /api/v1/products
+[2022-08-25 10:39:18,390] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin
+[2022-08-25 10:39:18,536] com.saravanank.ecommerce.resourceserver.service.ProductService 95 INFO   -  Added product with productId=101
+[2022-08-25 10:39:50,433] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-25 10:39:50,433] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-25 10:40:27,567] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-08-25 10:40:33,826] com.saravanank.ecommerce.resourceserver.controller.CategoryController 61 INFO   -  GET request to /api/v1/category/all
+[2022-08-25 10:40:33,826] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 11:32:11,681] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 11:35:31,642] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 11:40:05,910] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 11:40:05,929] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 11:41:46,805] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 11:41:46,958] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 11:43:56,470] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 11:43:56,496] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:28:55,248] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:28:55,278] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:37:48,897] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:37:48,923] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:37:48,959] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:40:01,912] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:40:01,953] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:45:26,793] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:45:26,817] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:45:56,579] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:45:56,600] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:45:56,615] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:47:01,306] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:47:01,313] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:47:01,327] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:47:01,336] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:48:14,868] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:48:14,875] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:48:14,911] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:48:14,921] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:50:06,761] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:50:06,771] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:50:06,787] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:50:06,806] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:53:31,682] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:53:31,689] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:53:31,695] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:53:31,711] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:53:31,725] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 13:59:22,751] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:59:22,758] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:59:22,765] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 13:59:22,775] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 13:59:22,785] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 14:04:53,868] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 14:04:53,879] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 14:04:53,888] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 14:04:53,905] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 14:04:53,919] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 14:04:53,969] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test2
+[2022-08-25 14:05:33,366] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 14:05:33,373] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 14:05:33,380] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=test1
+[2022-08-25 14:05:33,392] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=test1
+[2022-08-25 14:05:33,403] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-25 15:49:29,326] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 15:49:29,391] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 15:49:29,451] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 15:49:29,489] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=1
+[2022-08-25 15:49:29,492] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
+[2022-08-25 15:49:29,494] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
+[2022-08-25 15:50:38,907] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 15:50:38,982] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 15:50:39,106] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=1
+[2022-08-25 15:50:39,107] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
+[2022-08-25 15:50:39,125] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
+[2022-08-25 15:50:50,646] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 15:50:50,684] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 15:50:50,713] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=1
+[2022-08-25 15:50:50,714] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
+[2022-08-25 15:50:50,715] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
+[2022-08-25 15:54:52,673] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 15:54:52,736] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 15:54:52,784] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=1
+[2022-08-25 15:54:52,785] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
+[2022-08-25 15:54:52,787] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
+[2022-08-25 15:54:53,028] com.saravanank.ecommerce.resourceserver.service.CategoryService 61 INFO   -  Added category with category_id=4
+[2022-08-25 15:57:39,929] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 15:57:39,976] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 15:57:40,002] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=1
+[2022-08-25 15:57:40,003] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
+[2022-08-25 15:57:40,004] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
+[2022-08-25 15:57:40,053] com.saravanank.ecommerce.resourceserver.service.CategoryService 61 INFO   -  Added category with category_id=4
+[2022-08-25 15:59:14,615] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 15:59:14,699] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 15:59:14,743] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=1
+[2022-08-25 15:59:14,744] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
+[2022-08-25 15:59:14,745] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
+[2022-08-25 15:59:14,765] com.saravanank.ecommerce.resourceserver.service.CategoryService 61 INFO   -  Added category with category_id=4
+[2022-08-25 16:02:12,136] com.saravanank.ecommerce.resourceserver.service.CategoryService 89 INFO   -  Deleted category with id=3
+[2022-08-25 16:02:12,205] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-25 16:02:12,267] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 3 category(ies)
+[2022-08-25 16:02:12,282] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=1
+[2022-08-25 16:02:12,283] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
+[2022-08-25 16:02:12,284] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
+[2022-08-25 16:02:12,302] com.saravanank.ecommerce.resourceserver.service.CategoryService 61 INFO   -  Added category with category_id=4
