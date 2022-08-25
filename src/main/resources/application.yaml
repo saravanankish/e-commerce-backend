@@ -1,0 +1,31 @@
+server:
+  port: ${server-port:8080}
+  servlet:
+    context-path: /api
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://${jwt-issuer-uri:auth-server:9000}
+  datasource:
+    url: jdbc:mysql://localhost:3306/${database-name:project_test}
+    username: ${database-username:root}
+    password: ${database-password:password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true       
+    hibernate:
+      ddl-auto: update
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher 
+  rabbitmq:
+    template:
+      default-receive-queue: my-transactions
+e-commerce:
+  application:
+    tax-percentage: ${application-tax-percentage:8}
+    transaction-url: http://${transaction-url:"localhost:8081"}/api/v1/transaction
+    client-id: ${client-id}
+    
