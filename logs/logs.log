@@ -2420,3 +2420,461 @@
 [2022-08-22 14:00:00,310] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
 [2022-08-22 14:03:03,166] com.saravanank.ecommerce.resourceserver.controller.OrderController 68 INFO   -  GET request to /api/v1/order/all
 [2022-08-22 14:03:03,189] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 86 INFO   -  Returned all order
+[2022-08-22 15:12:29,526] com.saravanank.ecommerce.resourceserver.controller.UserController 56 INFO   -  POST request to /api/v1/user/register
+[2022-08-22 15:12:30,226] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=1
+[2022-08-22 15:12:30,246] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 64 INFO   -  Added user with userid=1
+[2022-08-22 15:15:43,742] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-22 15:15:55,161] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:15:55,199] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:15:55,516] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:15:55,516] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:16:03,341] com.saravanank.ecommerce.resourceserver.controller.UserController 56 INFO   -  POST request to /api/v1/user/register
+[2022-08-22 15:16:03,879] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 64 INFO   -  Added user with userid=2
+[2022-08-22 15:17:39,523] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:17:39,537] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:17:39,568] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:17:39,574] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:18:03,905] com.saravanank.ecommerce.resourceserver.controller.CategoryController 46 INFO   -  POST request to /api/v1/category/all
+[2022-08-22 15:18:03,906] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 75 INFO   -  Returned user with username=admin
+[2022-08-22 15:18:04,011] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 7 category(ies)
+[2022-08-22 15:18:21,858] com.saravanank.ecommerce.resourceserver.controller.BrandController 46 INFO   -  POST request to /api/v1/brand/all
+[2022-08-22 15:18:21,861] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 75 INFO   -  Returned user with username=admin
+[2022-08-22 15:18:21,872] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 78 brand(s)
+[2022-08-22 15:18:33,505] com.saravanank.ecommerce.resourceserver.controller.ProductController 70 INFO   -  POST request to /api/v1/products/all
+[2022-08-22 15:18:33,506] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 75 INFO   -  Returned user with username=admin
+[2022-08-22 15:18:33,511] com.saravanank.ecommerce.resourceserver.service.ProductService 45 INFO   -  Added 100 product(s)
+[2022-08-22 15:18:37,190] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:18:37,271] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:18:37,381] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:18:37,382] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:18:40,309] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=1&limit=null
+[2022-08-22 15:18:40,387] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:18:54,464] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:18:54,504] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:18:54,568] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:18:54,635] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:18:55,507] com.saravanank.ecommerce.resourceserver.controller.UserController 41 INFO   -  GET request to /api/v1/user
+[2022-08-22 15:18:55,507] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 75 INFO   -  Returned user with username=customer
+[2022-08-22 15:18:55,675] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 15:18:55,683] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 15:18:55,737] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 15:18:55,737] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 15:18:59,016] com.saravanank.ecommerce.resourceserver.controller.CartController 42 INFO   -  POST request to /api/v1/cart/add
+[2022-08-22 15:18:59,046] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=customer
+[2022-08-22 15:18:59,136] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 15:18:59,139] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 15:19:00,995] com.saravanank.ecommerce.resourceserver.controller.CartController 42 INFO   -  POST request to /api/v1/cart/add
+[2022-08-22 15:19:01,026] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=customer
+[2022-08-22 15:19:01,103] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 15:19:01,107] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 15:19:01,964] com.saravanank.ecommerce.resourceserver.controller.CartController 42 INFO   -  POST request to /api/v1/cart/add
+[2022-08-22 15:19:01,980] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=customer
+[2022-08-22 15:19:02,038] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 15:19:02,042] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 15:19:05,922] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:19:05,967] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:05,971] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:19:06,064] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:06,067] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 15:19:06,070] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 15:19:06,249] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 15:19:06,252] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 15:19:06,981] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:19:07,084] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:19:07,486] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:07,498] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:09,225] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=1&limit=null
+[2022-08-22 15:19:09,292] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:11,384] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=2&limit=null
+[2022-08-22 15:19:11,425] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:13,324] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=3&limit=null
+[2022-08-22 15:19:13,373] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:21,673] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 15:19:21,993] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:22,867] com.saravanank.ecommerce.resourceserver.controller.UserController 41 INFO   -  GET request to /api/v1/user
+[2022-08-22 15:19:22,867] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 75 INFO   -  Returned user with username=admin
+[2022-08-22 15:19:23,828] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 15:19:23,869] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 15:19:27,303] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 15:19:27,338] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:27,380] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 15:19:27,398] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:38,671] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 15:19:38,691] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:42,236] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 15:19:42,241] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:19:47,080] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:19:47,129] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:19:47,157] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:19:47,158] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:19:47,211] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:19:47,212] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:19:56,600] com.saravanank.ecommerce.resourceserver.controller.ProductController 79 INFO   -  PUT request to /api/v1/products
+[2022-08-22 15:19:56,606] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 75 INFO   -  Returned user with username=admin
+[2022-08-22 15:20:20,512] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 15:20:20,531] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:20:20,550] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 15:20:20,569] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:20:23,475] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 15:20:23,481] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 15:20:24,238] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:20:24,265] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:20:24,287] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:20:24,288] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:20:24,340] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:20:24,341] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:20:37,333] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:20:37,337] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:20:37,459] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:20:37,459] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:20:37,463] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:20:37,465] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:21:48,145] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:21:48,149] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 15:21:48,267] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:21:48,268] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:21:48,267] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 15:21:48,270] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 15:21:48,273] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 15:21:48,273] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 15:21:48,280] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 15:21:48,282] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 15:43:41,970] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:43:41,971] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:43:41,973] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:43:41,972] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:43:49,313] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:43:49,314] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:43:49,319] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:43:49,320] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:44:16,160] com.saravanank.ecommerce.resourceserver.controller.CategoryController 61 INFO   -  GET request to /api/v1/category/all
+[2022-08-22 15:44:16,160] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-22 15:44:16,160] com.saravanank.ecommerce.resourceserver.controller.CategoryController 61 INFO   -  GET request to /api/v1/category/all
+[2022-08-22 15:44:16,161] com.saravanank.ecommerce.resourceserver.service.CategoryService 38 INFO   -  Returned all categories
+[2022-08-22 15:46:27,401] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:46:27,402] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:46:27,433] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:46:27,434] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:46:58,298] com.saravanank.ecommerce.resourceserver.controller.UserController 49 INFO   -  GET request to /api/v1/user/1
+[2022-08-22 15:46:58,304] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 91 INFO   -  Returned user with userId=1
+[2022-08-22 15:46:58,320] com.saravanank.ecommerce.resourceserver.controller.UserController 49 INFO   -  GET request to /api/v1/user/1
+[2022-08-22 15:46:58,324] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 91 INFO   -  Returned user with userId=1
+[2022-08-22 15:47:02,476] com.saravanank.ecommerce.resourceserver.controller.UserController 80 INFO   -  GET request to /api/v1/user/1
+[2022-08-22 15:47:02,497] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 117 INFO   -  Updated user with userId=1
+[2022-08-22 15:47:02,554] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:02,555] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:02,590] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:47:02,614] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:02,615] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:02,621] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:47:05,708] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:05,710] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:05,720] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:47:05,749] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:05,749] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:05,756] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:47:40,439] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:40,439] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:40,457] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:47:40,493] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:40,494] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:40,500] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:47:50,307] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:50,307] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:50,308] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:47:50,309] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:47:50,317] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:47:50,320] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 77 ERROR  -  No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.saravanank.ecommerce.resourceserver.model.User["modifiedBy"]->com.saravanank.ecommerce.resourceserver.model.User$HibernateProxy$Jqkjex7c["hibernateLazyInitializer"])
+[2022-08-22 15:48:57,723] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:48:57,724] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:48:57,729] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:48:57,729] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:50:56,366] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:50:56,366] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:50:56,367] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:50:56,367] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:52:03,114] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:52:03,115] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 15:52:03,114] com.saravanank.ecommerce.resourceserver.controller.UserController 71 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 15:52:03,116] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 81 INFO   -  Returned All customers
+[2022-08-22 16:09:17,862] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:09:17,862] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 83 INFO   -  Returned All customers
+[2022-08-22 16:09:28,499] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:09:28,500] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 83 INFO   -  Returned All customers
+[2022-08-22 16:09:28,499] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:09:28,501] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 83 INFO   -  Returned All customers
+[2022-08-22 16:13:07,059] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:13:07,060] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 83 INFO   -  Returned All customers
+[2022-08-22 16:13:07,123] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:13:07,125] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 83 INFO   -  Returned All customers
+[2022-08-22 16:13:24,543] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:13:24,543] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 83 INFO   -  Returned All customers
+[2022-08-22 16:13:24,644] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:13:24,645] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 83 INFO   -  Returned All customers
+[2022-08-22 16:17:50,608] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:17:50,608] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:17:50,646] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:17:50,646] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:18:08,848] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:18:08,848] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:18:08,861] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:18:08,862] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:19:06,112] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:19:06,114] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:19:06,138] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:19:06,139] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:20:50,566] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:20:50,566] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:20:50,588] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:20:50,588] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:21:58,311] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:21:58,311] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:21:58,336] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:21:58,336] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:22:10,419] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:22:10,419] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:22:10,454] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:22:10,454] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:22:14,569] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:22:14,570] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:22:14,595] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:22:14,596] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:22:26,894] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:22:26,894] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:22:26,936] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:22:26,936] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:45:36,015] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-22 16:47:13,410] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:47:13,410] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:47:29,648] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:47:29,649] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:48:27,161] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:48:27,161] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:48:32,363] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:48:32,364] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:49:43,697] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:49:43,698] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:50:16,110] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:50:16,111] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:50:33,313] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 16:50:33,314] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 16:52:06,065] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:52:06,105] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:52:06,137] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:52:06,160] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:52:10,265] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=10
+[2022-08-22 16:52:10,299] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:52:12,985] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 16:52:13,027] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 16:52:13,037] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 16:52:13,037] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 16:52:13,037] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 16:52:13,037] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 16:52:13,074] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 16:52:13,074] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 16:52:13,081] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 16:52:13,081] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 16:52:18,236] com.saravanank.ecommerce.resourceserver.controller.ProductController 79 INFO   -  PUT request to /api/v1/products
+[2022-08-22 16:52:18,246] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin
+[2022-08-22 16:52:26,813] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 16:52:26,815] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 16:52:26,914] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 16:52:26,915] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 16:52:26,916] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 16:52:26,916] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 16:52:26,926] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 16:52:26,926] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 16:52:26,932] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 16:52:26,933] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 16:52:37,738] com.saravanank.ecommerce.resourceserver.controller.ProductController 79 INFO   -  PUT request to /api/v1/products
+[2022-08-22 16:52:37,745] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin
+[2022-08-22 16:54:03,645] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 16:54:03,645] com.saravanank.ecommerce.resourceserver.controller.ProductController 38 INFO   -  GET request to /api/v1/products/1
+[2022-08-22 16:54:03,735] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 16:54:03,735] com.saravanank.ecommerce.resourceserver.controller.BrandController 60 INFO   -  GET request to /api/v1/brand
+[2022-08-22 16:54:03,735] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 16:54:03,735] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-22 16:54:03,740] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 16:54:03,740] com.saravanank.ecommerce.resourceserver.controller.SubCategoryController 34 INFO   -  GET request to /api/v1/sub-category
+[2022-08-22 16:54:03,741] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 16:54:03,741] com.saravanank.ecommerce.resourceserver.service.SubCategoryServiceImpl 41 INFO   -  Returned all subCategories
+[2022-08-22 16:54:08,491] com.saravanank.ecommerce.resourceserver.controller.ProductController 79 INFO   -  PUT request to /api/v1/products
+[2022-08-22 16:54:08,498] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin
+[2022-08-22 16:54:08,538] com.saravanank.ecommerce.resourceserver.service.ProductService 87 INFO   -  Updated product with productId=1
+[2022-08-22 16:54:08,727] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:54:08,727] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:54:08,748] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:54:08,748] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:54:58,950] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:54:58,950] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:54:58,981] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:54:58,981] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:56:04,576] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:56:04,577] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 16:56:04,605] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:56:04,631] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:06,644] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:06,684] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:06,742] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 16:57:06,767] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:06,779] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 16:57:06,782] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:07,075] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:07,128] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:07,182] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:07,217] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:09,849] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:09,873] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:09,889] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:09,914] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:15,009] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:15,017] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:15,616] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:15,628] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:26,572] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:26,628] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:57:26,716] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:57:26,741] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:58:53,790] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:58:53,843] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:58:53,870] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:58:53,921] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:59:40,745] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:59:40,762] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 16:59:41,071] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:59:41,074] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 16:59:59,976] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:00:00,070] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:00:00,183] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:00:00,186] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:00:41,432] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:00:41,442] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:00:41,503] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:00:41,503] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:01:13,784] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:01:13,835] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:01:14,862] com.saravanank.ecommerce.resourceserver.controller.UserController 41 INFO   -  GET request to /api/v1/user
+[2022-08-22 17:01:14,863] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=customer
+[2022-08-22 17:01:15,269] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 17:01:15,271] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 17:01:15,295] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 17:01:15,297] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 17:06:11,759] com.saravanank.ecommerce.resourceserver.controller.CartController 42 INFO   -  POST request to /api/v1/cart/add
+[2022-08-22 17:06:11,797] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=customer
+[2022-08-22 17:06:12,001] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 17:06:12,004] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 17:06:16,752] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:06:16,787] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:06:16,892] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 17:06:16,899] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 17:06:16,953] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:16,994] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:17,146] com.saravanank.ecommerce.resourceserver.controller.CartController 34 INFO   -  GET request to /api/v1/cart
+[2022-08-22 17:06:17,150] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-22 17:06:21,103] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:06:21,112] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:06:21,671] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:21,784] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:32,341] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:06:32,360] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-08-22 17:06:32,413] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:32,414] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:33,283] com.saravanank.ecommerce.resourceserver.controller.UserController 41 INFO   -  GET request to /api/v1/user
+[2022-08-22 17:06:33,284] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin
+[2022-08-22 17:06:33,821] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 17:06:33,821] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-08-22 17:06:39,784] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 17:06:39,784] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-08-22 17:06:39,810] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:39,810] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-22 17:06:46,168] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 17:06:46,168] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 17:06:46,169] com.saravanank.ecommerce.resourceserver.controller.UserController 74 INFO   -  GET request to /api/v1/user/customer
+[2022-08-22 17:06:46,170] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 84 INFO   -  Returned All customers
+[2022-08-22 17:08:20,311] com.saravanank.ecommerce.resourceserver.controller.ProductController 48 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-22 17:08:20,363] com.saravanank.ecommerce.resourceserver.service.ProductService 116 INFO   -  Returned products
+[2022-08-23 10:55:36,420] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 10:56:28,330] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:06:57,229] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:06:57,262] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:08:29,759] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:08:29,829] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:11:43,485] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:13:09,030] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:13:09,109] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:44:28,789] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:44:28,840] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 11:44:28,866] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=1
+[2022-08-23 11:44:28,903] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:47:36,664] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:47:36,715] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 11:47:36,746] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 11:47:36,766] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:48:04,738] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:48:04,792] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 11:48:04,810] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 11:48:04,824] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:49:40,858] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:49:40,909] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 11:49:40,934] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 11:49:40,953] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:50:47,507] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 11:50:47,594] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:55:55,209] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:55:55,261] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 11:55:55,294] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 11:55:55,351] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 11:57:24,549] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 11:57:24,604] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 11:57:24,631] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 11:57:24,685] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 14:57:30,931] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 14:57:30,946] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 14:57:30,964] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 14:57:30,977] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-23 14:57:30,990] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 15:17:07,936] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 15:17:07,963] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 15:17:07,990] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 4 brand(s)
+[2022-08-23 15:17:08,004] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 15:17:08,017] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-23 15:17:08,031] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 15:20:18,959] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 15:20:18,983] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 15:20:19,004] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 4 brand(s)
+[2022-08-23 15:20:19,028] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 15:20:19,040] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-23 15:20:19,053] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 15:28:57,192] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 15:28:57,219] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 15:28:57,243] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 4 brand(s)
+[2022-08-23 15:28:57,332] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 15:28:57,352] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-23 15:28:57,373] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 15:30:33,818] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 15:30:33,822] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 15:30:33,843] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 4 brand(s)
+[2022-08-23 15:30:33,875] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 15:30:33,885] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-23 15:30:33,897] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 15:31:19,415] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 15:31:19,420] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 15:31:19,436] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 4 brand(s)
+[2022-08-23 15:31:19,447] com.saravanank.ecommerce.resourceserver.service.BrandService 74 INFO   -  Deleted brand with id=3
+[2022-08-23 15:31:19,474] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 15:31:19,486] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-23 15:31:19,497] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-23 15:32:30,710] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-23 15:32:30,716] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-23 15:32:30,732] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 4 brand(s)
+[2022-08-23 15:32:30,745] com.saravanank.ecommerce.resourceserver.service.BrandService 74 INFO   -  Deleted brand with id=3
+[2022-08-23 15:32:30,769] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-23 15:32:30,779] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-23 15:32:30,791] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
+[2022-08-25 09:59:51,750] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=2
+[2022-08-25 09:59:51,757] com.saravanank.ecommerce.resourceserver.service.BrandService 32 INFO   -  Returned brand with id=4
+[2022-08-25 09:59:51,775] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 4 brand(s)
+[2022-08-25 09:59:51,789] com.saravanank.ecommerce.resourceserver.service.BrandService 74 INFO   -  Deleted brand with id=3
+[2022-08-25 09:59:51,809] com.saravanank.ecommerce.resourceserver.service.BrandService 48 INFO   -  Added brand with id=5
+[2022-08-25 09:59:51,831] com.saravanank.ecommerce.resourceserver.service.BrandService 63 INFO   -  Updated brand with id=Brand(id=5, name=Nokia1, creationDate=null, modifiedDate=null, modifiedBy=null)
+[2022-08-25 09:59:51,847] com.saravanank.ecommerce.resourceserver.service.BrandService 38 INFO   -  Returned all brands
