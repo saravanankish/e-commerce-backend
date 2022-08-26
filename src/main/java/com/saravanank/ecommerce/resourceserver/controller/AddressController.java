@@ -3,6 +3,8 @@ package com.saravanank.ecommerce.resourceserver.controller;
 import java.security.Principal;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,7 +50,7 @@ public class AddressController {
 	@PostMapping
 	@PreAuthorize("hasAuthority('ROLE_CUSTOMER')")
 	@ApiOperation(value = "Add address", notes = "User with customer access can use this endpoint to add their address")
-	public ResponseEntity<Address> addAddress(Principal principal, @RequestBody Address address) {
+	public ResponseEntity<Address> addAddress(Principal principal, @RequestBody @Valid Address address) {
 		logger.info("POST request to /api/v1/address");
 		System.out.println(address.getCity());
 		System.out.println(address.getArea());
@@ -62,7 +64,7 @@ public class AddressController {
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Add address to user", notes = "Users with admin access can use this endpoint to add address to a user")
 	public ResponseEntity<Address> addAddressToUser(Principal principal, @PathVariable("userId") long userId,
-			@RequestBody Address address) {
+			@RequestBody @Valid Address address) {
 		logger.info("POST request to /api/v1/address/" + userId);
 		return new ResponseEntity<Address>(addressService.addAddress(userId, address), HttpStatus.CREATED);
 	}
@@ -71,7 +73,7 @@ public class AddressController {
 	@PreAuthorize("hasAuthority('ROLE_CUSTOMER')")
 	@ApiOperation(value = "Update address", notes = "Users with customer access can edit their address")
 	public ResponseEntity<Address> updateAddress(Principal principal, @PathVariable("addressId") long addressId,
-			@RequestBody Address address) {
+			@RequestBody @Valid Address address) {
 		logger.info("PUT request to /api/v1/address/" + addressId);
 		return new ResponseEntity<Address>(addressService.updateAddress(addressId, address), HttpStatus.CREATED);
 	}

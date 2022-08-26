@@ -21,12 +21,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.model.DeliveryTimingType;
-import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.MobileNumber;
 import com.saravanank.ecommerce.resourceserver.model.Role;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.AddressRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
+import com.saravanank.ecommerce.resourceserver.util.Json;
 
 @SpringBootTest
 public class AddressServiceTest {

@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -47,6 +49,7 @@ public class User {
 	@Size(min = 6, message = "Password should contain atleast 6 characters")
 	private String password;
 	
+	@Enumerated(EnumType.STRING)
 	@NotNull(message = "User role should not be null")
 	private Role role;
 	
@@ -56,7 +59,7 @@ public class User {
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id")
-	private List<MobileNumber> mobileNumbers;
+	private List<@NotNull(message = "Mobile numbers of user should not be null") MobileNumber> mobileNumbers;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "modified_by")
@@ -64,6 +67,6 @@ public class User {
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id")
-	private List<Address> addresses;
+	private List<@NotNull(message = "User address should not be null") Address> addresses;
 
 }

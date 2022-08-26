@@ -18,7 +18,6 @@ import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.DeliveryTimingType;
-import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
 import com.saravanank.ecommerce.resourceserver.model.Role;
@@ -26,6 +25,7 @@ import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.CartRepository;
 import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
+import com.saravanank.ecommerce.resourceserver.util.Json;
 
 @SpringBootTest
 public class CartServiceTest {

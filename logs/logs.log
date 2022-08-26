@@ -2998,3 +2998,4 @@
 [2022-08-25 16:02:12,283] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
 [2022-08-25 16:02:12,284] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
 [2022-08-25 16:02:12,302] com.saravanank.ecommerce.resourceserver.service.CategoryService 61 INFO   -  Added category with category_id=4
+[2022-08-26 13:21:12,401] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found

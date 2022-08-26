@@ -44,6 +44,12 @@ public class SubCategoryServiceImpl implements SubCategoryService {
 
 	@Override
 	public List<String> addAllToId(Set<String> data, String modifiedBy, long id) {
+		if (data.size() == 0) {
+			throw new BadRequestException("Data is empty");
+		}
+		if (data.stream().anyMatch(d -> d == null || d.equals(""))) {
+			throw new BadRequestException("One or more of subcategory is empty");
+		}
 		Optional<Category> categoryInDb = categoryRepo.findById(id);
 		User user = userRepo.findByUsername(modifiedBy);
 		if (categoryInDb.isEmpty())
@@ -61,10 +67,13 @@ public class SubCategoryServiceImpl implements SubCategoryService {
 
 	@Override
 	public String add(String data, String modifiedBy, long id) {
+		if (data == null || data.equals(""))
+			throw new BadRequestException("Subcategory is empty");
 		Optional<Category> categoryInDb = categoryRepo.findById(id);
-		if(categoryInDb.isEmpty()) throw new NotFoundException("Category with id " + id + " not found");
+		if (categoryInDb.isEmpty())
+			throw new NotFoundException("Category with id " + id + " not found");
 		Category category = categoryInDb.get();
-		if(category.getSubCategory().contains(data))
+		if (category.getSubCategory().contains(data))
 			throw new BadRequestException("Subcategory already exists in the category");
 		category.getSubCategory().add(data);
 		categoryRepo.saveAndFlush(category);
@@ -73,8 +82,11 @@ public class SubCategoryServiceImpl implements SubCategoryService {
 
 	@Override
 	public String update(String data, int index, String modifiedBy, long id) {
+		if (data == null || data.equals(""))
+			throw new BadRequestException("Subcategory is empty");
 		Optional<Category> categoryInDb = categoryRepo.findById(id);
-		if(categoryInDb.isEmpty()) throw new NotFoundException("Category with id " + id + " not found");
+		if (categoryInDb.isEmpty())
+			throw new NotFoundException("Category with id " + id + " not found");
 		Category category = categoryInDb.get();
 		category.getSubCategory().set(index, data);
 		categoryRepo.saveAndFlush(category);
@@ -84,7 +96,8 @@ public class SubCategoryServiceImpl implements SubCategoryService {
 	@Override
 	public void delete(int index, long id) {
 		Optional<Category> categoryInDb = categoryRepo.findById(id);
-		if(categoryInDb.isEmpty()) throw new NotFoundException("Category with id " + id + " not found");
+		if (categoryInDb.isEmpty())
+			throw new NotFoundException("Category with id " + id + " not found");
 		Category category = categoryInDb.get();
 		category.getSubCategory().remove(index);
 		categoryRepo.saveAndFlush(category);

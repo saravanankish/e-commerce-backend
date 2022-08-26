@@ -2,6 +2,8 @@ package com.saravanank.ecommerce.resourceserver.controller;
 
 import java.security.Principal;
 
+import javax.validation.Valid;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,7 +40,7 @@ public class CartController {
 	@PostMapping("/add")
 	@PreAuthorize("hasAuthority('ROLE_CUSTOMER')")
 	@ApiOperation(value = "Add items to cart", notes = "Only user with customer access can use this endpoint, user can add items to cart using this endpoint")
-	public ResponseEntity<Cart> addToCart(Principal principal, @RequestBody ProductQuantityMapper productQty) {
+	public ResponseEntity<Cart> addToCart(Principal principal, @RequestBody @Valid ProductQuantityMapper productQty) {
 		logger.info("POST request to /api/v1/cart/add");
 		return new ResponseEntity<Cart>(cartService.addProductsToCart(principal.getName(), productQty),
 				HttpStatus.CREATED);

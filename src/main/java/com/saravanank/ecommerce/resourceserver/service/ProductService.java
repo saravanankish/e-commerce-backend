@@ -48,6 +48,35 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 	public List<Product> addAll(List<Product> data, String modifiedBy) {
 		User modifiedByUser = userService.getUserByUsername(modifiedBy);
 		data.stream().forEach(product -> {
+			if (product.getBrand().getId() == 0) {
+				Brand brandInDb = brandRepo.findByNameIgnoreCase(product.getBrand().getName());
+				if (brandInDb != null) {
+					product.setBrand(brandInDb);
+				} else {
+					Brand newBrand = new Brand();
+					newBrand.setName(product.getBrand().getName());
+					newBrand.setCreationDate(new Date());
+					newBrand.setModifiedBy(modifiedByUser);
+					newBrand.setModifiedDate(new Date());
+					brandRepo.saveAndFlush(newBrand);
+					product.setBrand(newBrand);
+				}
+			}
+			if (!categoryRepo.existsBySubCategoryIgnoreCase(product.getCategory())) {
+				Category category = categoryRepo.findByNameIgnoreCase("Others");
+				if (category == null) {
+					Category newCategory = new Category();
+					newCategory.setCreationDate(new Date());
+					newCategory.setModifiedDate(new Date());
+					newCategory.setModifiedBy(modifiedByUser);
+					newCategory.setName("Others");
+					newCategory.setSubCategory(List.of(product.getCategory()));
+					categoryRepo.saveAndFlush(newCategory);
+				} else {
+					category.getSubCategory().add(product.getCategory());
+					categoryRepo.saveAndFlush(category);
+				}
+			}
 			product.setCreationDate(new Date(new java.util.Date().getTime()));
 			product.setModifiedDate(new Date(new java.util.Date().getTime()));
 			product.setModifiedBy(modifiedByUser);

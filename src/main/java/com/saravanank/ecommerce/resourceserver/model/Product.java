@@ -46,7 +46,7 @@ public class Product {
 	private String thumbnail;
 	
 	@ElementCollection
-	private List<String> images;
+	private List<@NotEmpty(message = "Image url of product should not be empty") String> images;
 	
 	@NotNull(message = "Product brand should not be null")
 	@OneToOne(cascade = CascadeType.REFRESH)

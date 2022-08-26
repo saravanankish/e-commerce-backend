@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import javax.transaction.Transactional;
+import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -20,7 +20,6 @@ import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.Invoice;
-import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.Order;
 import com.saravanank.ecommerce.resourceserver.model.OrderStatus;
 import com.saravanank.ecommerce.resourceserver.model.PaymentType;
@@ -33,6 +32,7 @@ import com.saravanank.ecommerce.resourceserver.repository.InvoiceRepository;
 import com.saravanank.ecommerce.resourceserver.repository.OrderRepository;
 import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
+import com.saravanank.ecommerce.resourceserver.util.Json;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -207,10 +207,15 @@ public class OrderServiceImpl implements OrderService {
 		invoice.setTotalAmountReceivable(totalValue + (totalValue * (taxPercentage / 100)));
 		invoice.setAmountPending(totalValue + (totalValue * (taxPercentage / 100)));
 		invoice.setUser(placedForUser);
-		orderRepo.saveAndFlush(userOrder);
+		saveOrder(userOrder);
 		invoiceRepo.saveAndFlush(invoice);
 		logger.info("Added order for user " + placedForUser.getUsername());
 		return invoice.getOrder();
+	}
+	
+	private Order saveOrder(@Valid Order order) {
+		orderRepo.saveAndFlush(order);
+		return order;
 	}
 
 	@Override

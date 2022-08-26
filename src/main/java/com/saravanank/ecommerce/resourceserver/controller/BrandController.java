@@ -3,6 +3,8 @@ package com.saravanank.ecommerce.resourceserver.controller;
 import java.security.Principal;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,7 +36,7 @@ public class BrandController {
 	@PostMapping
 	@ApiOperation(value = "Add a brand", notes = "Only user with admin access can use this endpoint")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
-	public ResponseEntity<Brand> addBrand(@RequestBody Brand brand, Principal principal) {
+	public ResponseEntity<Brand> addBrand(@RequestBody @Valid Brand brand, Principal principal) {
 		logger.info("POST request to /api/v1/brand");
 		return new ResponseEntity<Brand>(brandService.add(brand, principal.getName()), HttpStatus.CREATED);
 	}
@@ -42,7 +44,7 @@ public class BrandController {
 	@PostMapping("/all")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Add many brand", notes = "Only user with admin access can use this endpoint")
-	public ResponseEntity<List<Brand>> addBrands(@RequestBody List<Brand> brands, Principal principal) {
+	public ResponseEntity<List<Brand>> addBrands(@RequestBody @Valid List<Brand> brands, Principal principal) {
 		logger.info("POST request to /api/v1/brand/all");
 		return new ResponseEntity<List<Brand>>(brandService.addAll(brands, principal.getName()), HttpStatus.CREATED);
 	}
@@ -64,7 +66,7 @@ public class BrandController {
 	@PutMapping("/{brandId}")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Update a brand", notes = "Only user with admin access can use this endpoint")
-	public ResponseEntity<Brand> updateBrand(@PathVariable("brandId") long brandId, @RequestBody Brand brand,
+	public ResponseEntity<Brand> updateBrand(@PathVariable("brandId") long brandId, @RequestBody @Valid Brand brand,
 			Principal principal) {
 		logger.info("PUT request to /api/v1/brand/" + brandId);
 		return new ResponseEntity<Brand>(brandService.update(brand, brandId, principal.getName()),

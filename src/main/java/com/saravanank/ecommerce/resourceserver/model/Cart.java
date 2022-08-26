@@ -30,7 +30,7 @@ public class Cart {
 	
 	@OneToMany(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "cart_id")
-	private List<ProductQuantityMapper> products;
+	private List<@NotNull(message = "Product quantity mapper should not be null") ProductQuantityMapper> products;
 	
 	@NotNull(message = "Cart user should not be null")
 	@OneToOne(cascade = CascadeType.ALL)

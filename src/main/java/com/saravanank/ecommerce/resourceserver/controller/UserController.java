@@ -1,6 +1,9 @@
 package com.saravanank.ecommerce.resourceserver.controller;
 
 import java.security.Principal;
+
+import javax.validation.Valid;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -52,14 +55,14 @@ public class UserController {
 
 	@PostMapping("/register")
 	@ApiOperation(value = "Register customer", notes = "This is an open endpoint to register user")
-	public ResponseEntity<User> registerUser(@RequestBody User user) {
+	public ResponseEntity<User> registerUser(@RequestBody @Valid User user) {
 		logger.info("POST request to /api/v1/user/register");
 		return new ResponseEntity<User>(userService.addUser(user), HttpStatus.CREATED);
 	}
 
 	@PostMapping
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
-	public ResponseEntity<User> addUser(@RequestBody User user) {
+	public ResponseEntity<User> addUser(@RequestBody @Valid User user) {
 		logger.info("POST request to /api/v1/user");
 		return new ResponseEntity<User>(userService.addUser(user), HttpStatus.CREATED);
 	}
@@ -83,7 +86,7 @@ public class UserController {
 	@PutMapping("/{customerId}")
 	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_CUSTOMER')")
 	@ApiOperation(value = "Get customer by id", notes = "Only user with admin or support access can use this endpoint")
-	public ResponseEntity<User> updateUser(@RequestBody User user, @PathVariable("customerId") long customerId,
+	public ResponseEntity<User> updateUser(@RequestBody @Valid User user, @PathVariable("customerId") long customerId,
 			Principal principal) {
 		logger.info("GET request to /api/v1/user/" + customerId);
 		return new ResponseEntity<User>(userService.updateUser(user, customerId, principal.getName()),
@@ -102,7 +105,7 @@ public class UserController {
 	@PostMapping("/contact")
 	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_CUSTOMER')")
 	@ApiOperation(value = "Add mobile number to user", notes = "Only users with admin or customer access can use this endpoint")
-	public ResponseEntity<MobileNumber> addMobileNumber(Principal principal, @RequestBody MobileNumber number) {
+	public ResponseEntity<MobileNumber> addMobileNumber(Principal principal, @RequestBody @Valid MobileNumber number) {
 		logger.info("POST request to /api/v1/user/contact");
 		return new ResponseEntity<MobileNumber>(mobileNumberService.addMobileNumber(principal.getName(), number),
 				HttpStatus.CREATED);
@@ -111,7 +114,7 @@ public class UserController {
 	@PutMapping("/contact/{contactId}")
 	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_CUSTOMER')")
 	@ApiOperation(value = "Add mobile number to user", notes = "Only users with admin or customer access can use this endpoint")
-	public ResponseEntity<MobileNumber> updateMobileNumber(Principal principal, @RequestBody MobileNumber number,
+	public ResponseEntity<MobileNumber> updateMobileNumber(Principal principal, @RequestBody @Valid MobileNumber number,
 			@PathVariable("contactId") long contactId) {
 		logger.info("PUT request to /api/v1/user/contact/" + contactId);
 		return new ResponseEntity<MobileNumber>(mobileNumberService.updateMobileNumber(contactId, number),

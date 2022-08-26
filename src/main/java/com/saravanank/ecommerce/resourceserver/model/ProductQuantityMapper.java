@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PositiveOrZero;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,8 +29,10 @@ public class ProductQuantityMapper {
 	
 	@OneToOne(cascade =  CascadeType.MERGE, fetch = FetchType.EAGER)
 	@JoinColumn(name = "product_id")
+	@NotNull(message = "Product in product quantity mapping should not be null")
 	private Product product;
 	
+	@PositiveOrZero(message = "Quantity in product quantity mapping should be positive or 0")
 	private int quantity;
 
 	public long getProductId() {

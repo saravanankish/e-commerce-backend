@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.saravanank.ecommerce.resourceserver.model.Json;
+import com.saravanank.ecommerce.resourceserver.util.Json;
 
 @Service
 public class TransactionService {
