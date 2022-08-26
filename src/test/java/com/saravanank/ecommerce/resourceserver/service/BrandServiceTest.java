@@ -16,6 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Brand;
+import com.saravanank.ecommerce.resourceserver.model.Role;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.BrandRepository;
 
@@ -31,7 +32,7 @@ public class BrandServiceTest {
 	@InjectMocks
 	private BrandService brandService;
 
-	User testUser = new User(1, "test", "test", "test", "test", "test", true, null, null, null, null, null);
+	User testUser = new User(1, "test", "test", "test", "test", Role.ADMIN, true, null, null, null, null, null);
 
 	Date currentDate = new Date();
 	Brand brand1 = new Brand(1, "Apple", currentDate, currentDate, testUser);

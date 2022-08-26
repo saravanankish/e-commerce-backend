@@ -21,6 +21,7 @@ import com.saravanank.ecommerce.resourceserver.model.DeliveryTimingType;
 import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
+import com.saravanank.ecommerce.resourceserver.model.Role;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.CartRepository;
 import com.saravanank.ecommerce.resourceserver.repository.ProductRepository;
@@ -41,13 +42,13 @@ public class CartServiceTest {
 	@InjectMocks
 	private CartServiceImpl cartService;
 
-	Address address1 = new Address(1, "19", "Street 1", "Area 1", "City 1", "State 1", 600001, "Landmark 1", "Test 1",
+	Address address1 = new Address(1, "19", "Street 1", "Area 1", "City 1", "State 1", "600001", "Landmark 1", "Test 1",
 			true, DeliveryTimingType.HOME, null);
-	Address address2 = new Address(2, "11", "Street 2", "Area 2", "City 2", "State 2", 600002, "Landmark 2", "Test 2",
+	Address address2 = new Address(2, "11", "Street 2", "Area 2", "City 2", "State 2", "600002", "Landmark 2", "Test 2",
 			false, DeliveryTimingType.OFFICE, null);
-	User testUser1 = new User(1, "test1", "test1", "test1", "test1", "test1", true, null, null, null, null,
+	User testUser1 = new User(1, "test1", "test1", "test1", "test1",Role.CUSTOMER, true, null, null, null, null,
 			new ArrayList<Address>(List.of(address1, address2)));
-	User testUser2 = new User(1, "test2", "test2", "test2", "test2", "test2", true, null, null, null, null,
+	User testUser2 = new User(1, "test2", "test2", "test2", "test2", Role.CUSTOMER, true, null, null, null, null,
 			new ArrayList<Address>(List.of(address1, address2)));
 	Cart user1Cart = new Cart(0, null, testUser1);
 	Cart user2Cart = new Cart(0, null, null);

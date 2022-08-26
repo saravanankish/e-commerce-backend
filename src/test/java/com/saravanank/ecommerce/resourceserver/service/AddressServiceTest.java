@@ -23,6 +23,7 @@ import com.saravanank.ecommerce.resourceserver.model.Address;
 import com.saravanank.ecommerce.resourceserver.model.DeliveryTimingType;
 import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.MobileNumber;
+import com.saravanank.ecommerce.resourceserver.model.Role;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.AddressRepository;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
@@ -41,17 +42,17 @@ public class AddressServiceTest {
 
 	MobileNumber testMobileNumber = new MobileNumber(1L, "9876543210", "test", false);
 
-	Address address1 = new Address(1, "19", "Street 1", "Area 1", "City 1", "State 1", 600001, "Landmark 1", "Test 1",
+	Address address1 = new Address(1, "19", "Street 1", "Area 1", "City 1", "State 1", "600001", "Landmark 1", "Test 1",
 			false, DeliveryTimingType.HOME, testMobileNumber);
-	Address address2 = new Address(2, "11", "Street 2", "Area 2", "City 2", "State 2", 600002, "Landmark 2", "Test 2",
+	Address address2 = new Address(2, "11", "Street 2", "Area 2", "City 2", "State 2", "600002", "Landmark 2", "Test 2",
 			false, DeliveryTimingType.OFFICE, testMobileNumber);
-	Address address3 = new Address(3, "12", "Street 3", "Area 3", "City 3", "State 3", 600003, "Landmark 3", "Test 3",
+	Address address3 = new Address(3, "12", "Street 3", "Area 3", "City 3", "State 3", "600003", "Landmark 3", "Test 3",
 			false, DeliveryTimingType.HOME, testMobileNumber);
-	Address address4 = new Address(4, "22", "Street 4", "Area 4", "City 4", "State 4", 600004, "Landmark 4", "Test 4",
+	Address address4 = new Address(4, "22", "Street 4", "Area 4", "City 4", "State 4", "600004", "Landmark 4", "Test 4",
 			true, DeliveryTimingType.OFFICE, testMobileNumber);
-	User testUser1 = new User(1, "test1", "test1", "test1", "test1", "test1", true, null, null, null, null,
+	User testUser1 = new User(1, "test1", "test1", "test1", "test1", Role.ADMIN, true, null, null, null, null,
 			new ArrayList<Address>(List.of(address1, address3)));
-	User testUser2 = new User(2, "test2", "test2", "test2", "test2", "test2", true, null, null, null, null,
+	User testUser2 = new User(2, "test2", "test2", "test2", "test2", Role.CUSTOMER, true, null, null, null, null,
 			new ArrayList<Address>(List.of(address2, address4)));
 
 	@Test

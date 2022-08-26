@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
 			throw new UsernameNotFoundException("No user found");
 		}
 		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), true,
-				true, true, true, getAuthorities(Arrays.asList(user.getRole())));
+				true, true, true, getAuthorities(Arrays.asList(user.getRole().name())));
 	}
 
 	private Collection<? extends GrantedAuthority> getAuthorities(List<String> roles) {

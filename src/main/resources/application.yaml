@@ -1,5 +1,5 @@
 server:
-  port: ${server-port:8080}
+  port: ${server-port}
   servlet:
     context-path: /api
 spring:
@@ -7,25 +7,25 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://${jwt-issuer-uri:auth-server:9000}
+          issuer-uri: ${jwt-issuer-uri}
   datasource:
-    url: jdbc:mysql://localhost:3306/${database-name:project_test}
-    username: ${database-username:root}
-    password: ${database-password:password}
+    url: ${database-url}/${database-name}
+    username: ${database-username}
+    password: ${database-password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    show-sql: true       
+    show-sql: ${show-sql}       
     hibernate:
-      ddl-auto: update
+      ddl-auto: ${ddl-auto}
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher 
   rabbitmq:
     template:
-      default-receive-queue: my-transactions
+      default-receive-queue: ${rabbitmq-default-queue}
 e-commerce:
   application:
-    tax-percentage: ${application-tax-percentage:8}
-    transaction-url: http://${transaction-url:"localhost:8081"}/api/v1/transaction
+    tax-percentage: ${application-tax-percentage}
+    transaction-url: ${transaction-url}
     client-id: ${client-id}
     

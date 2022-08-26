@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,10 +25,12 @@ public class Invoice {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long invoiceId;
 	
+	@NotNull(message = "User of invoice should not be null")
 	@OneToOne(cascade =  CascadeType.ALL)
 	@JoinColumn(name ="invoice_of_user")
 	private User user;
 	
+	@NotNull(message = "Order of invoice should not be null")
 	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "invoice_of_order")
 	private Order order;
