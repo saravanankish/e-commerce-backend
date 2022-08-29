@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,9 +30,10 @@ public class Cart {
 	
 	@OneToMany(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "cart_id")
-	private List<ProductQuantityMapper> products;
+	private List<@NotNull(message = "Product quantity mapper should not be null") ProductQuantityMapper> products;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@NotNull(message = "Cart user should not be null")
+	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "user")
 	private User user;
 	

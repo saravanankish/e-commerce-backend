@@ -85,7 +85,7 @@ public class AddressServiceImpl implements AddressService {
 			addressData.setArea(address.getArea());
 		if (address.getCity() != null)
 			addressData.setCity(address.getCity());
-		if (address.getPincode() != 0)
+		if (address.getPincode() != null)
 			addressData.setPincode(address.getPincode());
 		if (address.getLandmark() != null)
 			addressData.setLandmark(address.getLandmark());

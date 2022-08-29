@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class RestResponse {
 
 	private String error;
-	private String message;
+	private Object message;
 	private int status;
 	private String timestamp;
 

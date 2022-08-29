@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
+import com.saravanank.ecommerce.resourceserver.model.Role;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
 
@@ -46,7 +47,7 @@ public class UserServiceImpl implements UserService {
 			throw new UsernameNotFoundException("No user found");
 		}
 		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), true,
-				true, true, true, getAuthorities(Arrays.asList(user.getRole())));
+				true, true, true, getAuthorities(Arrays.asList(user.getRole().name())));
 	}
 
 	private Collection<? extends GrantedAuthority> getAuthorities(List<String> roles) {
@@ -67,7 +68,7 @@ public class UserServiceImpl implements UserService {
 		user.setCreationTime(new Date());
 		user.setModifiedTime(new Date());
 		userRepo.save(user);
-		if (user.getRole().equals("CUSTOMER"))
+		if (user.getRole().equals(Role.CUSTOMER))
 			cartService.addCartToUser(user);
 		logger.info("Added user with userid=" + user.getUserId());
 		return user;
@@ -86,10 +87,10 @@ public class UserServiceImpl implements UserService {
 		PageResponseModel<User> userResponse = new PageResponseModel<User>();
 		Page<User> user;
 		if (search == null) {
-			user = userRepo.findByRole(role.toUpperCase(), pageReq);
+			user = userRepo.findByRole(Role.valueOf(role.toUpperCase()), pageReq);
 		} else {
 			user = userRepo.findByNameContainingOrEmailContainingOrUsernameContainingAndRole(search, search, search,
-					role.toUpperCase(), pageReq);
+					Role.valueOf(role.toUpperCase()), pageReq);
 		}
 		userResponse.setData(user.toList());
 		userResponse.setCurrentPage(user.getNumber());

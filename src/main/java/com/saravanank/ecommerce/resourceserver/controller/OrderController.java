@@ -3,6 +3,8 @@ package com.saravanank.ecommerce.resourceserver.controller;
 import java.security.Principal;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,10 +21,12 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.saravanank.ecommerce.resourceserver.model.Json;
 import com.saravanank.ecommerce.resourceserver.model.Order;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
+import com.saravanank.ecommerce.resourceserver.model.TransactionRequest;
 import com.saravanank.ecommerce.resourceserver.service.OrderService;
+import com.saravanank.ecommerce.resourceserver.util.Json;
+
 import io.swagger.annotations.ApiOperation;
 
 @RestController
@@ -71,7 +75,7 @@ public class OrderController {
 
 	@PutMapping("/{orderId}")
 	@ApiOperation(value = "Update an order", notes = "All users can use this endpoint")
-	public ResponseEntity<Order> updateOrder(@PathVariable("orderId") long orderId, @RequestBody Order order) {
+	public ResponseEntity<Order> updateOrder(@PathVariable("orderId") long orderId, @RequestBody @Valid Order order) {
 		logger.info("PUT request to /api/v1/order/" + orderId);
 		return new ResponseEntity<Order>(orderService.updateOrder(order, orderId), HttpStatus.CREATED);
 	}
@@ -121,10 +125,16 @@ public class OrderController {
 
 	@PostMapping("/cart")
 	@PreAuthorize("hasAuthority('ROLE_CUSTOMER')")
-	public ResponseEntity<Order> placeOrderFromCart(Principal principal, @RequestBody String paymentType) {
+	public ResponseEntity<Order> placeOrderFromCart(Principal principal, @RequestBody(required = false) String paymentType) {
 		logger.info("POST request to /api/v1/order/cart by user = " + principal.getName());
 		return new ResponseEntity<Order>(orderService.placeOrderFromCart(paymentType, principal.getName()),
 				HttpStatus.CREATED);
+	}
+	
+	@PostMapping("/received/payment")
+	public ResponseEntity<Void> handleReceivedPayment(@RequestBody TransactionRequest transaction) {
+		orderService.recieveTransactions(transaction);
+		return new ResponseEntity<Void>(HttpStatus.ACCEPTED);
 	}
 
 }

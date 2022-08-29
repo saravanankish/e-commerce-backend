@@ -3,6 +3,8 @@ package com.saravanank.ecommerce.resourceserver.controller;
 import java.security.Principal;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,7 +35,7 @@ public class CategoryController {
 	@PostMapping
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Add category", notes = "Only user with admin access can use this endpoint")
-	public ResponseEntity<Category> addCategory(@RequestBody Category subCategory, Principal principal) {
+	public ResponseEntity<Category> addCategory(@RequestBody @Valid Category subCategory, Principal principal) {
 		logger.info("POST request to /api/v1/category");
 		return new ResponseEntity<Category>(categoryService.add(subCategory, principal.getName()), HttpStatus.CREATED);
 	}
@@ -41,7 +43,7 @@ public class CategoryController {
 	@PostMapping("/all")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Add many categories", notes = "Only user with admin access can use this endpoint")
-	public ResponseEntity<List<Category>> addCategories(@RequestBody List<Category> subCategories,
+	public ResponseEntity<List<Category>> addCategories(@RequestBody @Valid List<Category> subCategories,
 			Principal principal) {
 		logger.info("POST request to /api/v1/category/all");
 		return new ResponseEntity<List<Category>>(categoryService.addAll(subCategories, principal.getName()),
@@ -66,7 +68,7 @@ public class CategoryController {
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	@ApiOperation(value = "Update a category", notes = "Only user with admin access can use this endpoint")
 	public ResponseEntity<Category> updateCategory(@PathVariable("categoryId") long categoryId,
-			@RequestBody Category category, Principal principal) {
+			@RequestBody @Valid Category category, Principal principal) {
 		logger.info("PUT request to /api/v1/category/" + categoryId);
 		return new ResponseEntity<Category>(categoryService.update(category, categoryId, principal.getName()),
 				HttpStatus.CREATED);

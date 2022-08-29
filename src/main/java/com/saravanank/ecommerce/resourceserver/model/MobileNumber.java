@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +23,10 @@ public class MobileNumber {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long mobileNumberId;
 	
+	@NotEmpty(message = "Number should not be empty")
+	@Pattern(regexp = "^\\d{10}$", message = "Invalid number format")
 	private String number;
 	private String label;
+	
 	private boolean primaryNumber;
 }

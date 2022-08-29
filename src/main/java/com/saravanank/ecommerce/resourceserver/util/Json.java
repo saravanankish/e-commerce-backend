@@ -1,4 +1,4 @@
-package com.saravanank.ecommerce.resourceserver.model;
+package com.saravanank.ecommerce.resourceserver.util;
 
 import java.util.Arrays;
 import java.util.List;

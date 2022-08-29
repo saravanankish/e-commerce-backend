@@ -15,6 +15,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
@@ -26,6 +29,8 @@ public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long orderId;
+	
+	@Min(value = 1, message = "Value should be greater than one")
 	private float value;
 	private Date orderDate;
 	private Date expectedDeliveryDate;
@@ -33,30 +38,38 @@ public class Order {
 	private Date cancelDate;
 	private String cancelReason;
 	private Date modifiedDate;
+	
+	@Min(value = 0, message = "Tax percentage should be greater than 0")
+	@Max(value = 100, message = "Tax percentage should be less than 100")
 	private float taxPercentage;
+	@Min(value = 1, message = "Value should be greater than one")
 	private float totalValue;
 	private boolean isClosed = false;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@NotNull(message = "Delivery address should not be null")
+	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "delivery_address")
 	private Address deliveryAddress;
 	
 	@Enumerated(EnumType.STRING)
 	private PaymentType paymentType;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@NotNull(message = "User of order should not be null")
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "user_id")
 	private User user;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "placed_by")
 	private User placedBy;
 	
+	@NotNull(message = "Order status should not be null")
 	@Enumerated(EnumType.STRING)
 	private OrderStatus orderStatus;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@NotNull(message = "Order should contain atleast one product")
+	@OneToMany(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "order_id")
-	private List<ProductQuantityMapper> products;
+	private List<@NotNull(message = "Product quantity mapper should not be null") ProductQuantityMapper> products;
 
 }

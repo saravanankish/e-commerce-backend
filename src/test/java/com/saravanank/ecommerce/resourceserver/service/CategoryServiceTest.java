@@ -18,6 +18,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Category;
+import com.saravanank.ecommerce.resourceserver.model.Role;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.CategoryRepository;
 
@@ -38,7 +39,7 @@ public class CategoryServiceTest {
 	Category category3 = new Category(3, "Category 2", new ArrayList<String>(), null, null, null);
 	Category category4 = new Category(4, "Category 2", new ArrayList<String>(), null, null, null);
 
-	User testUser1 = new User(1, "Test1", "test@gmail.com", "test1", "test", "test", false, null, null, null, null,
+	User testUser1 = new User(1, "Test1", "test@gmail.com", "test1", "test", Role.ADMIN, false, null, null, null, null,
 			null);
 
 	@Test

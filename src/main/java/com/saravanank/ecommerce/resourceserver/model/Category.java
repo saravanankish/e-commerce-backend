@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,14 +26,16 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
+	@NotEmpty(message = "Category name should be empty")
 	private String name;
-	
+
 	@ElementCollection
-	private List<String> subCategory;
-	
+	private List<@NotEmpty(message = "Sub category cannot be empty") String> subCategory;
+
 	private Date creationDate = new Date();
 	private Date modifiedDate = new Date();
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "modified_by")
 	private User modifiedBy;

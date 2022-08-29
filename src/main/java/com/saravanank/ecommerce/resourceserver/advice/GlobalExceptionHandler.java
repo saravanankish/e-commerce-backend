@@ -2,12 +2,17 @@ package com.saravanank.ecommerce.resourceserver.advice;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.validation.ConstraintViolationException;
 
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.client.HttpClientErrorException;
@@ -84,11 +89,40 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 			errResponse.setError(proccessingExp.getMessage());
 			errResponse.setMessage("Couldn't process JSON");
 			errResponse.setStatus(500);
-			errResponse.setTimestamp(new Date().toString());			
+			errResponse.setTimestamp(new Date().toString());
 		}
 		return new ResponseEntity<RestResponse>(errResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+
+	@Override
+	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+			HttpHeaders headers, HttpStatus status, WebRequest request) {
+		RestResponse errResponse = new RestResponse();
+		Map<String, String> invalidFields = new HashMap<>();
+		ex.getBindingResult().getFieldErrors().forEach(err -> {
+			invalidFields.put(err.getField(), err.getDefaultMessage());
+		});
+		errResponse.setError("Invalid data");
+		errResponse.setMessage(invalidFields);
+		errResponse.setStatus(400);
+		errResponse.setTimestamp(new Date().toString());
+		return new ResponseEntity<Object>(errResponse, HttpStatus.BAD_REQUEST);
+	}
 	
+	@ExceptionHandler(ConstraintViolationException.class) 
+	public ResponseEntity<RestResponse> listOfConstraintViolation(ConstraintViolationException exp) {
+		RestResponse errResponse = new RestResponse();
+		Map<String, String> invalidFields = new HashMap<>();
+		exp.getConstraintViolations().forEach(violation -> {
+			invalidFields.put(violation.getPropertyPath().toString(), violation.getMessage());
+		});
+		errResponse.setError("One or more of data are invalid");
+		errResponse.setMessage(invalidFields);
+		errResponse.setStatus(400);
+		errResponse.setTimestamp(new Date().toString());
+		return new ResponseEntity<RestResponse>(errResponse, HttpStatus.BAD_REQUEST);
+	}
+
 	@Override
 	protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(HttpRequestMethodNotSupportedException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {

@@ -2,6 +2,7 @@ package com.saravanank.ecommerce.resourceserver.service;
 
 import java.util.Base64;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -14,7 +15,12 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.saravanank.ecommerce.resourceserver.model.Json;
+import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
+import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
+import com.saravanank.ecommerce.resourceserver.model.TransactionRequest;
+import com.saravanank.ecommerce.resourceserver.repository.OrderRepository;
+import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
+import com.saravanank.ecommerce.resourceserver.util.Json;
 
 @Service
 public class TransactionService {
@@ -27,6 +33,25 @@ public class TransactionService {
 
 	@Value("${e-commerce.application.client-id}")
 	private String clientId;
+
+	@Autowired
+	private OrderRepository orderRepo;
+
+	@Autowired
+	private UserRepository userRepo;
+
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+
+	public void putPaymentToQueue(TransactionRequest transaction) {
+		if (transaction.getAmount() <= 0)
+			throw new BadRequestException("Amount should be greater than 0");
+		if (!orderRepo.existsById(transaction.getOrderId()))
+			throw new NotFoundException("Order with id " + transaction.getOrderId() + " not found");
+		if (!userRepo.existsById(transaction.getUserId()))
+			throw new NotFoundException("User with id " + transaction.getUserId() + " not found");
+		rabbitTemplate.convertAndSend(Json.toJson(transaction).toString());
+	}
 
 	public JsonNode getUserTransactions(long userId) throws JsonMappingException, JsonProcessingException {
 		HttpHeaders headers = new HttpHeaders();
