@@ -47,7 +47,7 @@ public class Order {
 	private boolean isClosed = false;
 	
 	@NotNull(message = "Delivery address should not be null")
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "delivery_address")
 	private Address deliveryAddress;
 	
@@ -55,11 +55,11 @@ public class Order {
 	private PaymentType paymentType;
 	
 	@NotNull(message = "User of order should not be null")
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "user_id")
 	private User user;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "placed_by")
 	private User placedBy;
 	
@@ -68,7 +68,7 @@ public class Order {
 	private OrderStatus orderStatus;
 
 	@NotNull(message = "Order should contain atleast one product")
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "order_id")
 	private List<@NotNull(message = "Product quantity mapper should not be null") ProductQuantityMapper> products;
 

@@ -13,6 +13,12 @@ spring:
     username: ${database-username}
     password: ${database-password}
     driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations:
+      - classpath:/schema.sql
+      continue-on-error: true
   jpa:
     show-sql: ${show-sql}       
     hibernate:
@@ -23,6 +29,8 @@ spring:
   rabbitmq:
     template:
       default-receive-queue: ${rabbitmq-default-queue}
+      exchange: ${rabbitmq-default-exchange}
+      routing-key: ${rabbitmq-default-routekey}
 e-commerce:
   application:
     tax-percentage: ${application-tax-percentage}
