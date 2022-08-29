@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Cart;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
+import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.service.CartService;
 import io.swagger.annotations.ApiOperation;
 
@@ -44,6 +46,16 @@ public class CartController {
 		logger.info("POST request to /api/v1/cart/add");
 		return new ResponseEntity<Cart>(cartService.addProductsToCart(principal.getName(), productQty),
 				HttpStatus.CREATED);
+	}
+	
+	@PostMapping("/user/{userId}")
+	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_CUSTOMER')")
+	public ResponseEntity<String> addCartToUser(@PathVariable("userId") long userId) {
+		logger.info("POST request to  /api/v1/cart/user/" + userId);
+		User user = new User();
+		user.setUserId(userId);
+		cartService.addCartToUser(user);
+		return new ResponseEntity<String>("Added cart to user with id " + userId, HttpStatus.CREATED);
 	}
 
 }

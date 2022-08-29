@@ -33,7 +33,7 @@ public class Cart {
 	private List<@NotNull(message = "Product quantity mapper should not be null") ProductQuantityMapper> products;
 	
 	@NotNull(message = "Cart user should not be null")
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "user")
 	private User user;
 	

@@ -23,6 +23,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.saravanank.ecommerce.resourceserver.model.Order;
 import com.saravanank.ecommerce.resourceserver.model.ProductQuantityMapper;
+import com.saravanank.ecommerce.resourceserver.model.TransactionRequest;
 import com.saravanank.ecommerce.resourceserver.service.OrderService;
 import com.saravanank.ecommerce.resourceserver.util.Json;
 
@@ -124,10 +125,16 @@ public class OrderController {
 
 	@PostMapping("/cart")
 	@PreAuthorize("hasAuthority('ROLE_CUSTOMER')")
-	public ResponseEntity<Order> placeOrderFromCart(Principal principal, @RequestBody String paymentType) {
+	public ResponseEntity<Order> placeOrderFromCart(Principal principal, @RequestBody(required = false) String paymentType) {
 		logger.info("POST request to /api/v1/order/cart by user = " + principal.getName());
 		return new ResponseEntity<Order>(orderService.placeOrderFromCart(paymentType, principal.getName()),
 				HttpStatus.CREATED);
+	}
+	
+	@PostMapping("/received/payment")
+	public ResponseEntity<Void> handleReceivedPayment(@RequestBody TransactionRequest transaction) {
+		orderService.recieveTransactions(transaction);
+		return new ResponseEntity<Void>(HttpStatus.ACCEPTED);
 	}
 
 }
