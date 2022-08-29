@@ -2998,3 +2998,91 @@
 [2022-08-25 16:02:12,283] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=2
 [2022-08-25 16:02:12,284] com.saravanank.ecommerce.resourceserver.service.CategoryService 32 INFO   -  Returned category with id=3
 [2022-08-25 16:02:12,302] com.saravanank.ecommerce.resourceserver.service.CategoryService 61 INFO   -  Added category with category_id=4
+[2022-08-26 13:21:12,401] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 10:42:35,810] com.saravanank.ecommerce.resourceserver.controller.UserController 59 INFO   -  POST request to /api/v1/user/register
+[2022-08-29 10:42:37,049] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 72 INFO   -  Added user with userid=1
+[2022-08-29 10:42:51,435] com.saravanank.ecommerce.resourceserver.controller.UserController 59 INFO   -  POST request to /api/v1/user/register
+[2022-08-29 10:42:51,986] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 72 INFO   -  Added user with userid=2
+[2022-08-29 10:43:23,068] com.saravanank.ecommerce.resourceserver.controller.BrandController 48 INFO   -  POST request to /api/v1/brand/all
+[2022-08-29 10:43:23,068] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin1
+[2022-08-29 10:43:23,123] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 78 brand(s)
+[2022-08-29 10:43:34,840] com.saravanank.ecommerce.resourceserver.controller.CategoryController 48 INFO   -  POST request to /api/v1/category/all
+[2022-08-29 10:43:34,841] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin1
+[2022-08-29 10:43:34,846] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 7 category(ies)
+[2022-08-29 10:43:42,674] com.saravanank.ecommerce.resourceserver.controller.ProductController 72 INFO   -  POST request to /api/v1/products/all
+[2022-08-29 10:43:42,675] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin1
+[2022-08-29 10:45:21,791] com.saravanank.ecommerce.resourceserver.controller.ProductController 72 INFO   -  POST request to /api/v1/products/all
+[2022-08-29 10:45:21,792] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 78 INFO   -  Returned user with username=admin1
+[2022-08-29 10:45:22,177] com.saravanank.ecommerce.resourceserver.service.ProductService 84 INFO   -  Added 100 product(s)
+[2022-08-29 10:45:36,043] com.saravanank.ecommerce.resourceserver.controller.ProductController 50 INFO   -  GET request to /api/v1/products?page=null&limit=null
+[2022-08-29 10:45:36,165] com.saravanank.ecommerce.resourceserver.service.ProductService 217 INFO   -  Returned products
+[2022-08-29 10:46:22,336] com.saravanank.ecommerce.resourceserver.controller.CartController 36 INFO   -  GET request to /api/v1/cart
+[2022-08-29 10:46:22,339] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-29 10:46:35,227] com.saravanank.ecommerce.resourceserver.controller.CartController 44 INFO   -  POST request to /api/v1/cart/add
+[2022-08-29 10:46:35,245] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Cart of user with username customer not found
+[2022-08-29 10:52:04,276] com.saravanank.ecommerce.resourceserver.controller.CartController 54 INFO   -  POST request to  /api/v1/cart/user/2
+[2022-08-29 10:52:04,276] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=2
+[2022-08-29 10:52:40,847] com.saravanank.ecommerce.resourceserver.controller.CartController 54 INFO   -  POST request to  /api/v1/cart/user/2
+[2022-08-29 10:52:40,847] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=2
+[2022-08-29 10:52:58,669] com.saravanank.ecommerce.resourceserver.controller.CartController 46 INFO   -  POST request to /api/v1/cart/add
+[2022-08-29 10:52:58,709] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=customer
+[2022-08-29 10:54:42,200] com.saravanank.ecommerce.resourceserver.controller.OrderController 129 INFO   -  POST request to /api/v1/order/cart by user = customer
+[2022-08-29 10:54:42,368] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  User has no delivery address
+[2022-08-29 11:00:56,310] com.saravanank.ecommerce.resourceserver.controller.AddressController 54 INFO   -  POST request to /api/v1/address
+[2022-08-29 11:01:09,737] com.saravanank.ecommerce.resourceserver.controller.OrderController 129 INFO   -  POST request to /api/v1/order/cart by user = customer
+[2022-08-29 11:02:06,306] com.saravanank.ecommerce.resourceserver.controller.OrderController 129 INFO   -  POST request to /api/v1/order/cart by user = customer
+[2022-08-29 11:07:18,143] com.saravanank.ecommerce.resourceserver.controller.OrderController 129 INFO   -  POST request to /api/v1/order/cart by user = customer
+[2022-08-29 11:07:27,289] com.saravanank.ecommerce.resourceserver.controller.CartController 38 INFO   -  GET request to /api/v1/cart
+[2022-08-29 11:07:27,301] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-29 11:08:43,770] com.saravanank.ecommerce.resourceserver.controller.OrderController 129 INFO   -  POST request to /api/v1/order/cart by user = customer
+[2022-08-29 11:08:43,911] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 212 INFO   -  Added order for user customer
+[2022-08-29 11:08:47,527] com.saravanank.ecommerce.resourceserver.controller.CartController 38 INFO   -  GET request to /api/v1/cart
+[2022-08-29 11:08:47,537] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-29 11:10:41,643] com.saravanank.ecommerce.resourceserver.controller.UserController 77 INFO   -  GET request to /api/v1/user/customer
+[2022-08-29 11:10:41,644] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 85 INFO   -  Returned All customers
+[2022-08-29 11:13:30,634] com.saravanank.ecommerce.resourceserver.controller.UserController 77 INFO   -  GET request to /api/v1/user/customer
+[2022-08-29 11:13:57,975] com.saravanank.ecommerce.resourceserver.controller.UserController 77 INFO   -  GET request to /api/v1/user/customer
+[2022-08-29 11:13:57,975] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 85 INFO   -  Returned All customers
+[2022-08-29 11:34:09,277] com.saravanank.ecommerce.resourceserver.controller.OrderController 72 INFO   -  GET request to /api/v1/order/all
+[2022-08-29 11:34:09,279] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-08-29 11:34:13,200] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:35:44,710] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:36:18,546] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:37:01,031] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:37:08,431] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:37:44,459] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:39:08,943] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:39:37,492] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:39:45,859] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  Amount should be greater than 0
+[2022-08-29 11:41:18,454] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 11:46:50,343] com.saravanank.ecommerce.resourceserver.controller.UserController 59 INFO   -  POST request to /api/v1/user/register
+[2022-08-29 11:46:51,741] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 73 INFO   -  Added user with userid=1
+[2022-08-29 11:47:00,385] com.saravanank.ecommerce.resourceserver.controller.UserController 59 INFO   -  POST request to /api/v1/user/register
+[2022-08-29 11:47:01,153] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=2
+[2022-08-29 11:47:01,178] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 73 INFO   -  Added user with userid=2
+[2022-08-29 11:47:14,540] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 11:47:19,563] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 11:47:47,363] com.saravanank.ecommerce.resourceserver.controller.AddressController 54 INFO   -  POST request to /api/v1/address
+[2022-08-29 11:48:26,821] com.saravanank.ecommerce.resourceserver.controller.BrandController 48 INFO   -  POST request to /api/v1/brand/all
+[2022-08-29 11:48:26,821] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 79 INFO   -  Returned user with username=admin1
+[2022-08-29 11:48:26,830] com.saravanank.ecommerce.resourceserver.service.BrandService 86 INFO   -  Added 78 brand(s)
+[2022-08-29 11:48:36,744] com.saravanank.ecommerce.resourceserver.controller.CategoryController 48 INFO   -  POST request to /api/v1/category/all
+[2022-08-29 11:48:36,745] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 79 INFO   -  Returned user with username=admin1
+[2022-08-29 11:48:36,753] com.saravanank.ecommerce.resourceserver.service.CategoryService 50 INFO   -  Added 7 category(ies)
+[2022-08-29 11:48:41,842] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 11:48:50,780] com.saravanank.ecommerce.resourceserver.controller.ProductController 72 INFO   -  POST request to /api/v1/products/all
+[2022-08-29 11:48:50,785] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 79 INFO   -  Returned user with username=admin1
+[2022-08-29 11:48:53,791] com.saravanank.ecommerce.resourceserver.controller.ProductController 72 INFO   -  POST request to /api/v1/products/all
+[2022-08-29 11:48:53,792] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 79 INFO   -  Returned user with username=admin1
+[2022-08-29 11:48:54,324] com.saravanank.ecommerce.resourceserver.service.ProductService 84 INFO   -  Added 100 product(s)
+[2022-08-29 11:49:15,266] com.saravanank.ecommerce.resourceserver.controller.CartController 38 INFO   -  GET request to /api/v1/cart
+[2022-08-29 11:49:15,270] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 40 WARN   -  Returned cart of user with username=customer
+[2022-08-29 11:49:22,745] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 11:49:27,111] com.saravanank.ecommerce.resourceserver.controller.CartController 46 INFO   -  POST request to /api/v1/cart/add
+[2022-08-29 11:49:27,161] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 78 WARN   -  Product added to user cart of user with username=customer
+[2022-08-29 11:49:37,830] com.saravanank.ecommerce.resourceserver.controller.OrderController 129 INFO   -  POST request to /api/v1/order/cart by user = customer
+[2022-08-29 11:49:38,019] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 212 INFO   -  Added order for user customer
+[2022-08-29 11:49:59,948] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 11:50:51,606] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-08-29 11:53:13,873] com.saravanank.ecommerce.resourceserver.controller.OrderController 72 INFO   -  GET request to /api/v1/order/all
+[2022-08-29 11:53:13,873] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
