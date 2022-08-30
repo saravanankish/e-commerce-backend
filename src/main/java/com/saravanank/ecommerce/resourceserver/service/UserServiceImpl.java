@@ -76,8 +76,11 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User getUserByUsername(String username) {
+		User user = userRepo.findByUsername(username);
+		if (user == null)
+			throw new NotFoundException("User with username " + username + " not found");
 		logger.info("Returned user with username=" + username);
-		return userRepo.findByUsername(username);
+		return user;
 	}
 
 	@Override
@@ -113,7 +116,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User updateUser(User user, long customerId, String updatedBy) {
 		if (customerId == 0) {
-			throw new NotFoundException("User with id is not present");
+			throw new NotFoundException("User id is not present");
 		}
 		Optional<User> userData = userRepo.findById(customerId);
 		if (userData.isEmpty()) {

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+
+import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.Brand;
@@ -88,8 +90,13 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 	@Override
 	public Product add(Product data, String modifiedBy) {
 		User modifiedByUser = userService.getUserByUsername(modifiedBy);
+		if(data.getBrand() == null)
+			throw new BadRequestException("Brand cannot be null");
+		if(data.getCategory() == null) 
+			throw new BadRequestException("Category cannot be null");			
 		if (data.getBrand().getId() == 0) {
 			Brand brandInDb = brandRepo.findByNameIgnoreCase(data.getBrand().getName());
+			System.out.println(brandInDb);
 			if (brandInDb != null) {
 				data.setBrand(brandInDb);
 			} else {
@@ -99,6 +106,7 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 				newBrand.setModifiedBy(modifiedByUser);
 				newBrand.setModifiedDate(new Date());
 				brandRepo.saveAndFlush(newBrand);
+				System.out.println("Ran");
 				data.setBrand(newBrand);
 			}
 		}
@@ -120,9 +128,8 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 		data.setModifiedDate(new Date());
 		data.setCreationDate(new Date());
 		data.setModifiedBy(modifiedByUser);
-		productRepo.save(data);
 		logger.info("Added product with productId=" + data.getProductId());
-		return data;
+		return productRepo.save(data);
 	}
 
 	@Override
@@ -184,9 +191,8 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 		}
 		data.setModifiedDate(new Date(new java.util.Date().getTime()));
 		data.setModifiedBy(modifiedByUser);
-		productRepo.save(productData);
 		logger.info("Updated product with productId=" + data.getProductId());
-		return productData;
+		return productRepo.save(productData);
 	}
 
 	@Override
