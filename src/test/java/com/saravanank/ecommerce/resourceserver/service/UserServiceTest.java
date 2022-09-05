@@ -171,7 +171,7 @@ public class UserServiceTest {
 		Page<User> users = new PageImpl<>(List.of(testUser1, testUser2), req, 2);
 		when(userRepo.findByRole(Role.CUSTOMER, req)).thenReturn(users);
 
-		PageResponseModel<User> response = userService.getByRole("customer", 0, 5, null);
+		PageResponseModel<User> response = userService.getByRole("customer", 0, 5, null, "");
 		assertEquals(2, response.getData().size());
 		assertEquals(2, response.getTotal());
 		assertEquals(1, response.getTotalPages());
@@ -185,7 +185,7 @@ public class UserServiceTest {
 		Page<User> users = new PageImpl<>(List.of(), req, 0);
 		when(userRepo.findByRole(Role.ADMIN, req)).thenReturn(users);
 		
-		PageResponseModel<User> response = userService.getByRole("admin", 0, 5, null);
+		PageResponseModel<User> response = userService.getByRole("admin", 0, 5, null, "");
 		assertEquals(0, response.getData().size());
 		assertEquals(0, response.getTotal());
 		assertEquals(0, response.getTotalPages());

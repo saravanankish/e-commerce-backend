@@ -102,7 +102,7 @@ public class OrderServiceTest {
 	public void getAllOrders_success() {
 		when(orderRepo.findAll()).thenReturn(List.of(order1, order2, order3));
 		
-		assertEquals(List.of(order1, order2, order3), orderService.getAllOrders());
+		assertEquals(List.of(order1, order2, order3), orderService.getAllOrders("", ""));
 	}
 	
 	@Test
@@ -116,7 +116,9 @@ public class OrderServiceTest {
 		cancelled.setModifiedDate(new Date());
 		cancelled.setClosed(true);
 				
-		assertEquals(cancelled,	orderService.cancelOrder(2, "Reason"));
+		Order response = orderService.cancelOrder(2, "Reason");
+		assertEquals("Reason",	response.getCancelReason());
+		assertEquals(OrderStatus.CANCELED,	response.getOrderStatus());
 	}
 	
 	@Test 

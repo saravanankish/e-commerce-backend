@@ -34,8 +34,10 @@ public class CategoryService implements CrudOperationService<Category> {
 	}
 
 	@Override
-	public List<Category> getAll() {
+	public List<Category> getAll(String search) {
 		logger.info("Returned all categories");
+		if(search != null && !search.equals(""))
+			return categoryRepo.findByNameContainingIgnoreCase(search);
 		return categoryRepo.findAll();
 	}
 
@@ -88,6 +90,11 @@ public class CategoryService implements CrudOperationService<Category> {
 		}
 		logger.info("Deleted category with id=" + id);
 		categoryRepo.deleteById(id);
+	}
+
+	@Override
+	public List<OptionValue> getAllForOption() {
+		return null;
 	}
 
 }

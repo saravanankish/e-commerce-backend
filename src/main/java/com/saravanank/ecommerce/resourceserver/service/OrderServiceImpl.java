@@ -78,8 +78,17 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public List<Order> getAllOrders() {
+	public List<Order> getAllOrders(String orderStatus, String search) {
 		logger.info("Returned all order");
+		if(orderStatus != null && !orderStatus.equals("")) {
+			if(search != null && !search.equals("")) {				
+				return orderRepo.findByOrderStatusAndUserUsernameContainingIgnoreCase(OrderStatus.valueOf(orderStatus), search);
+			}
+			return orderRepo.findByOrderStatus(OrderStatus.valueOf(orderStatus));
+		}
+		if(search != null && !search.equals("")) {
+			return orderRepo.findByUserUsernameContainingIgnoreCase(search);
+		}
 		return orderRepo.findAll();
 	}
 

@@ -48,7 +48,7 @@ public class BrandServiceTest {
 		List<Brand> brands = List.of(brand1, brand2, brand3, brand4);
 		when(brandRepo.findAll()).thenReturn(brands);
 
-		List<Brand> getResult = brandService.getAll();
+		List<Brand> getResult = brandService.getAll("");
 		assertEquals(brands, getResult);
 	}
 

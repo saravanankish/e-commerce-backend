@@ -84,16 +84,27 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public PageResponseModel<User> getByRole(String role, Integer page, Integer limit, String search) {
+	public PageResponseModel<User> getByRole(String role, Integer page, Integer limit, String search, String field) {
 		logger.info("Returned All customers");
 		PageRequest pageReq = PageRequest.of(page, limit);
 		PageResponseModel<User> userResponse = new PageResponseModel<User>();
-		Page<User> user;
+		Page<User> user = null;
 		if (search == null) {
 			user = userRepo.findByRole(Role.valueOf(role.toUpperCase()), pageReq);
 		} else {
-			user = userRepo.findByNameContainingOrEmailContainingOrUsernameContainingAndRole(search, search, search,
-					Role.valueOf(role.toUpperCase()), pageReq);
+			switch (field) {
+			case "name":
+				user = userRepo.findByNameContainingAndRole(search, Role.valueOf(role.toUpperCase()), pageReq);
+				break;
+			case "email":
+				user = userRepo.findByEmailContainingAndRole(search, Role.valueOf(role.toUpperCase()), pageReq);
+				break;
+			case "username":
+				user = userRepo.findByUsernameContainingAndRole(search, Role.valueOf(role.toUpperCase()), pageReq);
+				break;
+			default:
+				user = userRepo.findByRole(Role.valueOf(role.toUpperCase()), pageReq);
+			}
 		}
 		userResponse.setData(user.toList());
 		userResponse.setCurrentPage(user.getNumber());

@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Brand;
 import com.saravanank.ecommerce.resourceserver.service.CrudOperationService;
+import com.saravanank.ecommerce.resourceserver.service.OptionValue;
 
 import io.swagger.annotations.ApiOperation;
 
@@ -48,6 +50,11 @@ public class BrandController {
 		logger.info("POST request to /api/v1/brand/all");
 		return new ResponseEntity<List<Brand>>(brandService.addAll(brands, principal.getName()), HttpStatus.CREATED);
 	}
+	
+	@GetMapping("/options")
+	public ResponseEntity<List<OptionValue>> getAllForOptions() {
+		return new ResponseEntity<List<OptionValue>>(brandService.getAllForOption(), HttpStatus.OK);
+	}
 
 	@GetMapping("/{brandId}")
 	@ApiOperation(value = "Get brand by id", notes = "All users can use this endpoint")
@@ -58,9 +65,9 @@ public class BrandController {
 
 	@GetMapping
 	@ApiOperation(value = "Get all brands", notes = "All users can use this endpoint", produces = "application/json")
-	public ResponseEntity<List<Brand>> getAllBrand() {
+	public ResponseEntity<List<Brand>> getAllBrand(@RequestParam(required = false, name = "search") String search) {
 		logger.info("GET request to /api/v1/brand");
-		return new ResponseEntity<List<Brand>>(brandService.getAll(), HttpStatus.OK);
+		return new ResponseEntity<List<Brand>>(brandService.getAll(search), HttpStatus.OK);
 	}
 
 	@PutMapping("/{brandId}")

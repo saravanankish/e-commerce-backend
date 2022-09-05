@@ -6,7 +6,7 @@ public interface CrudOperationService<T> {
 
 	public T getById(long id);
 
-	public List<T> getAll();
+	public List<T> getAll(String search);
 
 	public List<T> addAll(List<T> data, String modifiedBy);
 
@@ -15,5 +15,7 @@ public interface CrudOperationService<T> {
 	public T update(T data, long id, String modifiedBy);
 
 	public void delete(long id);
+	
+	public List<OptionValue> getAllForOption();
 
 }

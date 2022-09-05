@@ -224,4 +224,10 @@ public class ProductService implements PageCrudOperationService<Product, PageRes
 		return productResponse;
 	}
 
+	@Override
+	public List<OptionValue> getAllForOption() {
+		logger.info("Returned product data for options");
+		return productRepo.findAllForOption();
+	}
+
 }

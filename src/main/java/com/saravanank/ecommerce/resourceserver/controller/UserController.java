@@ -73,6 +73,7 @@ public class UserController {
 	public ResponseEntity<PageResponseModel<User>> getByRole(@RequestParam(required = false, name = "limit") Integer limit,
 			@RequestParam(required = false, name = "page") Integer page,
 			@RequestParam(required = false, name = "search") String search,
+			@RequestParam(required = false, name = "field") String field,
 			@PathVariable(name = "role", required = false) String role) {
 		logger.info("GET request to /api/v1/user/customer");
 		if (limit == null)
@@ -80,7 +81,7 @@ public class UserController {
 		if (limit > 100)
 			limit = 100;
 		if(page == null) page = 0;
-		return new ResponseEntity<PageResponseModel<User>>(userService.getByRole(role, page, limit, search), HttpStatus.OK);
+		return new ResponseEntity<PageResponseModel<User>>(userService.getByRole(role, page, limit, search, field), HttpStatus.OK);
 	}
 
 	@PutMapping("/{customerId}")

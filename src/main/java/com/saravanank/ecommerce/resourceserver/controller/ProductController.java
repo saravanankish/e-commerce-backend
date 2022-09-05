@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
+import com.saravanank.ecommerce.resourceserver.service.OptionValue;
 import com.saravanank.ecommerce.resourceserver.service.PageCrudOperationService;
 import io.swagger.annotations.ApiOperation;
 
@@ -33,6 +34,11 @@ public class ProductController {
 
 	@Autowired
 	private PageCrudOperationService<Product, PageResponseModel<Product>> prodService;
+	
+	@GetMapping("/options")
+	public ResponseEntity<List<OptionValue>> getAllForOptions() {
+		return new ResponseEntity<List<OptionValue>>(prodService.getAllForOption(), HttpStatus.OK);
+	}
 
 	@GetMapping("/{productId}")
 	@ApiOperation(value = "Get product by id", notes = "This is an open endpoint")

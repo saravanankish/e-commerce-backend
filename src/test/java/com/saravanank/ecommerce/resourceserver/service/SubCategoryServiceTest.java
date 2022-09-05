@@ -67,7 +67,7 @@ public class SubCategoryServiceTest {
 				.thenReturn(List.of("sub-1-1", "sub-1-2", "sub-1-3", "sub-2-1", "sub-2-2", "sub-3-1"));
 
 		assertEquals(List.of("sub-1-1", "sub-1-2", "sub-1-3", "sub-2-1", "sub-2-2", "sub-3-1"),
-				subCategoryService.getAll());
+				subCategoryService.getAll(""));
 	}
 
 	@Test

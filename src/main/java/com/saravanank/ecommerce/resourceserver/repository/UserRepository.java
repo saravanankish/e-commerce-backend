@@ -13,8 +13,11 @@ public interface UserRepository extends PagingAndSortingRepository<User, Long> {
 
 	public Page<User> findByRole(Role role, PageRequest request);
 
-	public Page<User> findByNameContainingOrEmailContainingOrUsernameContainingAndRole(String name,
-			String email, String username, Role role, PageRequest request);
+	public Page<User> findByNameContainingAndRole(String name, Role role, PageRequest request);
+
+	public Page<User> findByEmailContainingAndRole(String email, Role role, PageRequest request);
+
+	public Page<User> findByUsernameContainingAndRole(String username, Role role, PageRequest request);
 
 	public boolean existsByUsername(String username);
 

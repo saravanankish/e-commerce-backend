@@ -11,7 +11,7 @@ public interface UserService extends UserDetailsService {
 	
 	public User getUserByUsername(String username);
 	
-	public PageResponseModel<User> getByRole(String role, Integer page, Integer limit, String search);
+	public PageResponseModel<User> getByRole(String role, Integer page, Integer limit, String search, String field);
 	
 	public User getUserById(long id);
 	

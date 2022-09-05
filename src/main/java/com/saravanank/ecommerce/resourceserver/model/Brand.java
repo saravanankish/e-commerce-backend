@@ -33,7 +33,7 @@ public class Brand {
 	private Date creationDate;
 	private Date modifiedDate;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "modified_by")
 	private User modifiedBy;
 	

@@ -7,6 +7,8 @@ import java.util.Optional;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Brand;
 import com.saravanank.ecommerce.resourceserver.model.User;
@@ -34,13 +36,17 @@ public class BrandService implements CrudOperationService<Brand> {
 	}
 
 	@Override
-	public List<Brand> getAll() {
+	public List<Brand> getAll(String search) {
 		logger.info("Returned all brands");
+		if(search != null && !search.equals("")) 
+			return brandRepo.findByNameContainingIgnoreCase(search);
 		return brandRepo.findAll();
 	}
 
 	@Override
 	public Brand add(Brand data, String modifiedBy) {
+		if(brandRepo.findByNameIgnoreCase(data.getName()) != null) 
+			throw new BadRequestException(data.getName() + " already exists");
 		data.setCreationDate(new Date());
 		data.setModifiedDate(new Date());
 		data.setModifiedBy(userService.getUserByUsername(modifiedBy));
@@ -85,6 +91,12 @@ public class BrandService implements CrudOperationService<Brand> {
 		});
 		logger.info("Added " + data.size() + " brand(s)");
 		return brandRepo.saveAll(data);
+	}
+
+	@Override
+	public List<OptionValue> getAllForOption() {
+		logger.info("Returned all brand for options");
+		return brandRepo.findAllForOption();
 	}
 
 }

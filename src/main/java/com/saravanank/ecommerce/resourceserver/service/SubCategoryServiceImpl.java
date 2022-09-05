@@ -37,7 +37,7 @@ public class SubCategoryServiceImpl implements SubCategoryService {
 	}
 
 	@Override
-	public List<String> getAll() {
+	public List<String> getAll(String search) {
 		logger.info("Returned all subCategories");
 		return categoryRepo.findAllSubcategories();
 	}
@@ -115,6 +115,11 @@ public class SubCategoryServiceImpl implements SubCategoryService {
 			throw new BadRequestException("Index to delete is not present");
 		category.getSubCategory().remove(index);
 		categoryRepo.saveAndFlush(category);
+	}
+
+	@Override
+	public List<OptionValue> getAllForOption() {
+		return null;
 	}
 
 }

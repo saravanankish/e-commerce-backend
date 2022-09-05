@@ -36,7 +36,7 @@ public class Category {
 	private Date creationDate = new Date();
 	private Date modifiedDate = new Date();
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.REFRESH)
 	@JoinColumn(name = "modified_by")
 	private User modifiedBy;
 }

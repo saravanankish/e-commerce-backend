@@ -32,7 +32,7 @@ public class SubCategoryController {
 	@GetMapping
 	public ResponseEntity<List<String>> getAllSubCategories() {
 		logger.info("GET request to /api/v1/sub-category");
-		return new ResponseEntity<List<String>>(subCategoryService.getAll(), HttpStatus.OK);
+		return new ResponseEntity<List<String>>(subCategoryService.getAll(""), HttpStatus.OK);
 	}
 
 	@GetMapping("/category/{categoryId}")

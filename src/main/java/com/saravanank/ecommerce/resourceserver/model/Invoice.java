@@ -26,7 +26,7 @@ public class Invoice {
 	private long invoiceId;
 	
 	@NotNull(message = "User of invoice should not be null")
-	@OneToOne(cascade =  CascadeType.ALL)
+	@OneToOne(cascade =  CascadeType.REFRESH)
 	@JoinColumn(name ="invoice_of_user")
 	private User user;
 	

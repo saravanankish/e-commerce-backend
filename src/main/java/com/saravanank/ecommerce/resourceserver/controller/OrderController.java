@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -68,9 +69,11 @@ public class OrderController {
 	@GetMapping("/all")
 	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_SUPPORT')")
 	@ApiOperation(value = "Get all orders", notes = "Only user with admin or support access can use this endpoint")
-	public ResponseEntity<List<Order>> getAllOrders() {
+	public ResponseEntity<List<Order>> getAllOrders(
+			@RequestParam(required = false, name = "orderStatus") String orderStatus,
+			@RequestParam(required = false, name = "search") String search) {
 		logger.info("GET request to /api/v1/order/all");
-		return new ResponseEntity<List<Order>>(orderService.getAllOrders(), HttpStatus.OK);
+		return new ResponseEntity<List<Order>>(orderService.getAllOrders(orderStatus, search), HttpStatus.OK);
 	}
 
 	@PutMapping("/{orderId}")
@@ -125,12 +128,13 @@ public class OrderController {
 
 	@PostMapping("/cart")
 	@PreAuthorize("hasAuthority('ROLE_CUSTOMER')")
-	public ResponseEntity<Order> placeOrderFromCart(Principal principal, @RequestBody(required = false) String paymentType) {
+	public ResponseEntity<Order> placeOrderFromCart(Principal principal,
+			@RequestBody(required = false) String paymentType) {
 		logger.info("POST request to /api/v1/order/cart by user = " + principal.getName());
 		return new ResponseEntity<Order>(orderService.placeOrderFromCart(paymentType, principal.getName()),
 				HttpStatus.CREATED);
 	}
-	
+
 	@PostMapping("/received/payment")
 	public ResponseEntity<Void> handleReceivedPayment(@RequestBody TransactionRequest transaction) {
 		orderService.recieveTransactions(transaction);

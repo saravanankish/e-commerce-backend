@@ -72,7 +72,7 @@ public class Order {
 	private OrderStatus orderStatus;
 
 	@NotNull(message = "Order should contain atleast one product")
-	@OneToMany(cascade = CascadeType.REFRESH)
+	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "order_id")
 	private List<@NotNull(message = "Product quantity mapper should not be null") ProductQuantityMapper> products;
 

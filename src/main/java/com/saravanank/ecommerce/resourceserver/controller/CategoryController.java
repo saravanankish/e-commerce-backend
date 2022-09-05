@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Category;
@@ -59,9 +60,9 @@ public class CategoryController {
 
 	@GetMapping("/all")
 	@ApiOperation(value = "Get all categories", notes = "All users can use this endpoint")
-	public ResponseEntity<List<Category>> getAllCategories() {
+	public ResponseEntity<List<Category>> getAllCategories(@RequestParam(required = false, name = "search") String search) {
 		logger.info("GET request to /api/v1/category/all");
-		return new ResponseEntity<List<Category>>(categoryService.getAll(), HttpStatus.OK);
+		return new ResponseEntity<List<Category>>(categoryService.getAll(search), HttpStatus.OK);
 	}
 
 	@PutMapping("/{categoryId}")

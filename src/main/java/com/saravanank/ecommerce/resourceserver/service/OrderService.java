@@ -14,7 +14,7 @@ public interface OrderService {
 
 	public Order getById(long id);
 
-	public List<Order> getAllOrders();
+	public List<Order> getAllOrders(String orderStatus, String search);
 
 	public Order updateOrder(Order order, long orderId);
 

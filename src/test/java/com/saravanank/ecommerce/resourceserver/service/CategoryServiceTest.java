@@ -64,7 +64,7 @@ public class CategoryServiceTest {
 	public void getAll_success() {
 		when(categoryRepo.findAll()).thenReturn(List.of(category1, category2, category3, category4));
 
-		assertEquals(List.of(category1, category2, category3, category4), categoryService.getAll());
+		assertEquals(List.of(category1, category2, category3, category4), categoryService.getAll(""));
 	}
 
 	@Test
