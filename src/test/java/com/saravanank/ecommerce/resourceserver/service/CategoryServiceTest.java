@@ -39,7 +39,7 @@ public class CategoryServiceTest {
 	Category category3 = new Category(3, "Category 2", new ArrayList<String>(), null, null, null);
 	Category category4 = new Category(4, "Category 2", new ArrayList<String>(), null, null, null);
 
-	User testUser1 = new User(1, "Test1", "test@gmail.com", "test1", "test", Role.ADMIN, false, null, null, null, null,
+	User testUser1 = new User(1, "Test1", "test@gmail.com", "test1", "test", Role.ADMIN, true, false, null, null, null, null,
 			null);
 
 	@Test

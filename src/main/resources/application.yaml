@@ -36,4 +36,6 @@ e-commerce:
     tax-percentage: ${application-tax-percentage}
     transaction-url: ${transaction-url}
     client-id: ${client-id}
+    frontend-url: ${frontend-url}
+    notification-exchange: ${notification-exchange}
     

@@ -6013,3 +6013,30 @@
 [2022-09-02 16:36:26,699] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=5
 [2022-09-02 16:36:26,710] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
 [2022-09-02 16:36:26,712] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 09:59:34,866] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 09:59:34,866] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 09:59:35,104] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 09:59:35,104] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 09:59:41,260] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=1&limit=null
+[2022-09-05 09:59:41,351] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 09:59:56,344] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 09:59:56,413] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 09:59:57,472] com.saravanank.ecommerce.resourceserver.controller.UserController 44 INFO   -  GET request to /api/v1/user
+[2022-09-05 09:59:57,518] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 82 INFO   -  Returned user with username=admin1
+[2022-09-05 09:59:57,955] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-09-05 10:00:01,062] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-09-05 10:00:01,118] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 10:00:01,157] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=5
+[2022-09-05 10:00:01,197] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 10:00:04,807] com.saravanank.ecommerce.resourceserver.controller.UserController 78 INFO   -  GET request to /api/v1/user/customer
+[2022-09-05 10:00:04,812] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 88 INFO   -  Returned All customers
+[2022-09-05 10:00:04,946] com.saravanank.ecommerce.resourceserver.controller.UserController 78 INFO   -  GET request to /api/v1/user/customer
+[2022-09-05 10:00:04,946] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 88 INFO   -  Returned All customers
+[2022-09-05 10:00:09,180] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-05 10:00:09,180] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-05 10:00:09,349] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-05 10:00:09,352] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-05 10:00:15,049] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-05 10:00:15,052] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-05 10:00:15,116] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-05 10:00:15,116] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order

@@ -1,6 +1,7 @@
 package com.saravanank.ecommerce.resourceserver.util;
 
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.List;
 
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -50,9 +50,9 @@ public class AddressServiceTest {
 			false, DeliveryTimingType.HOME, testMobileNumber);
 	Address address4 = new Address(4, "22", "Street 4", "Area 4", "City 4", "State 4", "600004", "Landmark 4", "Test 4",
 			true, DeliveryTimingType.OFFICE, testMobileNumber);
-	User testUser1 = new User(1, "test1", "test1", "test1", "test1", Role.ADMIN, true, null, null, null, null,
+	User testUser1 = new User(1, "test1", "test1", "test1", "test1", Role.ADMIN, true, true, null, null, null, null,
 			new ArrayList<Address>(List.of(address1, address3)));
-	User testUser2 = new User(2, "test2", "test2", "test2", "test2", Role.CUSTOMER, true, null, null, null, null,
+	User testUser2 = new User(2, "test2", "test2", "test2", "test2", Role.CUSTOMER, true, true, null, null, null, null,
 			new ArrayList<Address>(List.of(address2, address4)));
 
 	@Test

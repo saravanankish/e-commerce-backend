@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` bigint NOT NULL AUTO_INCREMENT,
+  `email_verified` bit(1) NOT NULL,
   `account_active` bit(1) NOT NULL,
   `creation_time` datetime(6) DEFAULT NULL,
   `email` varchar(255) NOT NULL,

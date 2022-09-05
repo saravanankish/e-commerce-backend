@@ -44,7 +44,7 @@ public class SubCategoryServiceTest {
 			currentDate, null);
 	Category category3 = new Category(3, "category 3", new ArrayList<>(List.of("sub-3-1")), currentDate, currentDate,
 			null);
-	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.ADMIN, true, currentDate,
+	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.ADMIN, true, true, currentDate,
 			currentDate, new ArrayList<MobileNumber>(), null, null);
 
 	@Test
@@ -154,21 +154,22 @@ public class SubCategoryServiceTest {
 		assertThrows(NotFoundException.class, () -> subCategoryService.add("test", "user2", 1),
 				"User with username user2 not found");
 	}
-	
+
 	@Test
 	public void delete_success() {
 		when(categoryRepo.findById(2L)).thenReturn(Optional.of(category2));
-		
+
 		subCategoryService.delete(1, 2);
 		assertEquals(1, category2.getSubCategory().size());
 	}
-	
+
 	@Test
 	public void delete_throwException() {
 		when(categoryRepo.findById(1L)).thenReturn(Optional.of(category1));
 		when(categoryRepo.findById(4L)).thenReturn(Optional.empty());
-	
+
 		assertThrows(NotFoundException.class, () -> subCategoryService.delete(1, 4), "Category with id 4 not found");
-		assertThrows(BadRequestException.class, () -> subCategoryService.delete(4, 1), "Index to delete is not present");
+		assertThrows(BadRequestException.class, () -> subCategoryService.delete(4, 1),
+				"Index to delete is not present");
 	}
 }

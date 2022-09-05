@@ -32,9 +32,9 @@ public class InvoiceServiceTest {
 	private InvoiceServiceImpl invoiceService;
 
 	Date currentDate = new Date();
-	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.CUSTOMER, true, currentDate,
+	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.CUSTOMER, true, true, currentDate,
 			currentDate, null, null, null);
-	User testUser2 = new User(2, "User 2", "user2@gmail.com", "user2", "user2", Role.CUSTOMER, true, currentDate,
+	User testUser2 = new User(2, "User 2", "user2@gmail.com", "user2", "user2", Role.CUSTOMER, true, true, currentDate,
 			currentDate, null, null, null);
 
 	Order user1Order = new Order(1, 1000, currentDate, null, null, null, null, currentDate, 8, 1080, false, null,

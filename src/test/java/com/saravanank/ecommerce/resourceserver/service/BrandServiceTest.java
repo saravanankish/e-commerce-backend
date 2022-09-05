@@ -32,7 +32,7 @@ public class BrandServiceTest {
 	@InjectMocks
 	private BrandService brandService;
 
-	User testUser = new User(1, "test", "test", "test", "test", Role.ADMIN, true, null, null, null, null, null);
+	User testUser = new User(1, "test", "test", "test", "test", Role.ADMIN, true, true, null, null, null, null, null);
 
 	Date currentDate = new Date();
 	Brand brand1 = new Brand(1, "Apple", currentDate, currentDate, testUser);

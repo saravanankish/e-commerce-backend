@@ -53,9 +53,9 @@ public class UserServiceTest {
 	private UserServiceImpl userService;
 
 	Date currentDate = new Date();
-	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.CUSTOMER, true, currentDate,
+	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.CUSTOMER, true, true, currentDate,
 			currentDate, new ArrayList<MobileNumber>(), null, null);
-	User testUser2 = new User(2, "User 2", "user2@gmail.com", "user2", "user2", Role.CUSTOMER, true, currentDate,
+	User testUser2 = new User(2, "User 2", "user2@gmail.com", "user2", "user2", Role.CUSTOMER, true, true, currentDate,
 			currentDate, new ArrayList<MobileNumber>(), null, null);
 	org.springframework.security.core.userdetails.User securityTestUser1 = new org.springframework.security.core.userdetails.User(
 			testUser1.getUsername(), testUser1.getPassword(), true, true, true, true,
@@ -178,13 +178,13 @@ public class UserServiceTest {
 		assertEquals(0, response.getCurrentPage());
 		assertEquals(5, response.getLimit());
 	}
-	
+
 	@Test
 	public void getByRoleEmpty_success() {
 		PageRequest req = PageRequest.of(0, 5);
 		Page<User> users = new PageImpl<>(List.of(), req, 0);
 		when(userRepo.findByRole(Role.ADMIN, req)).thenReturn(users);
-		
+
 		PageResponseModel<User> response = userService.getByRole("admin", 0, 5, null, "");
 		assertEquals(0, response.getData().size());
 		assertEquals(0, response.getTotal());
@@ -192,28 +192,28 @@ public class UserServiceTest {
 		assertEquals(0, response.getCurrentPage());
 		assertEquals(5, response.getLimit());
 	}
-	
+
 	@Test
 	public void addUser_success() throws JsonProcessingException, IllegalArgumentException {
 		when(userRepo.existsByUsername("user1")).thenReturn(false);
 		when(passwordEncoder.encode(testUser1.getPassword())).thenReturn("encodedPassword");
-		
+
 		User addUser = Json.fromJson(Json.toJson(testUser1), User.class);
 		addUser.setPassword("encodedPassword");
 		addUser.setCreationTime(new Date());
 		addUser.setModifiedTime(new Date());
-		
+
 		userService.addUser(testUser1);
 		ArgumentCaptor<User> argument = ArgumentCaptor.forClass(User.class);
 		verify(cartService, times(1)).addCartToUser(argument.capture());
 		verify(userRepo, times(1)).save(argument.capture());
 	}
-	
+
 	@Test
 	public void addUser_throwException() {
 		when(userRepo.existsByUsername("user1")).thenReturn(true);
-		
+
 		assertThrows(BadRequestException.class, () -> userService.addUser(testUser1), "Username already present");
 	}
-	
+
 }

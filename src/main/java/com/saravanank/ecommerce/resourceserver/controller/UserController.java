@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.saravanank.ecommerce.resourceserver.model.MobileNumber;
 import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
@@ -55,14 +56,14 @@ public class UserController {
 
 	@PostMapping("/register")
 	@ApiOperation(value = "Register customer", notes = "This is an open endpoint to register user")
-	public ResponseEntity<User> registerUser(@RequestBody @Valid User user) {
+	public ResponseEntity<User> registerUser(@RequestBody @Valid User user) throws JsonProcessingException {
 		logger.info("POST request to /api/v1/user/register");
 		return new ResponseEntity<User>(userService.addUser(user), HttpStatus.CREATED);
 	}
 
 	@PostMapping
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
-	public ResponseEntity<User> addUser(@RequestBody @Valid User user) {
+	public ResponseEntity<User> addUser(@RequestBody @Valid User user) throws JsonProcessingException {
 		logger.info("POST request to /api/v1/user");
 		return new ResponseEntity<User>(userService.addUser(user), HttpStatus.CREATED);
 	}
@@ -130,5 +131,13 @@ public class UserController {
 		mobileNumberService.deleteMobileNumber(contactId);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
+	
+	@PostMapping("/verify/email")
+	@ApiOperation(value = "Verify email address", notes = "Open endpoint anyone can use")
+	public ResponseEntity<String> verifyEmail(@RequestBody String token) {
+		userService.verifyEmail(token);
+		return new ResponseEntity<String>("Verified successfully", HttpStatus.ACCEPTED);
+	}
+	
 
 }

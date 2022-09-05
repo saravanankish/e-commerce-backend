@@ -47,7 +47,7 @@ public class ProductServiceTest {
 	private ProductService prodService;
 
 	Date currentDate = new Date();
-	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.ADMIN, true, currentDate,
+	User testUser1 = new User(1, "User 1", "user1@gmail.com", "user1", "user1", Role.ADMIN, true, true, currentDate,
 			currentDate, new ArrayList<MobileNumber>(), null, null);
 	Brand brand1 = new Brand(1, "brand1", currentDate, currentDate, testUser1);
 	Brand brand2 = new Brand(2, "brand2", currentDate, currentDate, testUser1);
@@ -55,14 +55,14 @@ public class ProductServiceTest {
 	Brand tempBrand1 = new Brand(0, "brand1", null, null, null);
 	Product prod1 = new Product(1, "Product 1", "desc 1", 10, 100, 4, "thumbnail1", null, brand1, "sub1", currentDate,
 			currentDate, testUser1);
-	Product prod2 = new Product(2, "Product 2", "desc 2", 40, 50, 4, "thumbnail2", null, tempBrand2, "sub2", currentDate,
-			currentDate, testUser1);
+	Product prod2 = new Product(2, "Product 2", "desc 2", 40, 50, 4, "thumbnail2", null, tempBrand2, "sub2",
+			currentDate, currentDate, testUser1);
 	Product prod3 = new Product(3, "Product 3", "desc 3", 100, 93, 4, "thumbnail3", null, brand2, "sub2", currentDate,
 			currentDate, testUser1);
-	Product tempProd1 = new Product(1, "Product 1", "desc 1", 10, 100, 4, "thumbnail1", null, tempBrand1, "sub1", currentDate,
-			currentDate, testUser1);
-	Product tempProd2 = new Product(2, "Product 2", "desc 2", 40, 50, 4, "thumbnail2", null, tempBrand2, "sub2", currentDate,
-			currentDate, testUser1);
+	Product tempProd1 = new Product(1, "Product 1", "desc 1", 10, 100, 4, "thumbnail1", null, tempBrand1, "sub1",
+			currentDate, currentDate, testUser1);
+	Product tempProd2 = new Product(2, "Product 2", "desc 2", 40, 50, 4, "thumbnail2", null, tempBrand2, "sub2",
+			currentDate, currentDate, testUser1);
 
 	@Test
 	public void getById_success() {
@@ -149,7 +149,7 @@ public class ProductServiceTest {
 		ArgumentCaptor<Brand> argument = ArgumentCaptor.forClass(Brand.class);
 		verify(brandRepo, times(2)).saveAndFlush(argument.capture());
 	}
-	
+
 	@Test
 	public void addAll_newCategory_success() {
 		when(userService.getUserByUsername("user1")).thenReturn(testUser1);
@@ -157,10 +157,10 @@ public class ProductServiceTest {
 		when(brandRepo.findByNameIgnoreCase("brand2")).thenReturn(brand2);
 		when(categoryRepo.existsBySubCategoryIgnoreCase("sub1")).thenReturn(false);
 		when(categoryRepo.existsBySubCategoryIgnoreCase("sub2")).thenReturn(false);
-		
+
 		prodService.addAll(List.of(prod1, prod2), "user1");
 		ArgumentCaptor<Category> argument = ArgumentCaptor.forClass(Category.class);
 		verify(categoryRepo, times(2)).saveAndFlush(argument.capture());
 	}
-	
+
 }

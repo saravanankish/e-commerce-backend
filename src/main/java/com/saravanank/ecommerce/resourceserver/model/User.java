@@ -52,7 +52,7 @@ public class User {
 	@Enumerated(EnumType.STRING)
 	@NotNull(message = "User role should not be null")
 	private Role role;
-	
+	private boolean emailVerified = false;
 	private boolean accountActive = true;
 	private Date creationTime = new Date();
 	private Date modifiedTime = new Date();

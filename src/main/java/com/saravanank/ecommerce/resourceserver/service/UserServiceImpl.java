@@ -2,6 +2,7 @@ package com.saravanank.ecommerce.resourceserver.service;
 
 import java.util.Date;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -9,7 +10,9 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.security.core.GrantedAuthority;
@@ -19,12 +22,15 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.saravanank.ecommerce.resourceserver.exceptions.BadRequestException;
 import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
+import com.saravanank.ecommerce.resourceserver.model.MailRequest;
 import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.Role;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.UserRepository;
+import com.saravanank.ecommerce.resourceserver.util.Json;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -40,6 +46,18 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	@Value("${e-commerce.application.frontend-url}")
+	private String frontendUrl;
+
+	@Value("${e-commerce.application.notification-exchange}")
+	private String notificationExchange;
+
+	@Value("${spring.rabbitmq.template.routing-key}")
+	private String routingKey;
+
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userRepo.findByUsername(username);
@@ -47,7 +65,7 @@ public class UserServiceImpl implements UserService {
 			throw new UsernameNotFoundException("No user found");
 		}
 		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), true,
-				true, true, true, getAuthorities(Arrays.asList(user.getRole().name())));
+				true, true, user.isEmailVerified(), getAuthorities(Arrays.asList(user.getRole().name())));
 	}
 
 	private Collection<? extends GrantedAuthority> getAuthorities(List<String> roles) {
@@ -60,7 +78,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User addUser(User user) {
+	public User addUser(User user) throws JsonProcessingException {
 		if (userRepo.existsByUsername(user.getUsername())) {
 			throw new BadRequestException("Username already present");
 		}
@@ -68,8 +86,20 @@ public class UserServiceImpl implements UserService {
 		user.setCreationTime(new Date());
 		user.setModifiedTime(new Date());
 		userRepo.save(user);
-		if (user.getRole().equals(Role.CUSTOMER))
+		if (user.getRole().equals(Role.CUSTOMER)) {
+			MailRequest mailRequest = new MailRequest();
+			mailRequest.setApplicationName("E-commerce");
+			mailRequest.setTo(new String[] { user.getEmail() });
+			mailRequest.setSubject("Verify email of " + user.getName());
+			mailRequest.setName(user.getName());
+			String encoded = Base64.getEncoder().encodeToString(user.getUsername().getBytes());
+			mailRequest.setUrl(frontendUrl + "/verify/mail/" + encoded);
+			System.out.println(encoded);
+			System.out.println(new String(Base64.getDecoder().decode(encoded)));
+			
+			rabbitTemplate.convertAndSend(notificationExchange, routingKey, Json.stringify(Json.toJson(mailRequest)));
 			cartService.addCartToUser(user);
+		}
 		logger.info("Added user with userid=" + user.getUserId());
 		return user;
 	}
@@ -160,6 +190,18 @@ public class UserServiceImpl implements UserService {
 		userData.setAccountActive(false);
 		logger.info("Deleted user with userId=" + id);
 		userRepo.save(userData);
+	}
+
+	@Override
+	public void verifyEmail(String token) {
+		System.out.println("Token: " + token);
+		String username = new String(Base64.getUrlDecoder().decode(token.getBytes()));
+		System.out.println("Username: " + username);
+		User user = userRepo.findByUsername(username);
+		if (user == null)
+			throw new NotFoundException("Invalid URL or user not registered");
+		user.setEmailVerified(true);
+		userRepo.save(user);
 	}
 
 }
