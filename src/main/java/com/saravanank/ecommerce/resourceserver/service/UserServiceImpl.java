@@ -94,8 +94,6 @@ public class UserServiceImpl implements UserService {
 			mailRequest.setName(user.getName());
 			String encoded = Base64.getEncoder().encodeToString(user.getUsername().getBytes());
 			mailRequest.setUrl(frontendUrl + "/verify/mail/" + encoded);
-			System.out.println(encoded);
-			System.out.println(new String(Base64.getDecoder().decode(encoded)));
 			
 			rabbitTemplate.convertAndSend(notificationExchange, routingKey, Json.stringify(Json.toJson(mailRequest)));
 			cartService.addCartToUser(user);
@@ -194,9 +192,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void verifyEmail(String token) {
-		System.out.println("Token: " + token);
 		String username = new String(Base64.getUrlDecoder().decode(token.getBytes()));
-		System.out.println("Username: " + username);
 		User user = userRepo.findByUsername(username);
 		if (user == null)
 			throw new NotFoundException("Invalid URL or user not registered");

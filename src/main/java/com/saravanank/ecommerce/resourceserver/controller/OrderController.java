@@ -3,8 +3,6 @@ package com.saravanank.ecommerce.resourceserver.controller;
 import java.security.Principal;
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -78,7 +76,7 @@ public class OrderController {
 
 	@PutMapping("/{orderId}")
 	@ApiOperation(value = "Update an order", notes = "All users can use this endpoint")
-	public ResponseEntity<Order> updateOrder(@PathVariable("orderId") long orderId, @RequestBody @Valid Order order) {
+	public ResponseEntity<Order> updateOrder(@PathVariable("orderId") long orderId, @RequestBody Order order) {
 		logger.info("PUT request to /api/v1/order/" + orderId);
 		return new ResponseEntity<Order>(orderService.updateOrder(order, orderId), HttpStatus.CREATED);
 	}

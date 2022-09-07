@@ -7,8 +7,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
+import com.saravanank.ecommerce.resourceserver.model.OptionValue;
 import com.saravanank.ecommerce.resourceserver.model.Product;
-import com.saravanank.ecommerce.resourceserver.service.OptionValue;
 
 public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
 
@@ -17,7 +17,7 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, L
 	@Query(value = "SELECT COUNT(*) FROM product where name LIKE '%?1%' OR description LIKE '%?1%'", nativeQuery = true)
 	public int countOfQueryResult(String query);
 	
-	@Query(value = "SELECT new com.saravanank.ecommerce.resourceserver.service.OptionValue(p.productId, p.name) FROM Product p")
+	@Query(value = "SELECT new com.saravanank.ecommerce.resourceserver.model.OptionValue(p.productId, p.name, p.quantity) FROM Product p")
 	public List<OptionValue> findAllForOption();
 	
 }

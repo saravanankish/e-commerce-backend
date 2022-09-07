@@ -27,7 +27,7 @@ public class ProductQuantityMapper {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@OneToOne(cascade =  CascadeType.MERGE, fetch = FetchType.EAGER)
+	@OneToOne(cascade =  CascadeType.REFRESH, fetch = FetchType.EAGER)
 	@JoinColumn(name = "product_id")
 	@NotNull(message = "Product in product quantity mapping should not be null")
 	private Product product;

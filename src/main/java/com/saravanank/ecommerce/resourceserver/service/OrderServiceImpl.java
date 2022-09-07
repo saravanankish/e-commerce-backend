@@ -105,8 +105,9 @@ public class OrderServiceImpl implements OrderService {
 			orderData.setOrderDate(order.getOrderDate());
 		if (order.getOrderStatus() != null)
 			orderData.setOrderStatus(order.getOrderStatus());
-		if (order.getProducts() != null)
+		if (order.getProducts() != null) {
 			orderData.setProducts(order.getProducts());
+		}
 		if (order.getTotalValue() != 0)
 			orderData.setTotalValue(order.getTotalValue());
 		if (order.getTaxPercentage() != taxPercentage)
@@ -154,7 +155,7 @@ public class OrderServiceImpl implements OrderService {
 		if (placedByUser == null || placedForUser.isEmpty()) {
 			throw new BadRequestException("User details are wrong, couldn't place order");
 		}
-		return orderHelper(placedByUser, placedByUser, products, paymentType);
+		return orderHelper(placedForUser.get(), placedByUser, products, paymentType);
 	}
 
 	@Override
@@ -181,16 +182,21 @@ public class OrderServiceImpl implements OrderService {
 		Order userOrder = new Order();
 		Invoice invoice = new Invoice();
 		float totalValue = 0;
+		System.out.println(placedForUser.getUserId());
+		Address deliveryAddress = addressRepo.findDeliveryAddressOfUser(placedForUser.getUserId());
+		System.out.println(deliveryAddress);
+		if (deliveryAddress == null)
+			throw new BadRequestException("User has no delivery address");
 		List<Product> productUpdate = new ArrayList<>();
 		for (ProductQuantityMapper product : products) {
 			Optional<Product> productData = productRepo.findById(product.getProductId());
-			Product prod = productData.get();
 			if (productData.isEmpty()) {
 				throw new BadRequestException("One or more products not present, couldn't place order");
 			}
 			if (product.getQuantity() <= 0) {
 				throw new BadRequestException("Quantity should be more than one, couldn't place order");
 			}
+			Product prod = productData.get();
 			if (prod.getQuantity() < product.getQuantity()) {
 				throw new BadRequestException("Insufficient stock of " + productData.get().getName());
 			}
@@ -211,9 +217,6 @@ public class OrderServiceImpl implements OrderService {
 		if (paymentType != null)
 			userOrder.setPaymentType(PaymentType.valueOf(paymentType));
 		userOrder.setProducts(products);
-		Address deliveryAddress = addressRepo.findDeliveryAddressOfUser(placedForUser.getUserId());
-		if (deliveryAddress == null)
-			throw new BadRequestException("User has no delivery address");
 		userOrder.setDeliveryAddress(deliveryAddress);
 		invoice.setOrder(userOrder);
 		invoice.setTotalAmountReceivable(totalValue + (totalValue * (taxPercentage / 100)));

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.saravanank.ecommerce.resourceserver.model.Brand;
-import com.saravanank.ecommerce.resourceserver.service.OptionValue;
+import com.saravanank.ecommerce.resourceserver.model.OptionValue;
 
 public interface BrandRepository extends JpaRepository<Brand, Long> {
 
@@ -14,7 +14,7 @@ public interface BrandRepository extends JpaRepository<Brand, Long> {
 
 	public List<Brand> findByNameContainingIgnoreCase(String name);
 	
-	@Query(value ="SELECT new com.saravanank.ecommerce.resourceserver.service.OptionValue(b.id, b.name) FROM Brand b")
+	@Query(value ="SELECT new com.saravanank.ecommerce.resourceserver.model.OptionValue(b.id, b.name) FROM Brand b")
 	public List<OptionValue> findAllForOption();
 	
 }

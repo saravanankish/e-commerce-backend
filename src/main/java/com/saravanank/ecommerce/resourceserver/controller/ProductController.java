@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Product;
+import com.saravanank.ecommerce.resourceserver.model.OptionValue;
 import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
-import com.saravanank.ecommerce.resourceserver.service.OptionValue;
 import com.saravanank.ecommerce.resourceserver.service.PageCrudOperationService;
 import io.swagger.annotations.ApiOperation;
 
@@ -46,7 +46,7 @@ public class ProductController {
 		logger.info("GET request to /api/v1/products/" + productId);
 		return new ResponseEntity<Product>(prodService.getById(productId), HttpStatus.OK);
 	}
-
+	
 	@GetMapping
 	@ApiOperation(value = "Get all products", notes = "This is an open endpoint")
 	public ResponseEntity<PageResponseModel<Product>> getAllProducts(

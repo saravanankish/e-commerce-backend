@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.saravanank.ecommerce.resourceserver.model.Brand;
+import com.saravanank.ecommerce.resourceserver.model.OptionValue;
 import com.saravanank.ecommerce.resourceserver.service.CrudOperationService;
-import com.saravanank.ecommerce.resourceserver.service.OptionValue;
 
 import io.swagger.annotations.ApiOperation;
 

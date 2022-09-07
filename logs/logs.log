@@ -6040,3 +6040,1087 @@
 [2022-09-05 10:00:15,052] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
 [2022-09-05 10:00:15,116] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
 [2022-09-05 10:00:15,116] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-05 14:45:29,150] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 14:47:15,987] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 14:47:16,662] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=9
+[2022-09-05 14:47:16,672] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 98 INFO   -  Added user with userid=9
+[2022-09-05 15:03:11,220] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-05 15:03:11,248] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-05 15:25:40,114] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  User not found
+[2022-09-05 15:25:40,114] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  User not found
+[2022-09-05 15:26:27,809] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:26:27,812] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:27:03,913] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:27:03,913] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:27:03,976] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-05 15:27:04,059] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-05 15:27:04,189] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:27:04,189] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:27:04,521] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:27:04,591] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:27:04,646] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:27:04,666] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:28:10,202] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:28:10,255] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:28:10,264] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:28:10,339] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:05,989] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:06,057] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:06,066] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:06,141] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:32,943] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:32,995] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:33,022] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:33,075] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:45,409] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:45,482] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:45,491] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:45,618] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:56,322] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:29:56,330] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:29:57,095] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:57,145] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:29:57,180] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:29:57,230] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:30:35,558] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:30:35,564] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:30:36,021] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:30:36,073] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:30:36,141] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:30:36,145] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:31:14,110] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:31:14,121] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:31:14,693] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:31:14,758] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:31:14,773] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:31:14,853] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:33:04,922] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:33:04,929] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:33:05,337] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:33:05,368] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:33:05,389] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:33:05,452] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:33:45,990] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:33:45,991] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:33:46,423] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:33:46,472] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:33:46,477] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:33:46,534] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:34:37,768] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:34:37,784] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:34:37,793] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:34:37,815] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:34:44,525] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:34:44,599] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:34:44,604] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:34:44,652] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:34:48,100] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:34:48,104] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:34:48,674] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:34:48,724] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:34:48,750] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:34:48,789] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:35:30,127] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:35:30,134] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:35:30,953] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:35:31,021] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:35:31,233] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:35:31,283] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:04,119] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:04,121] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:04,166] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:04,169] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:22,003] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:22,004] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:22,087] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:22,090] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:25,876] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:37:25,880] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:37:28,148] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:28,156] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:28,566] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:28,593] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:39,520] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:39,527] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:39,624] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:39,672] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:44,734] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:37:44,735] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 36 ERROR  -  Invalid URL or user not registered
+[2022-09-05 15:37:49,659] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:49,659] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 15:37:49,681] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:37:49,681] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 15:42:04,317] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 15:42:04,607] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=10
+[2022-09-05 15:42:04,618] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 99 INFO   -  Added user with userid=10
+[2022-09-05 15:44:59,052] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 15:44:59,571] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=11
+[2022-09-05 15:44:59,584] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 99 INFO   -  Added user with userid=11
+[2022-09-05 15:46:39,483] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 15:46:39,726] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=12
+[2022-09-05 15:46:39,739] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 101 INFO   -  Added user with userid=12
+[2022-09-05 15:49:47,277] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 15:49:47,572] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=13
+[2022-09-05 15:49:47,586] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 101 INFO   -  Added user with userid=13
+[2022-09-05 15:52:10,415] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 15:52:10,753] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=14
+[2022-09-05 15:52:10,764] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 102 INFO   -  Added user with userid=14
+[2022-09-05 16:44:06,753] com.saravanank.ecommerce.resourceserver.controller.UserController 60 INFO   -  POST request to /api/v1/user/register
+[2022-09-05 16:44:07,208] com.saravanank.ecommerce.resourceserver.service.CartServiceImpl 87 INFO   -  Added cart to user with id=15
+[2022-09-05 16:44:07,219] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 103 INFO   -  Added user with userid=15
+[2022-09-05 17:40:05,525] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 17:40:05,590] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-05 17:40:05,667] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-05 17:40:05,717] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-06 10:54:04,807] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 10:54:04,807] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 10:54:05,056] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-06 10:54:05,056] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-06 10:54:18,210] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 10:54:18,218] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 10:54:18,378] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-06 10:54:18,378] com.saravanank.ecommerce.resourceserver.service.ProductService 223 INFO   -  Returned products
+[2022-09-06 10:54:19,230] com.saravanank.ecommerce.resourceserver.controller.UserController 45 INFO   -  GET request to /api/v1/user
+[2022-09-06 10:54:19,262] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 110 INFO   -  Returned user with username=admin1
+[2022-09-06 10:54:19,692] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-09-06 10:54:26,406] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 10:54:26,407] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 10:54:26,572] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 10:54:26,573] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 11:00:59,499] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:00:59,502] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:00:59,643] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:00:59,643] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:00,101] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:00,101] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:00,263] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:00,266] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:00,391] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:00,392] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:00,510] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:00,512] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:00,653] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:00,654] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:00,792] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:00,792] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:00,923] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:00,924] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:01,091] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:01,093] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:01,255] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:01,255] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:01,430] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:01,431] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:01,585] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:01,586] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:01,695] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:01,695] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:01,861] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:01,862] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,038] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,039] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,248] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,249] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,352] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,353] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,485] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,486] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,601] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,602] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,698] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,699] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,811] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,812] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:02,939] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:02,940] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,105] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,105] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,250] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,252] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,483] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,484] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,589] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,590] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,682] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,683] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,762] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,763] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,839] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,839] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:03,932] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:03,933] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,024] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,025] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,126] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,127] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,302] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,341] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,443] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,443] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,529] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,529] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,623] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,624] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,708] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,709] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,815] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,815] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,908] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,910] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:04,996] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:04,997] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:05,113] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:05,114] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:05,339] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:05,342] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:05,520] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:05,521] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:05,616] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:05,617] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:05,720] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:05,720] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:05,834] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:05,835] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:05,946] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:05,947] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,043] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,044] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,119] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,120] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,196] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,196] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,283] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,284] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,418] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,419] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,600] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,601] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,733] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,733] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,853] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,853] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:06,950] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:06,961] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,060] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,063] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,165] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,166] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,281] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,282] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,392] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,393] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,480] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,481] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,564] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,565] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,655] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,656] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,736] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,737] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,835] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,835] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:07,976] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:07,976] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,089] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,091] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,175] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,176] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,257] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,258] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,341] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,341] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,419] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,419] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,495] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,496] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,576] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,577] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,662] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,663] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,745] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,747] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,836] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,837] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:08,924] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:08,924] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,008] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,009] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,086] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,088] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,171] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,172] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,253] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,256] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,332] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,332] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,415] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,416] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,548] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,549] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,623] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,624] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,702] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,703] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,779] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,779] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:09,865] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:09,868] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,022] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,023] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,229] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,229] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,330] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,331] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,417] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,418] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,501] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,502] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,607] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,608] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,697] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,697] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,785] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,788] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,887] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,887] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:10,983] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:10,984] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,078] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,080] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,156] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,157] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,308] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,309] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,395] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,396] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,479] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,480] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,579] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,579] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,671] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,671] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,768] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,772] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,857] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,858] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:11,950] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:11,950] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,045] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,045] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,125] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,126] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,205] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,205] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,318] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,319] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,404] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,404] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,487] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,488] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,585] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,586] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,697] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,698] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,818] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,819] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:12,957] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:12,958] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,191] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,192] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,352] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,356] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,464] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,465] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,575] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,580] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,675] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,675] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,764] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,765] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,840] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,840] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:13,923] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:13,924] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:14,118] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:14,119] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:14,622] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:14,624] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:14,793] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:14,794] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:16,526] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:16,527] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:16,697] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:16,701] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:16,886] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:16,887] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:16,974] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:16,974] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,082] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,083] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,184] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,184] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,270] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,270] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,348] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,348] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,430] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,430] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,514] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,517] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,598] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,598] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,699] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,699] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,781] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,781] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,856] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,856] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:17,947] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:17,947] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,033] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,033] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,116] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,116] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,200] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,200] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,304] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,305] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,389] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,389] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,465] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,465] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,551] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,551] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,633] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,633] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,733] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,734] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,808] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,808] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,864] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,867] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:18,951] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:18,951] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,021] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,021] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,104] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,104] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,167] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,167] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,233] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,233] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,315] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,316] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,382] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,384] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,454] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,454] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,543] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,545] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,789] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,789] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,881] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,881] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:19,977] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:19,978] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,088] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,088] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,164] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,164] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,256] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,262] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,341] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,342] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,521] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,521] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,613] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,613] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,709] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,709] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,796] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,796] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:20,950] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:20,950] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,102] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,102] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,227] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,227] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,327] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,327] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,458] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,459] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,584] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,585] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,699] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,699] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,792] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,792] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:21,894] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:21,895] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:22,286] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:22,295] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:22,408] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:22,409] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:22,528] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:22,528] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:22,653] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:22,653] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:22,760] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:22,761] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:22,903] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:22,906] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,130] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,130] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,226] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,226] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,312] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,312] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,397] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,398] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,493] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,494] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,593] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,593] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,683] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,683] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,781] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,782] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,870] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,871] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:23,988] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:23,989] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:24,143] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:24,158] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:24,286] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:24,286] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:24,387] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:24,388] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:24,559] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:24,559] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:24,698] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:24,698] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:24,812] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:24,814] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:24,959] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:24,960] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:25,071] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:25,073] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:25,163] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:25,164] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:25,220] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:25,221] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:35,056] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:35,057] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:01:35,085] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:01:35,085] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:02:30,791] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:02:30,792] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:02:30,791] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:02:38,588] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 Full authentication is required to access this resource
+[2022-09-06 11:03:27,257] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:03:27,257] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:03:27,257] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:03:27,259] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:03:27,258] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:03:27,265] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:03:59,809] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:03:59,809] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:03:59,812] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:04:10,803] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:04:10,803] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:04:10,803] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:05:24,274] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:05:24,274] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:05:24,283] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:06:04,055] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:06:04,055] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:06:04,055] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:06:04,058] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:06:04,059] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:06:04,059] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:06:13,849] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:06:13,850] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:06:13,851] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:06:57,932] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:06:57,935] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:06:57,935] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:04,904] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:04,904] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:04,952] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:08,806] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:08,806] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:08,807] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:15,633] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:15,634] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:15,635] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:16,809] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:16,810] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:16,810] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:25,813] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:25,814] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:25,815] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:28,813] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:28,813] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:28,814] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:37,412] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:37,413] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:37,414] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:07:39,691] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:07:39,693] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:07:39,693] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:35:10,817] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:35:10,817] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:35:10,820] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:35:10,820] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:35:10,820] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:35:10,820] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:35:26,905] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:35:26,910] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:35:26,911] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:35:26,912] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:35:26,915] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:35:26,916] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:35:31,886] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:35:31,887] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:35:31,887] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:35:31,888] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:35:31,890] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:35:31,890] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:35:57,790] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:35:57,790] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:35:57,790] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:36:27,798] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:36:27,798] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:36:27,798] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:37:17,819] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:37:17,820] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:37:17,831] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:37:29,826] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:37:29,827] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:37:29,826] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:37:34,817] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:37:34,817] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:37:34,821] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:37:40,788] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:37:40,790] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:37:40,790] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:38:22,857] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:38:22,857] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:38:22,857] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:38:22,858] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:38:22,859] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:38:22,859] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:38:24,210] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:38:24,216] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:38:24,216] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:38:24,222] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:38:24,226] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:38:24,226] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:38:37,213] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:38:37,215] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:38:37,213] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:38:37,217] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:38:37,213] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:38:37,218] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:39:02,336] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:39:02,336] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:39:02,341] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:39:02,342] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:39:02,341] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:39:02,343] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:39:24,505] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:39:24,505] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:39:24,505] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:39:24,521] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:39:24,521] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:39:24,539] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:40:06,614] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:40:06,614] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:40:06,614] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:40:06,810] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:40:06,810] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:40:06,816] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:40:21,536] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:40:21,536] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:40:21,536] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:40:21,582] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:40:21,601] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:40:21,601] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:40:54,804] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:40:54,804] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:40:54,804] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:41:18,798] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:41:18,798] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:41:18,800] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:42:03,388] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:42:03,388] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:42:03,393] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:42:41,891] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:42:41,891] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:42:41,896] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:43:04,310] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:43:04,313] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:43:04,313] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:43:15,567] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:43:15,571] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:43:15,571] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 11:43:15,587] com.saravanank.ecommerce.resourceserver.service.ProductService 229 INFO   -  Returned product data for options
+[2022-09-06 11:43:15,600] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 11:43:15,600] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:29:32,847] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-06 13:29:32,847] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-06 13:29:32,913] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-06 13:29:32,913] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-06 13:29:42,425] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-06 13:29:42,425] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 13:29:42,425] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 13:29:42,506] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Unauthenticated access 401 An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found
+[2022-09-06 13:29:42,840] com.saravanank.ecommerce.resourceserver.service.ProductService 224 INFO   -  Returned products
+[2022-09-06 13:29:42,840] com.saravanank.ecommerce.resourceserver.service.ProductService 224 INFO   -  Returned products
+[2022-09-06 13:29:43,090] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 13:29:43,116] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 13:29:43,199] com.saravanank.ecommerce.resourceserver.service.ProductService 224 INFO   -  Returned products
+[2022-09-06 13:29:43,203] com.saravanank.ecommerce.resourceserver.service.ProductService 224 INFO   -  Returned products
+[2022-09-06 13:29:58,775] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 13:29:58,796] com.saravanank.ecommerce.resourceserver.controller.ProductController 56 INFO   -  GET request to /api/v1/products?page=0&limit=null
+[2022-09-06 13:29:58,925] com.saravanank.ecommerce.resourceserver.service.ProductService 224 INFO   -  Returned products
+[2022-09-06 13:29:58,925] com.saravanank.ecommerce.resourceserver.service.ProductService 224 INFO   -  Returned products
+[2022-09-06 13:29:59,695] com.saravanank.ecommerce.resourceserver.controller.UserController 45 INFO   -  GET request to /api/v1/user
+[2022-09-06 13:29:59,732] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 110 INFO   -  Returned user with username=admin1
+[2022-09-06 13:29:59,919] com.saravanank.ecommerce.resourceserver.config.CustomAuthenticationEntryPoint 34 ERROR  -  Access denied 403 Access is denied
+[2022-09-06 13:30:02,684] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 13:30:02,685] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 13:30:02,764] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 13:30:02,764] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 13:30:03,870] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:30:03,874] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:30:03,876] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:30:03,917] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:30:03,950] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:30:03,950] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:30:26,981] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:30:26,981] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:30:26,981] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:30:40,854] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:30:40,854] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:30:40,908] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:30:50,160] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:30:50,160] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:30:50,174] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:31:04,859] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:31:04,866] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:31:04,867] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:31:14,825] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:31:14,826] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:31:14,836] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:31:17,783] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:31:17,784] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:31:17,785] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:31:32,752] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:31:32,753] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:31:32,753] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:32:21,873] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:32:21,873] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:32:21,886] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:32:38,817] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:32:38,817] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:32:38,829] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:32:46,548] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:32:46,548] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:32:46,551] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:33:24,763] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:33:24,764] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:33:24,765] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:33:39,037] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:33:39,038] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:33:39,038] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:34:31,866] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:34:31,866] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:34:31,878] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:34:31,900] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:34:31,924] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:34:31,924] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:34:49,917] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:34:49,917] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:34:49,920] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:34:49,948] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:34:49,966] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:34:49,966] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:35:02,861] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:35:02,861] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:35:02,866] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:35:02,895] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:35:02,919] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:35:02,919] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:38:51,816] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:38:51,816] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:38:51,819] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:39:23,343] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:39:23,344] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:39:23,352] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:39:23,449] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:39:23,450] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:39:23,452] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:39:37,806] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:39:37,808] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:39:37,809] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:39:40,894] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:39:40,898] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:39:40,899] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:39:40,932] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:39:40,952] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:39:40,953] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:39:47,836] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:39:47,836] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:39:47,838] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:39:59,387] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:39:59,387] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:39:59,390] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:40:15,888] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:40:15,889] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:40:15,893] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:40:17,868] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:40:17,869] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:40:17,870] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:40:25,841] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:40:25,845] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:40:25,845] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:42:36,847] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:42:36,847] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:42:36,848] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:42:50,864] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:42:50,865] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:42:50,864] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:43:12,522] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:43:12,522] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:43:12,523] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:43:19,853] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:43:19,853] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:43:19,860] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:43:39,091] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:43:39,092] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:43:39,092] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:43:51,247] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:43:51,248] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:43:51,248] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:44:18,872] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:44:18,872] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:44:18,876] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:44:30,197] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:44:30,198] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:44:30,200] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:45:18,402] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:45:18,409] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:45:18,410] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:46:05,014] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:46:05,015] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:46:05,017] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:46:32,975] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:46:32,975] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:46:32,976] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:46:41,855] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:46:41,855] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:46:41,860] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:46:58,917] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:46:58,918] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:46:58,919] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:47:01,855] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:47:01,856] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:47:01,857] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:47:19,867] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:47:19,867] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:47:19,870] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:47:24,472] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:47:24,473] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:47:24,475] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:47:24,506] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:47:24,571] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:47:24,572] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:47:45,753] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:47:45,753] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:47:45,756] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:47:45,786] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:47:45,798] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:47:45,798] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:49:45,992] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:49:45,992] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:49:45,993] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:49:46,580] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:49:46,582] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:49:46,583] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:49:54,694] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:49:54,695] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:49:54,694] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:49:54,723] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:49:54,747] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:49:54,747] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:52:57,319] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:52:57,320] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:52:57,320] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:53:12,323] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:53:12,324] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:53:12,331] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:53:20,646] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:53:20,647] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:53:20,660] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:53:35,274] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:53:35,276] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:53:35,276] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:53:35,323] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:53:35,324] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:53:35,334] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:55:28,869] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:55:28,869] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:55:28,869] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:56:15,591] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:56:15,592] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:56:15,621] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:56:26,853] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:56:26,854] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 13:56:26,866] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:57:17,461] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 13:57:17,461] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 13:57:17,462] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:21:46,856] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:21:46,856] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:21:46,857] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:21:53,938] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:21:53,938] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:21:53,939] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:21:56,852] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:21:56,852] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:21:56,852] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:22:09,832] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:22:09,832] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:22:09,832] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:22:21,840] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:22:21,841] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:22:21,841] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:22:33,834] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:22:33,835] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:22:33,834] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:22:47,014] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:22:47,017] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:22:47,017] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:22:58,841] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:22:58,842] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:22:58,842] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:23:43,821] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:23:43,822] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:23:43,822] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:23:56,857] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:23:56,859] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:23:56,865] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:24:08,901] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:24:08,904] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:24:08,905] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:24:08,926] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:24:08,949] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:24:08,949] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:26:31,970] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:26:31,970] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:26:31,972] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:26:33,987] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:26:33,988] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:26:34,035] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:26:52,852] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:26:52,853] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:26:52,863] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:27:15,907] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:27:15,908] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:27:15,908] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:27:25,800] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:27:25,801] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:27:25,802] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:27:34,803] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:27:34,805] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:27:34,805] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:03,560] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:03,560] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:03,561] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:13,681] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:13,682] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:13,682] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:13,933] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:13,933] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:13,934] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:14,237] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:14,237] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:14,237] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:20,275] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 15:28:20,276] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 15:28:20,352] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 15:28:20,353] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 15:28:31,223] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:31,223] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:31,224] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:31,241] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:31,258] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:31,258] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:33,203] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 15:28:33,205] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 15:28:33,239] com.saravanank.ecommerce.resourceserver.controller.OrderController 75 INFO   -  GET request to /api/v1/order/all
+[2022-09-06 15:28:33,239] com.saravanank.ecommerce.resourceserver.service.OrderServiceImpl 82 INFO   -  Returned all order
+[2022-09-06 15:28:37,141] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:37,141] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:37,141] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:28:37,160] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:28:37,175] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:28:37,175] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:29:36,838] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:29:36,839] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:29:36,839] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:29:44,675] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:29:44,676] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:29:44,675] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:30:17,850] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:30:17,851] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:30:17,854] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:30:20,113] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:30:20,113] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:30:20,119] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:30:21,513] com.saravanank.ecommerce.resourceserver.controller.OrderController 112 INFO   -  POST request to /api/v1/order/6
+[2022-09-06 15:30:34,200] com.saravanank.ecommerce.resourceserver.controller.OrderController 112 INFO   -  POST request to /api/v1/order/6
+[2022-09-06 15:33:34,986] com.saravanank.ecommerce.resourceserver.controller.OrderController 112 INFO   -  POST request to /api/v1/order/6
+[2022-09-06 15:33:35,009] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  One or more products not present, couldn't place order
+[2022-09-06 15:33:50,180] com.saravanank.ecommerce.resourceserver.controller.OrderController 112 INFO   -  POST request to /api/v1/order/6
+[2022-09-06 15:33:50,199] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  One or more products not present, couldn't place order
+[2022-09-06 15:34:59,831] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:34:59,841] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:34:59,841] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:35:10,859] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:35:10,860] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:35:10,862] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:35:29,860] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:35:29,861] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:35:29,862] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:35:37,273] com.saravanank.ecommerce.resourceserver.controller.OrderController 112 INFO   -  POST request to /api/v1/order/6
+[2022-09-06 15:35:37,291] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  One or more products not present, couldn't place order
+[2022-09-06 15:35:50,536] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:35:50,538] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:35:50,539] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:35:50,540] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:35:50,540] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:35:50,541] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:35:58,457] com.saravanank.ecommerce.resourceserver.controller.OrderController 112 INFO   -  POST request to /api/v1/order/6
+[2022-09-06 15:35:58,471] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  One or more products not present, couldn't place order
+[2022-09-06 15:36:34,905] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:36:34,910] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:36:34,910] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:36:45,879] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:36:45,879] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:36:45,884] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:36:56,016] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:36:56,017] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:36:56,018] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:37:03,850] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:37:03,850] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:37:03,852] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:37:06,658] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:37:06,658] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:37:06,661] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:37:06,663] com.saravanank.ecommerce.resourceserver.controller.UserController 79 INFO   -  GET request to /api/v1/user/customer
+[2022-09-06 15:37:06,664] com.saravanank.ecommerce.resourceserver.service.UserServiceImpl 116 INFO   -  Returned All customers
+[2022-09-06 15:37:06,666] com.saravanank.ecommerce.resourceserver.service.ProductService 230 INFO   -  Returned product data for options
+[2022-09-06 15:37:15,815] com.saravanank.ecommerce.resourceserver.controller.OrderController 112 INFO   -  POST request to /api/v1/order/6
+[2022-09-06 15:37:16,048] com.saravanank.ecommerce.resourceserver.advice.GlobalExceptionHandler 47 ERROR  -  User has no delivery address

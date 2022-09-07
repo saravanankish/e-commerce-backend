@@ -2,6 +2,8 @@ package com.saravanank.ecommerce.resourceserver.service;
 
 import java.util.List;
 
+import com.saravanank.ecommerce.resourceserver.model.OptionValue;
+
 public interface CrudOperationService<T> {
 
 	public T getById(long id);

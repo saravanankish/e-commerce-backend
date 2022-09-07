@@ -15,6 +15,7 @@ import com.saravanank.ecommerce.resourceserver.exceptions.NotFoundException;
 import com.saravanank.ecommerce.resourceserver.model.Product;
 import com.saravanank.ecommerce.resourceserver.model.Brand;
 import com.saravanank.ecommerce.resourceserver.model.Category;
+import com.saravanank.ecommerce.resourceserver.model.OptionValue;
 import com.saravanank.ecommerce.resourceserver.model.PageResponseModel;
 import com.saravanank.ecommerce.resourceserver.model.User;
 import com.saravanank.ecommerce.resourceserver.repository.BrandRepository;
